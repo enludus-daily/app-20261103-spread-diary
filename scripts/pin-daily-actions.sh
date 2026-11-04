@@ -16,7 +16,8 @@ if [ "${SKIP_CI_CHECK:-0}" != 1 ]; then
 fi
 
 root=$(git rev-parse --show-toplevel); cd "$root"
-for f in .github/workflows/ci.yml .github/workflows/testflight.yml; do
+for f in .github/workflows/ci.yml .github/workflows/testflight.yml .github/workflows/asc.yml; do
+  [ -f "$f" ] || continue
   sed -i.bak -E \
     -e "s#(uses: enludus-daily/daily-actions/\.github/workflows/[a-z-]+\.yml)@[0-9a-f]{40}( \# daily-actions .*)?\$#\1@$sha \# daily-actions $note#" \
     -e "s#(actions-sha: )[0-9a-f]{40}#\1$sha#" "$f"
