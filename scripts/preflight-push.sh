@@ -6,7 +6,7 @@
 set -euo pipefail
 
 root=$(git rev-parse --show-toplevel)
-max="${DAILY_MAX_PUSHES:-10}"
+max="${DAILY_MAX_PUSHES:-40}"
 state="${DAILY_STATE_DIR:-$HOME/.daily-apps}"
 today=$(TZ=Asia/Tokyo date +%Y-%m-%d)
 counter="$state/pushes-$today"

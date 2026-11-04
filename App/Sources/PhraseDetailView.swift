@@ -3,6 +3,7 @@ import SwiftUI
 /// フレーズの中身：英語・言い方の違い・単語・覚えた度合い
 struct PhraseDetailView: View {
     @Environment(PhraseStore.self) private var store
+    @Environment(\.colorScheme) private var scheme
     let phraseID: UUID
     let onPractice: () -> Void
 
@@ -22,7 +23,7 @@ struct PhraseDetailView: View {
                             SpeakButton(text: phrase.english)
                                 .font(.title3)
                         }
-                        Chip(text: phrase.source.label, color: .secondary)
+                        Chip(text: phrase.source.label, color: Theme.indigo)
                     }
                     if !phrase.variants.isEmpty {
                         card {
@@ -53,7 +54,8 @@ struct PhraseDetailView: View {
                     }
                     card {
                         Text("覚えた度合い").font(.headline)
-                        MasteryDots(box: phrase.review.box)
+                        ProgressView(value: Double(phrase.review.box), total: Double(ReviewState.maxBox))
+                            .tint(Theme.pink)
                         Text(reviewText(phrase.review))
                             .font(.callout)
                             .foregroundStyle(.secondary)
@@ -62,13 +64,13 @@ struct PhraseDetailView: View {
                         Label("このフレーズを練習する", systemImage: "play.fill")
                             .frame(maxWidth: .infinity)
                     }
-                    .buttonStyle(.borderedProminent)
-                    .controlSize(.large)
+                    .buttonStyle(BrandButtonStyle())
                 }
                 .padding()
                 .frame(maxWidth: 720)
                 .frame(maxWidth: .infinity)
             }
+            .background(Theme.background(scheme).ignoresSafeArea())
             .navigationTitle("フレーズ")
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -86,8 +88,6 @@ struct PhraseDetailView: View {
         VStack(alignment: .leading, spacing: 10) {
             content()
         }
-        .padding()
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(.fill.quaternary, in: RoundedRectangle(cornerRadius: 16))
+        .card()
     }
 }

@@ -100,6 +100,34 @@ struct DrillPlannerTests {
         #expect(DrillPlanner.kind(for: phrase("Could you tell me the way to the station?", box: 2, words: words)) == .recall)
     }
 
+    @Test func laterBoxesAlternateListeningAndRecall() {
+        let english = "Could you tell me the way to the station?"
+        #expect(DrillPlanner.kind(for: phrase(english, box: 3)) == .listening)
+        #expect(DrillPlanner.kind(for: phrase(english, box: 4)) == .recall)
+        #expect(DrillPlanner.kind(for: phrase(english, box: 5)) == .listening)
+        #expect(DrillPlanner.kind(for: phrase("Thank you", box: 3)) == .recall)
+    }
+
+    @Test func listeningQuestionUsesTheSameWords() {
+        var rng = SeededRandom(seed: 3)
+        let question = DrillPlanner.makeQuestion(for: phrase("Could you tell me the way?", box: 3), pool: [], using: &rng)
+        guard case .listening(let scramble) = question else {
+            Issue.record("聞き取りになっていない: \(question)")
+            return
+        }
+        #expect(scramble.pieces.sorted() == scramble.answer.sorted())
+        #expect(question.kind == .listening)
+    }
+
+    @Test func extraPracticeTakesWeakestNotDuePhrases() {
+        let strong = phrase("Strong one here", box: 5, due: day(20))
+        let weak = phrase("Weak one here", box: 1, due: day(6))
+        let due = phrase("Due one here", box: 0, due: day(1))
+        let extra = DrillPlanner.extraPractice([strong, weak, due], now: day(4))
+        #expect(extra.map(\.english) == ["Weak one here", "Strong one here"])
+        #expect(DrillPlanner.extraPractice([strong, weak], now: day(4), count: 1).map(\.english) == ["Weak one here"])
+    }
+
     @Test func shortSentenceSkipsScramble() {
         #expect(DrillPlanner.kind(for: phrase("OK!", box: 0)) == .recall)
         #expect(DrillPlanner.kind(for: phrase("Good morning", box: 0)) == .cloze)
@@ -280,6 +308,31 @@ struct PhraseStoreTests {
         #expect(store.drillDays.count == 2)
         #expect(store.streak(today: day(4), calendar: tokyo) == 2)
         #expect(makeStore().streak(today: day(4), calendar: tokyo) == 2)
+    }
+
+    @Test func answersCountTowardTodaysGoalAndWeek() {
+        let store = makeStore()
+        let id = store.add(PhraseDraft(japanese: "a", english: "Thank you so much", variants: [], words: [], source: .manual), now: day(1))
+        store.record(id: id, correct: true, now: day(3), calendar: tokyo)
+        for _ in 0..<3 {
+            store.record(id: id, correct: false, now: day(4, hour: 9), calendar: tokyo)
+        }
+        #expect(store.answeredCount(on: day(4), calendar: tokyo) == 3)
+        #expect(store.goalProgress(now: day(4), calendar: tokyo) == 3.0 / Double(PhraseStore.dailyGoal))
+        let week = store.week(endingAt: day(4), calendar: tokyo)
+        #expect(week.count == 7)
+        #expect(week.last?.count == 3)
+        #expect(week[week.count - 2].count == 1)
+        #expect(makeStore().answeredCount(on: day(4), calendar: tokyo) == 3)
+    }
+
+    @Test func goalProgressStopsAtOne() {
+        let store = makeStore()
+        let id = store.add(PhraseDraft(japanese: "a", english: "Thank you so much", variants: [], words: [], source: .manual), now: day(1))
+        for _ in 0..<(PhraseStore.dailyGoal + 3) {
+            store.record(id: id, correct: true, now: day(4), calendar: tokyo)
+        }
+        #expect(store.goalProgress(now: day(4), calendar: tokyo) == 1)
     }
 
     @Test func longTextIsCut() {

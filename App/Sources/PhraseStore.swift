@@ -7,6 +7,11 @@ import Observation
 final class PhraseStore {
     private(set) var phrases: [Phrase] = []
     private(set) var drillDays: [Date] = []
+    /// 日ごとの答えた数（"yyyy-MM-dd" → 数）
+    private(set) var answerLog: [String: Int] = [:]
+
+    /// 1 日の目標（答える数）
+    static let dailyGoal = 5
 
     @ObservationIgnored private let defaults: UserDefaults
     @ObservationIgnored private let key: String
@@ -26,9 +31,37 @@ final class PhraseStore {
            let saved = try? JSONDecoder().decode([Date].self, from: data) {
             drillDays = saved
         }
+        if let data = defaults.data(forKey: logKey),
+           let saved = try? JSONDecoder().decode([String: Int].self, from: data) {
+            answerLog = saved
+        }
     }
 
     private var daysKey: String { key + ".drillDays" }
+    private var logKey: String { key + ".answerLog" }
+
+    static func dayKey(_ date: Date, calendar: Calendar) -> String {
+        let c = calendar.dateComponents([.year, .month, .day], from: date)
+        return String(format: "%04d-%02d-%02d", c.year ?? 0, c.month ?? 0, c.day ?? 0)
+    }
+
+    func answeredCount(on date: Date = .now, calendar: Calendar = .current) -> Int {
+        answerLog[Self.dayKey(date, calendar: calendar)] ?? 0
+    }
+
+    /// 今日の目標の進み（0〜1）
+    func goalProgress(now: Date = .now, calendar: Calendar = .current) -> Double {
+        min(Double(answeredCount(on: now, calendar: calendar)) / Double(Self.dailyGoal), 1)
+    }
+
+    /// 直近 7 日（古い順）の答えた数
+    func week(endingAt today: Date = .now, calendar: Calendar = .current) -> [(date: Date, count: Int)] {
+        let start = calendar.startOfDay(for: today)
+        return (0..<7).reversed().compactMap { offset in
+            guard let day = calendar.date(byAdding: .day, value: -offset, to: start) else { return nil }
+            return (date: day, count: answeredCount(on: day, calendar: calendar))
+        }
+    }
 
     /// 新しい順
     var sortedPhrases: [Phrase] {
@@ -82,6 +115,17 @@ final class PhraseStore {
     /// ドリルの答えを記録する
     func record(id: UUID, correct: Bool, now: Date = .now, calendar: Calendar = .current) {
         update(id: id) { $0.review.record(correct: correct, now: now, calendar: calendar) }
+        let day = Self.dayKey(now, calendar: calendar)
+        answerLog[day, default: 0] += 1
+        // 古い記録は 400 日分だけ残す
+        if answerLog.count > 400 {
+            for old in answerLog.keys.sorted().prefix(answerLog.count - 400) {
+                answerLog[old] = nil
+            }
+        }
+        if let data = try? JSONEncoder().encode(answerLog) {
+            defaults.set(data, forKey: logKey)
+        }
     }
 
     /// ドリルを終えた日を記録する（続けた日数に使う）

@@ -31,6 +31,7 @@ enum QuizKind: String, Equatable, Sendable {
     case scramble  // 並べ替え
     case cloze     // 穴埋め
     case recall    // 日本語を見て英語を言う
+    case listening // 英語を聞いて並べる（日本語は答えのあとに出す）
 }
 
 struct ScrambleQuestion: Equatable, Sendable {
@@ -57,6 +58,16 @@ enum Question: Equatable, Sendable {
     case scramble(ScrambleQuestion)
     case cloze(ClozeQuestion)
     case recall
+    case listening(ScrambleQuestion)
+
+    var kind: QuizKind {
+        switch self {
+        case .scramble: .scramble
+        case .cloze: .cloze
+        case .recall: .recall
+        case .listening: .listening
+        }
+    }
 }
 
 /// 今日のドリルを組み立てる
@@ -79,7 +90,7 @@ enum DrillPlanner {
             .map { $0 }
     }
 
-    /// 箱が浅いうちは並べ替え（見て分かる）→ 穴埋め → 何も見ずに言う
+    /// 箱が浅いうちは並べ替え（見て分かる）→ 穴埋め → 何も見ずに言う → 聞き取りと言う、を交互に
     static func kind(for phrase: Phrase) -> QuizKind {
         let tokens = Tokenizer.tokens(phrase.english)
         switch phrase.review.box {
@@ -87,9 +98,20 @@ enum DrillPlanner {
             return .scramble
         case 0, 1:
             return blankIndex(tokens: tokens, words: phrase.words) == nil ? .recall : .cloze
-        default:
+        case 2:
             return .recall
+        default:
+            return phrase.review.box % 2 == 1 && tokens.count >= 3 ? .listening : .recall
         }
+    }
+
+    /// 今日の分が終わったあとの追加の練習：まだ覚えていない順（箱が浅い順、次に出す日が近い順）
+    static func extraPractice(_ phrases: [Phrase], now: Date, count: Int = 5) -> [Phrase] {
+        phrases
+            .filter { !$0.review.isDue(now: now) && !Tokenizer.tokens($0.english).isEmpty }
+            .sorted { ($0.review.box, $0.review.due) < ($1.review.box, $1.review.due) }
+            .prefix(count)
+            .map { $0 }
     }
 
     static func makeQuestion<R: RandomNumberGenerator>(
@@ -107,6 +129,8 @@ enum DrillPlanner {
             return .recall
         case .recall:
             return .recall
+        case .listening:
+            return .listening(makeScramble(phrase.english, using: &rng))
         }
     }
 
