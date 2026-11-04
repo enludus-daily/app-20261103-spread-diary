@@ -10,11 +10,8 @@ struct ContentView: View {
 
     @State private var selection: UUID?
     @State private var japanese = ""
-    @State private var isGenerating = false
-    @State private var draft: PhraseDraft?
-    @State private var notice: String?
+    @State private var compose = ComposeModel()
     @State private var translationConfig: TranslationSession.Configuration?
-    @State private var translatingText = ""
     @State private var drillPhraseIDs: DrillRequest?
 
     var body: some View {
@@ -23,7 +20,7 @@ struct ContentView: View {
                 Section {
                     ComposeCard(
                         japanese: $japanese,
-                        isGenerating: isGenerating,
+                        isGenerating: compose.isGenerating,
                         status: generator.status,
                         onSubmit: makeEnglish
                     )
@@ -71,8 +68,8 @@ struct ContentView: View {
                 )
             }
         }
-        .sheet(item: $draft) { item in
-            DraftSheet(draft: item, notice: notice) { saved in
+        .sheet(item: $compose.draft) { item in
+            DraftSheet(draft: item, notice: compose.notice) { saved in
                 let id = store.add(saved)
                 selection = id
                 japanese = ""
@@ -81,41 +78,33 @@ struct ContentView: View {
         .fullScreenCover(item: $drillPhraseIDs) { request in
             DrillView(phraseIDs: request.ids)
         }
-        .translationTask(translationConfig) { session in
-            Task { @MainActor in
-                let text = translatingText
-                do {
-                    let response = try await session.translate(text)
-                    notice = nil
-                    draft = try DraftCleaner.clean(
-                        japanese: text, english: response.targetText, variants: [], words: [], source: .translation
-                    )
-                } catch {
-                    notice = "翻訳できませんでした。英語を自分で書いて保存できます。"
-                    draft = PhraseDraft(japanese: text, english: "", variants: [], words: [], source: .manual)
-                }
-                isGenerating = false
+        .translationTask(translationConfig) { @Sendable [compose] session in
+            // session はこの閉包の中だけで使う（ほかの actor に渡さない）
+            let text = await compose.translatingText
+            let outcome: Result<String, any Error>
+            do {
+                outcome = .success(try await session.translate(text).targetText)
+            } catch {
+                outcome = .failure(error)
             }
+            await compose.finishTranslation(text: text, outcome: outcome)
         }
     }
 
     private func makeEnglish() {
         let text = String(japanese.trimmingCharacters(in: .whitespacesAndNewlines).prefix(Phrase.maxJapaneseLength))
-        guard !text.isEmpty, !isGenerating else { return }
-        isGenerating = true
+        guard !text.isEmpty, !compose.isGenerating else { return }
+        compose.isGenerating = true
         switch generator.status {
         case .available:
             Task {
                 do {
                     let result = try await generator.generate(japanese: text)
-                    notice = nil
-                    draft = result
+                    compose.finishGeneration(result)
                 } catch {
                     // モデルが断った・失敗したときは翻訳に回す
                     translate(text)
-                    return
                 }
-                isGenerating = false
             }
         case .unavailable:
             translate(text)
@@ -123,7 +112,7 @@ struct ContentView: View {
     }
 
     private func translate(_ text: String) {
-        translatingText = text
+        compose.translatingText = text
         if translationConfig == nil {
             translationConfig = TranslationSession.Configuration(
                 source: Locale.Language(identifier: "ja"),
@@ -138,6 +127,42 @@ struct ContentView: View {
         let ids = DrillPlanner.duePhrases(store.phrases, now: .now).map(\.id)
         guard !ids.isEmpty else { return }
         drillPhraseIDs = DrillRequest(ids: ids)
+    }
+}
+
+/// 英語を作る途中の状態（翻訳の閉包から MainActor に安全に戻すためのクラス）
+@MainActor
+@Observable
+final class ComposeModel {
+    var isGenerating = false
+    var draft: PhraseDraft?
+    var notice: String?
+    var translatingText = ""
+
+    func finishGeneration(_ result: PhraseDraft) {
+        notice = nil
+        draft = result
+        isGenerating = false
+    }
+
+    func finishTranslation(text: String, outcome: Result<String, any Error>) {
+        switch outcome {
+        case .success(let english):
+            if let cleaned = try? DraftCleaner.clean(japanese: text, english: english, variants: [], words: [], source: .translation) {
+                notice = nil
+                draft = cleaned
+            } else {
+                fallBackToManual(text)
+            }
+        case .failure:
+            fallBackToManual(text)
+        }
+        isGenerating = false
+    }
+
+    private func fallBackToManual(_ text: String) {
+        notice = "翻訳できませんでした。英語を自分で書いて保存できます。"
+        draft = PhraseDraft(japanese: text, english: "", variants: [], words: [], source: .manual)
     }
 }
 
