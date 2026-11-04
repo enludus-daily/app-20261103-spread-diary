@@ -18,7 +18,7 @@ struct HeroHeader: View {
 
     private var headline: String {
         let remaining = PhraseStore.dailyGoal - answered
-        return remaining <= 0 ? "今日の目標、達成！" : "あと \(remaining) 問で今日の目標"
+        return remaining <= 0 ? "今日の目標、達成！" : "今日の目標まで\nあと \(remaining) 問"
     }
 
     var body: some View {
@@ -29,7 +29,7 @@ struct HeroHeader: View {
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                     Text(headline)
-                        .font(.title2.weight(.bold))
+                        .font(.title3.weight(.bold))
                         .fixedSize(horizontal: false, vertical: true)
                     Label("\(streak) 日連続", systemImage: "flame.fill")
                         .font(.subheadline.weight(.semibold))

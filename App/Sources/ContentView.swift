@@ -32,18 +32,6 @@ struct ContentView: View {
                 .listRowSeparator(.hidden)
 
                 Section {
-                    ComposeCard(
-                        japanese: $japanese,
-                        isGenerating: compose.isGenerating,
-                        status: generator.status,
-                        onSubmit: makeEnglish
-                    )
-                }
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
-                .listRowSeparator(.hidden)
-
-                Section {
                     TodayCard(
                         dueCount: store.dueCount(),
                         extraCount: DrillPlanner.extraPractice(store.phrases, now: .now).count,
@@ -52,6 +40,18 @@ struct ContentView: View {
                         total: store.phrases.count,
                         onStart: startTodayDrill,
                         onExtra: startExtraDrill
+                    )
+                }
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
+                .listRowSeparator(.hidden)
+
+                Section {
+                    ComposeCard(
+                        japanese: $japanese,
+                        isGenerating: compose.isGenerating,
+                        status: generator.status,
+                        onSubmit: makeEnglish
                     )
                 }
                 .listRowBackground(Color.clear)
