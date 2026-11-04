@@ -23,7 +23,7 @@ targets:
     info:
       path: App/Info.plist
       properties:
-        CFBundleDisplayName: "見開き英日記"
+        CFBundleDisplayName: "言いたい英語"
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         # 標準の HTTPS 以外の暗号を使わない前提。使うなら本人に戻す（輸出規制の申告が変わる）

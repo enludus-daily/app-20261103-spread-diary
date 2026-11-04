@@ -1,0 +1,14 @@
+{
+  "_doc": "App Store Connect に API で入れる情報。daily-actions の asc（ios-asc.yml）が読む。審査への提出と App プライバシーの申告は本人が行う。",
+  "locale": "ja",
+  "name": "言いたい英語ドリル",
+  "subtitle": "日本語から英作文と復習ドリル",
+  "primaryCategory": "EDUCATION",
+  "secondaryCategory": "PRODUCTIVITY",
+  "supportUrl": "https://github.com/enludus-daily/app-20261103-spread-diary/issues",
+  "privacyPolicyUrl": "https://github.com/enludus-daily/app-20261103-spread-diary/blob/main/PRIVACY.md",
+  "keywords": "英語,英作文,英会話,フレーズ,単語帳,復習,ドリル,瞬間英作文,並べ替え,穴埋め,Apple Intelligence",
+  "promotionalText": "言いたいことを日本語で書くだけ。英語の言い方と単語カード、覚えるまでのドリルが自動でできます。",
+  "description": "日本語で「言いたいこと」を書くだけで、英語の言い方・単語カード・練習ドリルができる英語学習アプリです。教科書の例文ではなく、あなたが本当に言いたいことが毎日の復習の材料になります。\n\n■ 日本語から、使える英語を\n「明日の会議、少し遅らせてもらえますか？」のように書くと、自然な英文に加えて、丁寧な言い方・くだけた言い方、覚えておきたい単語と意味をまとめて作ります。保存の前に、英語も意味も自由に直せます。\n\n■ 覚えるまで、ドリルで\n・並べ替え：単語をタップして正しい順に\n・穴埋め：空いている所に入る単語を選ぶ\n・言ってみる：日本語を見て英語を声に出し、答えを確かめる\n覚えた度合いに合わせて、だんだん難しくなります。\n\n■ 忘れる前に、また出てくる\n間違えたフレーズはすぐにもう一度。できたフレーズは 1・2・4・7・15・30 日後に出てくる、間隔をあけた復習です。続けた日数と、覚えたフレーズの数も分かります。\n\n■ 英語を聞ける\n英文はボタン一つで読み上げます。\n\n■ Apple Intelligence にも、そうでない iPhone にも\nApple Intelligence に対応した iPhone では、端末の中のモデルが言い方の違いと単語まで作ります。対応していない iPhone では、Apple の翻訳（端末の中）で英文にし、単語は文からタップしてカードにできます。作った英語は提案なので、誤ることがあります。\n\n■ iPhone Duo の大きな画面で\n開くと、左に入力と一覧、右にフレーズやドリルが並びます。閉じるとふつうの iPhone の画面になります。\n\n■ プライバシー\nアカウントは要りません。書いた内容は iPhone の中だけに保存し、外に送りません。広告・解析もありません。",
+  "whatToTest": "日本語で言いたいことを入れて「英語にしてドリルを作る」→ 保存 →「ドリルを始める」。Apple Intelligence に対応した iPhone と、対応しない iPhone（Apple の翻訳で英語にする）の両方で確かめてください。"
+}
