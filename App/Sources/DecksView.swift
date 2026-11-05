@@ -94,7 +94,7 @@ struct DeckBundle: View {
                 }
                 .padding(.top, 30)
                 .padding(.leading, Space.l)
-                RingMetal().offset(x: 2, y: -31)
+                RingMetal().offset(x: 2, y: -39)
             }
             .frame(height: 110)
             // リングに通した割合をマーカーで
