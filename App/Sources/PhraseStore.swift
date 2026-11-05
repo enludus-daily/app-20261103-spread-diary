@@ -75,7 +75,7 @@ final class PhraseStore {
     func learnToday(_ cards: [BankPhrase], now: Date = .now, calendar: Calendar = .current) -> [UUID] {
         let ids = cards.map { addFromBank($0, now: now) }
         learnedDays.insert(Self.dayKey(now, calendar: calendar))
-        defaults.set(Array(learnedDays).sorted().suffix(400), forKey: learnedKey)
+        defaults.set(Array(learnedDays.sorted().suffix(400)), forKey: learnedKey)
         recordDrillFinished(now: now, calendar: calendar)
         return ids
     }
