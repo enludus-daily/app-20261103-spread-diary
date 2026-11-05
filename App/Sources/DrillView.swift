@@ -204,9 +204,11 @@ struct DrillView: View {
                 }
             }
             .modifier(ShakeOnChange(trigger: wrongTick))
-            Text(kindHint(question.kind))
-                .font(.footnote)
-                .foregroundStyle(Ink.sub)
+            if !(question.kind == .recall && flipped) {
+                Text(kindHint(question.kind))
+                    .font(.footnote)
+                    .foregroundStyle(Ink.sub)
+            }
         }
     }
 

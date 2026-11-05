@@ -12,21 +12,33 @@ struct CardShape: Shape {
     }
 }
 
-/// 金属のリング（穴に通っている所だけ見える）
+/// 金属のリング：カードの上へ出た所と、穴の中に見える所だけを描く（カードの紙の裏に回る所は隠す）
 struct RingMetal: View {
-    var size: CGFloat = 34
+    /// 穴の中心から上へ出る高さ
+    var radius: CGFloat = 17
+    /// 単独で置くとき（束の絵など）は全部描く
+    var throughHole = true
 
     var body: some View {
-        Canvas { context, canvas in
-            let rect = CGRect(x: 2, y: 2, width: canvas.width - 4, height: canvas.height - 4)
-            let ring = Path(ellipseIn: rect)
-            context.stroke(ring, with: .color(Ink.ring), lineWidth: 3.2)
+        let hole = CardShape.holeInset + CardShape.holeSize / 2
+        Canvas { context, size in
+            // カードの左上を (0, top) とした座標。リングの下端が穴の中心を通る
+            let top = radius * 2
+            let center = CGPoint(x: hole, y: top + hole - radius)
+            let ring = Path(ellipseIn: CGRect(x: center.x - radius * 0.62, y: center.y - radius, width: radius * 1.24, height: radius * 2))
+            var c = context
+            if throughHole {
+                var visible = Path(CGRect(x: 0, y: 0, width: size.width, height: top))
+                visible.addEllipse(in: CGRect(x: CardShape.holeInset, y: top + CardShape.holeInset,
+                                              width: CardShape.holeSize, height: CardShape.holeSize))
+                c.clip(to: visible)
+            }
+            c.stroke(ring, with: .color(Ink.ring), lineWidth: 3.4)
             var shine = Path()
-            shine.addArc(center: CGPoint(x: rect.midX, y: rect.midY), radius: rect.width / 2,
-                         startAngle: .degrees(200), endAngle: .degrees(260), clockwise: false)
-            context.stroke(shine, with: .color(Ink.ringShine), lineWidth: 1.2)
+            shine.addArc(center: center, radius: radius * 0.8, startAngle: .degrees(205), endAngle: .degrees(250), clockwise: false)
+            c.stroke(shine, with: .color(Ink.ringShine), lineWidth: 1.2)
         }
-        .frame(width: size, height: size)
+        .frame(width: hole * 2 + 4, height: radius * 2 + hole + 8)
         .accessibilityHidden(true)
     }
 }
@@ -62,7 +74,8 @@ struct CardFace<Content: View>: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             if showsRing {
                 RingMetal()
-                    .offset(x: CardShape.holeInset + CardShape.holeSize / 2 - 17, y: -12)
+                    .offset(y: -34)
+                    .allowsHitTesting(false)
             }
         }
     }

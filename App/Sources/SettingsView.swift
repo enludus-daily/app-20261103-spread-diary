@@ -40,6 +40,8 @@ struct SettingsView: View {
                                 toggle(scene)
                             } label: {
                                 Label(scene.title, systemImage: on ? "checkmark.square.fill" : "square")
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.75)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                             .buttonStyle(TileButtonStyle(fill: on ? scene.swatch.soft : Ink.card, edge: on ? scene.swatch.accent : Ink.rule,

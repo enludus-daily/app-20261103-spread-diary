@@ -52,9 +52,9 @@ struct RedSheet<Content: View>: View {
 
     private var sheet: some View {
         ZStack(alignment: .bottom) {
+            // 赤シートの下の字は、赤い光で見えなくなる（ここでは不透明に近い赤で隠す）
             RoundedRectangle(cornerRadius: 3, style: .continuous)
-                .fill(Ink.redSheet.opacity(0.95))
-                .blendMode(.multiply)
+                .fill(Ink.redSheet.opacity(0.97))
             // 透明なシートの光の筋
             Rectangle()
                 .fill(.white.opacity(0.22))

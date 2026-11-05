@@ -59,15 +59,17 @@ private struct OnboardingPage<Demo: View>: View {
     var body: some View {
         VStack(spacing: Space.xl) {
             Spacer(minLength: 0)
-            demo.frame(height: 260)
+            demo.frame(height: 220)
             Text(title)
-                .font(Typo.heading(.title))
+                .font(Typo.heading(.title2))
                 .foregroundStyle(Ink.text)
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
             Text(text)
                 .font(.callout)
                 .foregroundStyle(Ink.sub)
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: 420)
             Spacer(minLength: 0)
         }
