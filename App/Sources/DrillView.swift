@@ -46,25 +46,19 @@ struct DrillView: View {
                 } else if let current {
                     questionArea(current.phrase, current.question)
                         .id(index)
-                        .transition(reduceMotion ? .opacity : .asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .opacity))
+                        .transition(.opacity)
                 } else {
                     Spacer()
                 }
-            }
-            if finished && !reduceMotion && (correctCount == answeredCount || store.answeredCount() >= PhraseStore.dailyGoal) {
-                StickyConfetti()
             }
         }
         .safeAreaInset(edge: .bottom) {
             if let result, let current, !finished {
                 feedbackNote(current.phrase, correct: result)
-                    .transition(reduceMotion ? .opacity : .move(edge: .bottom).combined(with: .opacity))
+                    .transition(.opacity)
             }
         }
         .sensoryFeedback(trigger: selectTick) { _, _ in Feel.hapticsOn ? .selection : nil }
-        .sensoryFeedback(trigger: correctTick) { _, _ in Feel.hapticsOn ? .impact(weight: .light) : nil }
-        .sensoryFeedback(trigger: comboTick) { _, _ in Feel.hapticsOn ? .impact(weight: .heavy) : nil }
-        .sensoryFeedback(trigger: wrongTick) { _, _ in Feel.hapticsOn ? .error : nil }
         .sensoryFeedback(trigger: finished) { _, new in new && Feel.hapticsOn ? .success : nil }
         .sheet(item: $shareRequest) { phrase in
             ShareCardSheet(phrase: phrase)
@@ -169,7 +163,7 @@ struct DrillView: View {
                             Text(phrase.japanese).font(.footnote).foregroundStyle(Ink.sub)
                         } else {
                             Text(phrase.japanese)
-                                .font(.title2.weight(.bold))
+                                .font(.title2.weight(.semibold))
                                 .foregroundStyle(Ink.text)
                                 .minimumScaleFactor(0.7)
                         }
@@ -203,7 +197,6 @@ struct DrillView: View {
                         .allowsHitTesting(false)
                 }
             }
-            .modifier(ShakeOnChange(trigger: wrongTick))
             if !(question.kind == .recall && flipped) {
                 Text(kindHint(question.kind))
                     .font(.footnote)
@@ -234,7 +227,7 @@ struct DrillView: View {
                     Button(question.pieces[pieceIndex]) {
                         guard result == nil else { return }
                         selectTick += 1
-                        withAnimation(reduceMotion ? nil : .snappy) { _ = picked.remove(at: position) }
+                        withAnimation(reduceMotion ? nil : .easeOut(duration: 0.25)) { _ = picked.remove(at: position) }
                     }
                     .buttonStyle(TileButtonStyle(fill: scene.swatch.soft, edge: scene.swatch.accent))
                 }
@@ -253,7 +246,7 @@ struct DrillView: View {
                     Button(question.pieces[pieceIndex]) {
                         guard result == nil else { return }
                         selectTick += 1
-                        withAnimation(reduceMotion ? nil : .snappy) { picked.append(pieceIndex) }
+                        withAnimation(reduceMotion ? nil : .easeOut(duration: 0.25)) { picked.append(pieceIndex) }
                         if picked.count == question.pieces.count {
                             answer(question.isCorrect(picked.map { question.pieces[$0] }))
                         }
@@ -263,7 +256,7 @@ struct DrillView: View {
             }
             if result == nil, !picked.isEmpty {
                 Button("並べ直す") {
-                    withAnimation(reduceMotion ? nil : .snappy) { picked.removeAll() }
+                    withAnimation(reduceMotion ? nil : .easeOut(duration: 0.25)) { picked.removeAll() }
                 }
                 .buttonStyle(OutlineButtonStyle(color: Ink.sub))
             }
@@ -290,9 +283,9 @@ struct DrillView: View {
                         .frame(maxWidth: .infinity)
                         .overlay(alignment: .trailing) {
                             if result != nil, question.isCorrect(choice) {
-                                Image(systemName: "circle").font(.headline.weight(.heavy)).foregroundStyle(Ink.redPen)
+                                Image(systemName: "circle").font(.headline.weight(.medium)).foregroundStyle(Ink.pen)
                             } else if result == false, chosen == choice {
-                                Image(systemName: "xmark").font(.headline.weight(.heavy)).foregroundStyle(Ink.redPen)
+                                Image(systemName: "xmark").font(.headline.weight(.medium)).foregroundStyle(Ink.peachDeep)
                             }
                         }
                 }
@@ -359,7 +352,7 @@ struct DrillView: View {
                     .foregroundStyle(Ink.sub)
             }
             Button {
-                withAnimation(reduceMotion ? nil : .snappy) { next() }
+                withAnimation(reduceMotion ? nil : .easeOut(duration: 0.25)) { next() }
             } label: {
                 Text(nextTitle)
             }
@@ -368,11 +361,11 @@ struct DrillView: View {
         .padding(Space.l)
         .frame(maxWidth: 520)
         .background(
-            Rectangle()
-                .fill(correct ? SceneKind.travel.swatch.soft : SceneKind.feelings.swatch.soft)
-                .overlay(alignment: .top) { Rectangle().fill(.black.opacity(0.05)).frame(height: 10) }
+            RoundedRectangle(cornerRadius: Radius.panel, style: .continuous)
+                .fill(.regularMaterial)
+                .overlay(RoundedRectangle(cornerRadius: Radius.panel, style: .continuous).fill(correct ? Tone.current.swatch.soft.opacity(0.6) : Ink.peach.opacity(0.18)))
+                .overlay(RoundedRectangle(cornerRadius: Radius.panel, style: .continuous).strokeBorder(Ink.rule, lineWidth: 0.8))
         )
-        .rotationEffect(.degrees(reduceMotion ? 0 : -1))
         .liftShadow()
         .padding(.horizontal, Space.l)
         .padding(.bottom, Space.s)
@@ -400,7 +393,7 @@ struct DrillView: View {
                 ZStack {
                     VStack(spacing: Space.xs) {
                         Text("\(correctCount)")
-                            .font(.system(size: 76, weight: .bold, design: .serif))
+                            .font(.system(size: 76, weight: .regular, design: .serif))
                             .kerning(-3)
                             .monospacedDigit()
                             .foregroundStyle(Ink.text)
@@ -519,6 +512,7 @@ struct DrillView: View {
 
     private func answer(_ correct: Bool) {
         guard let current, result == nil else { return }
+        selectTick += 1
         store.record(id: current.phrase.id, correct: correct)
         answeredCount += 1
         if correct {
@@ -530,7 +524,7 @@ struct DrillView: View {
             combo = 0
             wrongTick += 1
         }
-        withAnimation(reduceMotion ? nil : .spring(response: 0.35, dampingFraction: 0.7)) { result = correct }
+        withAnimation(reduceMotion ? nil : .easeOut(duration: 0.3)) { result = correct }
         if current.question.kind != .recall { Speaker.shared.speak(current.phrase.english) }
     }
 
@@ -579,13 +573,12 @@ struct ComboBadge: View {
                 .monospacedDigit()
                 .contentTransition(.numericText())
         }
-        .font(.subheadline.weight(.bold))
+        .font(.subheadline.weight(.medium))
         .foregroundStyle(combo >= 3 ? Ink.redPen : Ink.sub)
         .padding(.horizontal, Space.s)
         .frame(minWidth: 52, minHeight: 32)
         .background(Capsule().fill(combo >= 3 ? SceneKind.feelings.swatch.soft : Ink.card))
-        .scaleEffect(combo >= 3 && !reduceMotion ? 1.08 : 1)
-        .animation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.45), value: combo)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.25), value: combo)
         .opacity(combo > 0 ? 1 : 0.5)
         .accessibilityLabel("連続正解 \(combo)")
     }

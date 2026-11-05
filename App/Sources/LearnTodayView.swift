@@ -37,9 +37,8 @@ struct LearnTodayView: View {
             }
             .padding(Space.xl)
             .frame(maxWidth: horizontalSizeClass == .regular ? 900 : Space.readable)
-            if done && !reduceMotion { StickyConfetti() }
         }
-        .sensoryFeedback(trigger: flips) { _, _ in Feel.hapticsOn ? .impact(weight: .light) : nil }
+        .sensoryFeedback(trigger: flips) { _, _ in Feel.hapticsOn ? .selection : nil }
         .sensoryFeedback(trigger: done) { _, new in new && Feel.hapticsOn ? .success : nil }
     }
 
@@ -81,7 +80,7 @@ struct LearnTodayView: View {
                             .foregroundStyle(card.sceneKind.swatch.deep)
                         Spacer(minLength: 0)
                         Text(card.ja)
-                            .font(.title2.weight(.bold))
+                            .font(.title2.weight(.semibold))
                             .foregroundStyle(Ink.text)
                             .minimumScaleFactor(0.7)
                         Spacer(minLength: 0)
@@ -147,7 +146,7 @@ struct LearnTodayView: View {
             .frame(maxWidth: 440)
         }
         .id(index)
-        .transition(reduceMotion ? .opacity : .asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity), removal: .move(edge: .leading).combined(with: .opacity)))
+        .transition(.opacity)
     }
 
     private var finished: some View {
@@ -158,12 +157,12 @@ struct LearnTodayView: View {
                         Text(card.en).font(Typo.english(.body)).foregroundStyle(Ink.text).lineLimit(2)
                     }
                     .frame(width: 220, height: 120)
-                    .rotationEffect(.degrees(Double(i - 1) * 5))
+                    .rotationEffect(.degrees(Double(i - 1) * 2))
                     .offset(y: CGFloat(i) * -8)
                 }
                 Hanko(text: "済", size: 96)
                     .rotationEffect(.degrees(-8))
-                    .scaleEffect(stamped || reduceMotion ? 1 : 1.6)
+                    .scaleEffect(stamped || reduceMotion ? 1 : 0.96)
                     .opacity(stamped || reduceMotion ? 1 : 0)
                     .offset(x: 90, y: 40)
             }
@@ -185,7 +184,7 @@ struct LearnTodayView: View {
         }
         .frame(maxWidth: 440)
         .onAppear {
-            withAnimation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.55).delay(0.15)) { stamped = true }
+            withAnimation(reduceMotion ? nil : .easeOut(duration: 0.35).delay(0.15)) { stamped = true }
         }
     }
 
@@ -201,7 +200,7 @@ struct LearnTodayView: View {
 
     private func next() {
         if index + 1 < cards.count {
-            withAnimation(reduceMotion ? nil : .spring(response: 0.4, dampingFraction: 0.85)) {
+            withAnimation(reduceMotion ? nil : .easeOut(duration: 0.25)) {
                 index += 1
                 flipped = false
             }

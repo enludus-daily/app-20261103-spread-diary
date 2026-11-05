@@ -33,7 +33,7 @@ struct RingMetal: View {
                                               width: CardShape.holeSize, height: CardShape.holeSize))
                 c.clip(to: visible)
             }
-            c.stroke(ring, with: .color(Ink.ring), lineWidth: 4.6)
+            c.stroke(ring, with: .color(Ink.ring), lineWidth: 3)
             var shine = Path()
             shine.addArc(center: center, radius: radius * 0.8, startAngle: .degrees(205), endAngle: .degrees(250), clockwise: false)
             c.stroke(shine, with: .color(Ink.ringShine), lineWidth: 1.2)
@@ -54,8 +54,10 @@ struct CardFace<Content: View>: View {
         let swatch = scene.swatch
         ZStack(alignment: .topLeading) {
             CardShape()
-                .fill(swatch.soft, style: FillStyle(eoFill: true))
+                .fill(Ink.card, style: FillStyle(eoFill: true))
                 .paperShadow()
+            CardShape()
+                .stroke(Ink.rule, lineWidth: 0.8)
             if ruled {
                 GeometryReader { proxy in
                     Path { p in
@@ -63,7 +65,7 @@ struct CardFace<Content: View>: View {
                         p.move(to: CGPoint(x: 18, y: y))
                         p.addLine(to: CGPoint(x: proxy.size.width - 18, y: y))
                     }
-                    .stroke(swatch.accent.opacity(0.45), lineWidth: 1)
+                    .stroke(swatch.accent.opacity(0.6), lineWidth: 0.6)
                 }
                 .allowsHitTesting(false)
             }
@@ -81,7 +83,7 @@ struct CardFace<Content: View>: View {
     }
 }
 
-/// めくれる単語カード：260ms・easeInOut、Y 軸で回し、半分で面を入れ替える。途中で 1.18 倍に浮かせる
+/// めくれる単語カード：260ms・easeInOut、Y 軸で回し、半分で面を入れ替える。途中で 1.05 倍だけ浮かせる（静かに）
 /// （五十音マインスイーパーのめくり BoardTile.tsx の値。動きを減らす設定では、面を直接入れ替える）
 struct FlipCard<Front: View, Back: View>: View {
     var flipped: Bool
@@ -119,8 +121,8 @@ struct FlipEffect: ViewModifier, Animatable {
         content
             .environment(\.flipShowsBack, angle >= 90)
             .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0), perspective: 0.6)
-            .scaleEffect(1 + 0.18 * sin(angle * .pi / 180))
-            .shadow(color: .black.opacity(0.12 * sin(angle * .pi / 180)), radius: 12, y: 10)
+            .scaleEffect(1 + 0.05 * sin(angle * .pi / 180))
+            .shadow(color: .black.opacity(0.06 * sin(angle * .pi / 180)), radius: 12, y: 6)
     }
 }
 

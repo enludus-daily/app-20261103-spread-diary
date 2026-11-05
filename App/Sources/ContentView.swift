@@ -7,6 +7,8 @@ struct ContentView: View {
     @Environment(PhraseStore.self) private var store
     let generator: any PhraseGenerator
     @AppStorage("onboarding.done") private var onboardingDone = false
+    /// テーマ色を変えたら、全画面を描き直す（色は Tone.current から読む）
+    @AppStorage("settings.tone") private var tone = Tone.sky.rawValue
     @State private var tab: AppTab = ScreenshotScene.current?.tab ?? .today
     @State private var reminder = Reminder()
 
@@ -27,6 +29,7 @@ struct ContentView: View {
         }
         .tabViewStyle(.sidebarAdaptable)
         .tint(Ink.pen)
+        .id(tone)
         .fullScreenCover(isPresented: Binding(get: { !onboardingDone }, set: { onboardingDone = !$0 })) {
             OnboardingView { onboardingDone = true }
         }

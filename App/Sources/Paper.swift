@@ -14,14 +14,14 @@ struct RuledPaper: View {
                 var line = Path()
                 line.move(to: CGPoint(x: 0, y: y))
                 line.addLine(to: CGPoint(x: size.width, y: y))
-                context.stroke(line, with: .color(Ink.rule), lineWidth: 0.8)
+                context.stroke(line, with: .color(Ink.rule), lineWidth: 0.6)
                 y += lineSpacing
             }
             if showsMargin {
                 var margin = Path()
                 margin.move(to: CGPoint(x: marginX, y: 0))
                 margin.addLine(to: CGPoint(x: marginX, y: size.height))
-                context.stroke(margin, with: .color(Ink.margin), lineWidth: 1)
+                context.stroke(margin, with: .color(Ink.margin), lineWidth: 0.8)
             }
         }
         .ignoresSafeArea()
@@ -43,7 +43,8 @@ struct PageHeading: View {
                     .foregroundStyle(Ink.sub)
             }
             Text(title)
-                .font(Typo.heading(.title))
+                .font(Typo.heading(.largeTitle))
+                .kerning(-0.5)
                 .foregroundStyle(Ink.text)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -55,37 +56,35 @@ struct PageHeading: View {
 /// ノートの区切り（小見出し）：セリフの小見出し＋下にマーカーを引く
 struct SectionMark: View {
     let title: String
-    var color: Color = Ink.marker
+    /// 前の版の色の指定（いまはテーマ色 1 系統なので使わない）
+    var color: Color = .clear
 
     var body: some View {
-        Text(title)
-            .font(Typo.heading(.headline))
-            .foregroundStyle(Ink.text)
-            .padding(.horizontal, 2)
-            .background(alignment: .bottom) {
-                Capsule().fill(color.opacity(0.45)).frame(height: 8).offset(y: -2)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .accessibilityAddTraits(.isHeader)
+        HStack(spacing: Space.s) {
+            Text(title)
+                .font(Typo.heading(.title3))
+                .foregroundStyle(Ink.text)
+            Rectangle().fill(Tone.current.swatch.accent).frame(height: 0.8)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .accessibilityAddTraits(.isHeader)
     }
 }
 
 /// 付箋（ちょっとした一文・案内）。少し傾ける
 struct StickyNote<Content: View>: View {
-    var color: Color = SceneKind.daily.swatch.soft
-    var tilt: Double = -1.5
+    var color: Color = Tone.current.swatch.paper
+    /// 前の版の傾け（いまは使わない：飾りは主役の 1 か所と共有カードだけ）
+    var tilt: Double = 0
     @ViewBuilder let content: Content
 
     var body: some View {
         VStack(alignment: .leading, spacing: Space.s) { content }
             .padding(Space.l)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Rectangle().fill(color))
-            .overlay(alignment: .top) {
-                Rectangle().fill(.black.opacity(0.05)).frame(height: 10)
-            }
-            .rotationEffect(.degrees(tilt))
-            .paperShadow()
+            .foregroundStyle(Ink.text)
+            .background(RoundedRectangle(cornerRadius: Radius.control, style: .continuous).fill(color))
+            .overlay(RoundedRectangle(cornerRadius: Radius.control, style: .continuous).strokeBorder(Ink.rule, lineWidth: 0.8))
     }
 }
 

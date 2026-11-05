@@ -71,8 +71,8 @@ struct BigNumber: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("\(value)")
-                .font(.system(size: 40, weight: .bold, design: .serif))
-                .kerning(-2)
+                .font(.system(size: 40, weight: .regular, design: .serif))
+                .kerning(-3)
                 .monospacedDigit()
                 .foregroundStyle(Ink.text)
                 .minimumScaleFactor(0.6)

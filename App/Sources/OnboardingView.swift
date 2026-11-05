@@ -32,7 +32,7 @@ struct OnboardingView: View {
                         Capsule().fill(i == page ? Ink.pen : Ink.rule).frame(width: i == page ? 24 : 8, height: 8)
                     }
                 }
-                .animation(.snappy, value: page)
+                .animation(.easeOut(duration: 0.25), value: page)
                 .accessibilityHidden(true)
                 Button {
                     if page < 2 { withAnimation { page += 1 } } else { onDone() }
@@ -88,7 +88,7 @@ private struct FlipDemo: View {
                 VStack(alignment: .leading) {
                     Label("旅行", systemImage: "airplane").font(Typo.label(.caption)).foregroundStyle(SceneKind.travel.swatch.deep)
                     Spacer(minLength: 0)
-                    Text("駅までの道を教えてもらえますか？").font(.title3.weight(.bold)).foregroundStyle(Ink.text)
+                    Text("駅までの道を教えてもらえますか？").font(.title3.weight(.semibold)).foregroundStyle(Ink.text)
                     Spacer(minLength: 0)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -124,9 +124,10 @@ private struct SheetDemo: View {
                     MarkedText(text: "I'm going to leave a little early today.", font: Typo.english(.title3))
                         .frame(maxWidth: .infinity, alignment: .leading)
                     GeometryReader { proxy in
-                        Rectangle()
-                            .fill(Ink.redSheet.opacity(0.95))
-                            .blendMode(.multiply)
+                        ZStack {
+                            Rectangle().fill(.ultraThinMaterial)
+                            Rectangle().fill(Tone.current.swatch.accent.opacity(0.45))
+                        }
                             .frame(height: proxy.size.height + 20)
                             .offset(y: down ? proxy.size.height * 0.85 : 0)
                     }
@@ -141,7 +142,7 @@ private struct SheetDemo: View {
             guard !reduceMotion else { down = true; return }
             while !Task.isCancelled {
                 try? await Task.sleep(for: .milliseconds(1250))
-                withAnimation(.spring(response: 0.5, dampingFraction: 0.85)) { down.toggle() }
+                withAnimation(.easeOut(duration: 0.35)) { down.toggle() }
             }
         }
         .accessibilityLabel("見本：赤シートをずらすと、英語の答えが見えます")
@@ -164,7 +165,7 @@ private struct BoxDemo: View {
                                 .overlay(RoundedRectangle(cornerRadius: Radius.card).strokeBorder(Ink.rule))
                             if box == step {
                                 RoundedRectangle(cornerRadius: Radius.card)
-                                    .fill(SceneKind.feelings.swatch.accent)
+                                    .fill(Tone.current.swatch.accent)
                                     .frame(width: 28, height: 50)
                                     .padding(.bottom, 4)
                                     .transition(.scale.combined(with: .opacity))
@@ -182,7 +183,7 @@ private struct BoxDemo: View {
             guard !reduceMotion else { step = 3; return }
             while !Task.isCancelled {
                 try? await Task.sleep(for: .milliseconds(900))
-                withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) { step = (step + 1) % 7 }
+                withAnimation(.easeOut(duration: 0.3)) { step = (step + 1) % 7 }
             }
         }
         .accessibilityLabel("見本：できたカードは、1・2・4・7・15・30 日後にまた出てきます")

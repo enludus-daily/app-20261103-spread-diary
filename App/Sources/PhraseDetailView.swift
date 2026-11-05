@@ -21,7 +21,7 @@ struct PhraseDetailView: View {
                                     .font(Typo.label(.caption))
                                     .foregroundStyle(phrase.sceneKind.swatch.deep)
                                 Spacer(minLength: 0)
-                                Text(phrase.japanese).font(.title3.weight(.bold)).foregroundStyle(Ink.text)
+                                Text(phrase.japanese).font(.title3.weight(.semibold)).foregroundStyle(Ink.text)
                                 Spacer(minLength: 0)
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)

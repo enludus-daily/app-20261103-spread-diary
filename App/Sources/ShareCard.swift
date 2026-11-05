@@ -37,7 +37,7 @@ struct ShareCardArt: View {
                 Spacer()
                 HStack(spacing: 6) {
                     Text("言いたい英語ドリル")
-                        .font(.system(size: 14, weight: .bold, design: .serif))
+                        .font(.system(size: 14, weight: .semibold, design: .serif))
                     Text("· \(phrase.sceneKind.title)")
                         .font(.system(size: 12))
                 }

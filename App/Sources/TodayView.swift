@@ -343,19 +343,19 @@ struct CardFan: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .frame(width: 230, height: 150)
-                .rotationEffect(.degrees(offset * 6), anchor: .bottom)
+                .rotationEffect(.degrees(offset * 3), anchor: .bottom)
                 .offset(x: offset * 46, y: abs(offset) * 10)
                 .zIndex(Double(index))
             }
             if learned {
                 Hanko(text: "済", size: 92)
                     .rotationEffect(.degrees(-8))
-                    .scaleEffect(stamped || reduceMotion ? 1 : 1.6)
+                    .scaleEffect(stamped || reduceMotion ? 1 : 0.96)
                     .opacity(stamped || reduceMotion ? 1 : 0)
                     .offset(x: 70, y: 30)
                     .zIndex(10)
                     .onAppear {
-                        withAnimation(reduceMotion ? nil : .spring(response: 0.3, dampingFraction: 0.55)) { stamped = true }
+                        withAnimation(reduceMotion ? nil : .easeOut(duration: 0.35)) { stamped = true }
                     }
             }
         }

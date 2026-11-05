@@ -7,6 +7,7 @@ struct SettingsView: View {
     @AppStorage("settings.dailyCards") private var dailyCards = 3
     @AppStorage("settings.scenes") private var scenesCSV = ""
     @AppStorage("settings.haptics") private var haptics = true
+    @AppStorage("settings.tone") private var tone = Tone.sky.rawValue
     @AppStorage("settings.speechRate") private var speechRate = 0.9
     @AppStorage("settings.reminder") private var reminderOn = false
     @AppStorage("settings.reminderHour") private var reminderHour = 20
@@ -24,7 +25,34 @@ struct SettingsView: View {
                 VStack(alignment: .leading, spacing: Space.xl) {
                     PageHeading(title: "せってい", caption: "言いたい英語ドリル")
 
-                    SectionMark(title: "今日のカード", color: SceneKind.daily.swatch.accent)
+                    SectionMark(title: "テーマ色")
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 72), spacing: Space.m)], spacing: Space.m) {
+                        ForEach(Tone.allCases) { option in
+                            Button {
+                                tone = option.rawValue
+                            } label: {
+                                VStack(spacing: Space.xs) {
+                                    Circle()
+                                        .fill(option.swatch.accent)
+                                        .frame(width: 40, height: 40)
+                                        .overlay(Circle().strokeBorder(option.swatch.deep, lineWidth: tone == option.rawValue ? 1.5 : 0))
+                                        .padding(3)
+                                        .overlay(Circle().strokeBorder(Ink.rule, lineWidth: 0.8))
+                                    Text(option.title)
+                                        .font(Typo.label(.caption2))
+                                        .foregroundStyle(tone == option.rawValue ? Ink.text : Ink.sub)
+                                        .lineLimit(1)
+                                        .minimumScaleFactor(0.7)
+                                }
+                                .frame(minWidth: 44, minHeight: 44)
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityLabel(option.title)
+                            .accessibilityAddTraits(tone == option.rawValue ? .isSelected : [])
+                        }
+                    }
+
+                    SectionMark(title: "今日のカード")
                     row {
                         Stepper(value: $dailyCards, in: 1...5) {
                             Text("1 日に覚える枚数：\(dailyCards) 枚").foregroundStyle(Ink.text)
