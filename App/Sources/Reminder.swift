@@ -11,7 +11,7 @@ enum ReminderStatus: Equatable, Sendable {
 @MainActor
 @Observable
 final class Reminder {
-    static let identifier = "daily.today-cards"
+    nonisolated static let identifier = "daily.today-cards"
     private(set) var status: ReminderStatus = .notDetermined
 
     func refresh() {
