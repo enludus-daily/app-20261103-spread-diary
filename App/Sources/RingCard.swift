@@ -25,7 +25,7 @@ struct RingMetal: View {
             // カードの左上を (0, top) とした座標。リングの下端が穴の中心を通る
             let top = radius * 2
             let center = CGPoint(x: hole, y: top + hole - radius)
-            let ring = Path(ellipseIn: CGRect(x: center.x - radius * 0.62, y: center.y - radius, width: radius * 1.4, height: radius * 2))
+            let ring = Path(ellipseIn: CGRect(x: center.x - radius * 0.7, y: center.y - radius, width: radius * 1.4, height: radius * 2))
             var c = context
             if throughHole {
                 var visible = Path(CGRect(x: 0, y: 0, width: size.width, height: top))
