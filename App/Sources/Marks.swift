@@ -62,18 +62,23 @@ struct RedSheet<Content: View>: View {
 
     private var film: some View {
         let swatch = Tone.current.swatch
-        return ZStack(alignment: .bottom) {
+        return ZStack(alignment: .top) {
             RoundedRectangle(cornerRadius: 4, style: .continuous)
                 .fill(.ultraThinMaterial)
             RoundedRectangle(cornerRadius: 4, style: .continuous)
                 .fill(swatch.accent.opacity(0.45))
             RoundedRectangle(cornerRadius: 4, style: .continuous)
                 .strokeBorder(swatch.deep.opacity(0.25), lineWidth: 0.8)
-            Label("下へずらして答えを見る", systemImage: "chevron.compact.down")
-                .font(Typo.label(.caption))
-                .kerning(0.6)
-                .foregroundStyle(swatch.deep)
-                .padding(.bottom, 30)
+            // 上の縁の細い光（フィルムの厚み）
+            Rectangle().fill(.white.opacity(0.7)).frame(height: 0.8).padding(.horizontal, 6).padding(.top, 2)
+            HStack(spacing: 4) {
+                Capsule().fill(swatch.deep.opacity(0.35)).frame(width: 28, height: 3)
+                Text("下へずらす")
+                    .font(Typo.label(.caption2))
+                    .kerning(0.6)
+                    .foregroundStyle(swatch.deep)
+            }
+            .padding(.top, 8)
         }
     }
 

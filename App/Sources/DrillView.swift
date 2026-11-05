@@ -128,7 +128,7 @@ struct DrillView: View {
         switch kind {
         case .scramble: "単語の札をタップして、英語の順に並べます。"
         case .cloze: "空いている所に入る単語を選びます。"
-        case .recall: "英語で声に出して言ってから、めくって赤シートをずらします。"
+        case .recall: "英語で声に出して言ってから、めくってシートをずらします。"
         case .listening: "聞こえた英語を、札で並べます。"
         }
     }
@@ -309,7 +309,7 @@ struct DrillView: View {
                 }
                 .buttonStyle(InkButtonStyle())
             } else if !revealed {
-                Text("赤シートを下へずらすと、答えが見えます。")
+                Text("シートを下へずらすと、答えが見えます。")
                     .font(.callout)
                     .foregroundStyle(Ink.sub)
                     .frame(maxWidth: .infinity, alignment: .leading)

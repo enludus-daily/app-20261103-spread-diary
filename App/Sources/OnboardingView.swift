@@ -16,8 +16,8 @@ struct OnboardingView: View {
                     ) { FlipDemo() }
                         .tag(0)
                     OnboardingPage(
-                        title: "赤シートをずらして、\n思い出す",
-                        text: "日本語を見て、英語で言ってから、赤シートを下へ。言えたら ◎、まだなら ×。"
+                        title: "シートをずらして、\n思い出す",
+                        text: "日本語を見て、英語で言ってから、シートを下へ。言えたら ◎、まだなら ×。"
                     ) { SheetDemo() }
                         .tag(1)
                     OnboardingPage(
@@ -145,7 +145,7 @@ private struct SheetDemo: View {
                 withAnimation(.easeOut(duration: 0.35)) { down.toggle() }
             }
         }
-        .accessibilityLabel("見本：赤シートをずらすと、英語の答えが見えます")
+        .accessibilityLabel("見本：シートをずらすと、英語の答えが見えます")
     }
 }
 

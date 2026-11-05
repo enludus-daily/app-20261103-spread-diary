@@ -154,7 +154,7 @@ struct TodayView: View {
                         Text("忘れかけたカードが \(due) 枚")
                             .font(.headline)
                             .foregroundStyle(Ink.text)
-                        Text("約 \(max(1, (due * 20 + 59) / 60)) 分。赤シートで思い出します。")
+                        Text("約 \(max(1, (due * 20 + 59) / 60)) 分。シートで思い出します。")
                             .font(.callout)
                             .foregroundStyle(Ink.sub)
                     } else {

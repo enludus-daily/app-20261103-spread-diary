@@ -42,7 +42,7 @@ final class Reminder {
     nonisolated static func schedule(hour: Int) {
         let content = UNMutableNotificationContent()
         content.title = "今日の 3 枚が届いています"
-        content.body = "リングをめくって、赤シートで 1 枚ずつ。1 分で終わります。"
+        content.body = "リングをめくって、シートで 1 枚ずつ。1 分で終わります。"
         content.sound = .default
         var date = DateComponents()
         date.hour = min(max(hour, 0), 23)
