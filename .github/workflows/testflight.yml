@@ -11,9 +11,9 @@ concurrency:
 jobs:
   testflight:
     if: github.repository != 'enludus-daily/daily-app-template'
-    uses: enludus-daily/daily-actions/.github/workflows/ios-testflight.yml@9e9139f6074871d755e073a7f54c6c6d085c2c87 # daily-actions 2026-11-05-io-enumerate
+    uses: enludus-daily/daily-actions/.github/workflows/ios-testflight.yml@1065caf75ae93254ba41ca35eb0bc8ef0dfe81ba # daily-actions 2026-11-05-fixed-cert
     with:
-      actions-sha: 9e9139f6074871d755e073a7f54c6c6d085c2c87
+      actions-sha: 1065caf75ae93254ba41ca35eb0bc8ef0dfe81ba
       scheme: SpreadDiary
       # iPhone Duo の全画面の表示には Xcode 27.1（iOS 27.1 SDK）が要る（Apple Tech Talk「Prepare your app for iPhone Duo」）。
       # xcode-27 ランナーは GitHub で Preview 扱い（actions/runner-images #14404）。
@@ -25,3 +25,6 @@ jobs:
       ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
       ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
       ASC_P8: ${{ secrets.ASC_P8 }}
+      # アーカイブに使う証明書 1 枚（毎回新しい証明書を作らせない。daily-actions の docs/signing.md）
+      SIGNING_CERT_P12_BASE64: ${{ secrets.SIGNING_CERT_P12_BASE64 }}
+      SIGNING_CERT_PASSWORD: ${{ secrets.SIGNING_CERT_PASSWORD }}
