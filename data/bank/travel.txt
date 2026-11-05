@@ -1,0 +1,52 @@
+駅までの道を教えてもらえますか？|Could you tell me the way to the station?|Excuse me, could you tell me how to get to the station?|How do I get to the station?|the way to=〜への道;station=駅
+チェックインをお願いします。|I'd like to check in, please.|I'd like to check in. I have a reservation.|Checking in, please.|check in=チェックインする;please=お願いします
+予約しています。名前は田中です。|I have a reservation under Tanaka.|I have a reservation under the name Tanaka.|It's booked under Tanaka.|reservation=予約;under=〜の名前で
+荷物を預かってもらえますか？|Could you keep my luggage?|Would you be able to hold my luggage?|Can you hold my bags?|keep=預かる;luggage=荷物
+空港まで行きたいです。|I'd like to go to the airport.|Could you take me to the airport, please?|Airport, please.|go to=〜へ行く;airport=空港
+この電車は渋谷に止まりますか？|Does this train stop at Shibuya?|Could you tell me if this train stops at Shibuya?|Does this stop at Shibuya?|train=電車;stop at=〜に止まる
+乗り換えはどこですか？|Where do I transfer?|Could you tell me where to change trains?|Where do I change?|transfer=乗り換える;where=どこ
+切符はどこで買えますか？|Where can I buy a ticket?|Could you tell me where I can buy a ticket?|Where are the tickets?|buy=買う;ticket=切符
+写真を撮ってもらえますか？|Could you take a picture of us?|Would you mind taking a picture of us?|Can you take our picture?|take a picture=写真を撮る;of us=私たちの
+道に迷ってしまいました。|I think I'm lost.|I'm afraid I've lost my way.|I'm lost.|lost=迷った;think=思う
+ここから歩いて行けますか？|Can I walk there from here?|Is it within walking distance from here?|Is it walkable from here?|walk=歩く;from here=ここから
+どのくらいかかりますか？|How long does it take?|Roughly how long will it take?|How long's it take?|how long=どのくらい;take=かかる
+Wi-Fi のパスワードを教えてください。|What's the Wi-Fi password?|Could you tell me the Wi-Fi password, please?|Wi-Fi password?|password=パスワード;what's=何ですか
+部屋を変えてもらえますか？|Could I change rooms?|Would it be possible to move to a different room?|Can I switch rooms?|change=変える;rooms=部屋
+朝食は何時からですか？|What time does breakfast start?|Could you tell me what time breakfast is served?|When's breakfast?|breakfast=朝食;what time=何時
+タクシーを呼んでもらえますか？|Could you call a taxi for me?|Would you mind calling a taxi for me?|Can you get me a taxi?|call=呼ぶ;taxi=タクシー
+観光で来ました。|I'm here for sightseeing.|I'm visiting for sightseeing.|Just here for sightseeing.|here for=〜のために来た;sightseeing=観光
+1週間滞在します。|I'm staying for a week.|I'll be staying for one week.|I'm here for a week.|staying=滞在する;week=週
+このバスは駅に行きますか？|Does this bus go to the station?|Could you tell me if this bus goes to the station?|This bus go to the station?|bus=バス;go to=〜へ行く
+次の駅はどこですか？|What's the next stop?|Could you tell me what the next stop is?|Next stop?|next=次の;stop=停留所
+ここで降ります。|I'll get off here.|I'd like to get off here, please.|This is my stop.|get off=降りる;here=ここで
+窓側の席をお願いします。|I'd like a window seat, please.|Could I have a window seat, please?|Window seat, please.|window seat=窓側の席;please=お願いします
+荷物が出てきません。|My luggage hasn't come out.|I'm afraid my luggage hasn't arrived.|My bag's missing.|luggage=荷物;come out=出てくる
+両替はどこでできますか？|Where can I exchange money?|Could you tell me where I can exchange currency?|Where's the money exchange?|exchange=両替する;money=お金
+おすすめの観光地はありますか？|Are there any places you'd recommend?|Could you recommend any places to visit?|Anywhere good to see?|recommend=すすめる;places=場所
+地図に印をつけてもらえますか？|Could you mark it on the map?|Would you mind marking it on the map for me?|Can you show me on the map?|mark=印をつける;map=地図
+入場料はいくらですか？|How much is the admission?|Could you tell me the admission fee?|How much to get in?|how much=いくら;admission=入場料
+トイレはどこですか？|Where is the restroom?|Excuse me, where can I find the restroom?|Where's the bathroom?|restroom=トイレ;where=どこ
+もっとゆっくり話してください。|Could you speak more slowly?|Would you mind speaking a little more slowly?|Slower, please?|speak=話す;slowly=ゆっくり
+英語が少ししか話せません。|I only speak a little English.|I'm afraid my English is limited.|My English isn't great.|a little=少し;English=英語
+チェックアウトは何時ですか？|What time is checkout?|Could you tell me the checkout time?|When's checkout?|checkout=チェックアウト;what time=何時
+鍵を部屋に置いてきてしまいました。|I left my key in the room.|I'm afraid I've locked my key in the room.|I locked myself out.|left=置いてきた;key=鍵
+お湯が出ません。|There's no hot water.|I'm afraid the hot water isn't working.|No hot water here.|hot water=お湯;no=ない
+近くにコンビニはありますか？|Is there a convenience store nearby?|Could you tell me if there's a convenience store nearby?|Any convenience stores around?|convenience store=コンビニ;nearby=近くに
+往復の切符をください。|A round-trip ticket, please.|I'd like a round-trip ticket, please.|Round trip, please.|round-trip=往復;ticket=切符
+電車が遅れています。|The train is delayed.|I'm afraid the train has been delayed.|The train's late.|train=電車;delayed=遅れている
+パスポートをなくしました。|I lost my passport.|I'm afraid I've lost my passport.|My passport's gone.|lost=なくした;passport=パスポート
+ここに座ってもいいですか？|Is this seat taken?|Excuse me, is anyone sitting here?|Anyone sitting here?|seat=席;taken=取られている
+景色がきれいですね。|The view is beautiful.|What a beautiful view.|What a view!|view=景色;beautiful=きれい
+日帰りで行けますか？|Can I go there on a day trip?|Is it possible to visit on a day trip?|Doable as a day trip?|day trip=日帰り;go there=そこへ行く
+レンタカーを借りたいです。|I'd like to rent a car.|I'd like to hire a car, please.|I want to rent a car.|rent=借りる;car=車
+到着が遅くなります。|I'll be arriving late.|I'm afraid I'll be arriving later than planned.|I'll be late getting in.|arriving=到着する;late=遅く
+傘を貸してもらえますか？|Could I borrow an umbrella?|Would it be possible to borrow an umbrella?|Can I borrow an umbrella?|borrow=借りる;umbrella=傘
+この住所に行ってください。|Please take me to this address.|Could you take me to this address, please?|This address, please.|take me to=〜へ連れて行く;address=住所
+クレジットカードは使えますか？|Do you take credit cards?|Do you accept credit cards?|Cards okay?|take=受け付ける;credit cards=クレジットカード
+帰りの便は何時ですか？|What time is the return flight?|Could you tell me the time of the return flight?|When's the flight back?|return flight=帰りの便;what time=何時
+予定より一日早く帰ります。|I'm going back a day early.|I'll be returning a day earlier than planned.|Heading home a day early.|going back=帰る;a day early=一日早く
+ここは何で有名ですか？|What is this place famous for?|What is this area known for?|What's this place famous for?|famous for=〜で有名;place=場所
+写真を撮ってもいいですか？|Can I take pictures here?|Is it all right to take photos here?|Photos okay here?|take pictures=写真を撮る;here=ここで
+旅行を楽しんでいます。|I'm enjoying my trip.|I'm really enjoying my trip.|Loving this trip!|enjoying=楽しんでいる;trip=旅行
+空港行きのバスはありますか？|Is there a bus to the airport?|Could you tell me if there's a bus to the airport?|Any buses to the airport?|bus=バス;airport=空港
+もう一泊したいです。|I'd like to stay one more night.|Would it be possible to extend my stay by one night?|Can I stay another night?|stay=泊まる;one more night=もう一泊

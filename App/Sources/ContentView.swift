@@ -1,210 +1,58 @@
 import SwiftUI
 import Translation
 
-/// ホーム。左に「日本語で言いたいこと」と一覧、右（または次の画面）にフレーズの中身。
-/// iPhone Duo の内側の画面では 2 列に並び、閉じると 1 列に重なる（NavigationSplitView。
-/// Apple Tech Talk「Prepare your app for iPhone Duo」：列は閉じると 1 つのスタックになる）。
+/// 全体：オンボーディング → 4 つのタブ（きょう・カード・きろく・せってい）。
+/// タブは iPhone Duo の内側の画面ではサイドバーになる（sidebarAdaptable）。
 struct ContentView: View {
     @Environment(PhraseStore.self) private var store
-    @Environment(\.colorScheme) private var scheme
     let generator: any PhraseGenerator
-
-    @State private var selection: UUID?
-    @State private var japanese = ""
-    @State private var compose = ComposeModel()
-    @State private var translationConfig: TranslationSession.Configuration?
-    @State private var drillRequest: DrillRequest?
-    @State private var handledScene = false
+    @AppStorage("onboarding.done") private var onboardingDone = false
+    @State private var tab: AppTab = ScreenshotScene.current?.tab ?? .today
+    @State private var reminder = Reminder()
 
     var body: some View {
-        NavigationSplitView {
-            List(selection: $selection) {
-                Section {
-                    HeroHeader(
-                        answered: store.answeredCount(),
-                        progress: store.goalProgress(),
-                        streak: store.streak(),
-                        week: store.week()
-                    )
-                }
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
-                .listRowSeparator(.hidden)
-
-                Section {
-                    TodayCard(
-                        dueCount: store.dueCount(),
-                        extraCount: DrillPlanner.extraPractice(store.phrases, now: .now).count,
-                        nextReview: nextReviewText,
-                        mastered: store.masteredCount,
-                        total: store.phrases.count,
-                        onStart: startTodayDrill,
-                        onExtra: startExtraDrill
-                    )
-                }
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
-                .listRowSeparator(.hidden)
-
-                Section {
-                    ComposeCard(
-                        japanese: $japanese,
-                        isGenerating: compose.isGenerating,
-                        status: generator.status,
-                        onSubmit: makeEnglish
-                    )
-                }
-                .listRowBackground(Color.clear)
-                .listRowInsets(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
-                .listRowSeparator(.hidden)
-
-                Section {
-                    ForEach(store.sortedPhrases) { phrase in
-                        NavigationLink(value: phrase.id) {
-                            PhraseRow(phrase: phrase)
-                        }
-                    }
-                    .onDelete { offsets in
-                        let sorted = store.sortedPhrases
-                        store.delete(ids: offsets.map { sorted[$0].id })
-                    }
-                } header: {
-                    Text("わたしのフレーズ（\(store.phrases.count)）")
-                        .font(.headline)
-                        .foregroundStyle(.primary)
-                        .textCase(nil)
-                }
+        TabView(selection: $tab) {
+            Tab("きょう", systemImage: "rectangle.portrait.on.rectangle.portrait", value: AppTab.today) {
+                TodayView(generator: generator)
             }
-            .scrollContentBackground(.hidden)
-            .background(Theme.background(scheme).ignoresSafeArea())
-            .navigationTitle("言いたい英語ドリル")
-            .navigationBarTitleDisplayMode(.inline)
-            .overlay(alignment: .bottom) {
-                if store.phrases.isEmpty {
-                    Text("上の欄に、日本語で言いたいことを書いてみましょう。")
-                        .font(.callout)
-                        .foregroundStyle(.secondary)
-                        .padding(.bottom, 40)
-                }
+            Tab("カード", systemImage: "square.stack.3d.up", value: AppTab.decks) {
+                DecksView()
             }
-        } detail: {
-            if let id = selection, store.phrase(id: id) != nil {
-                PhraseDetailView(phraseID: id) { drillRequest = DrillRequest(ids: [id]) }
-            } else {
-                ContentUnavailableView(
-                    "フレーズを選んでください",
-                    systemImage: "text.bubble",
-                    description: Text("左の一覧から選ぶと、英語・言い方の違い・単語が見られます。")
-                )
-                .background(Theme.background(scheme).ignoresSafeArea())
+            Tab("きろく", systemImage: "calendar", value: AppTab.record) {
+                RecordView()
+            }
+            Tab("せってい", systemImage: "slider.horizontal.3", value: AppTab.settings) {
+                SettingsView(reminder: reminder)
             }
         }
-        .tint(Theme.pink)
-        .sheet(item: $compose.draft) { item in
-            DraftSheet(draft: item, notice: compose.notice) { saved in
-                let id = store.add(saved)
-                selection = id
-                japanese = ""
-            }
+        .tabViewStyle(.sidebarAdaptable)
+        .tint(Ink.pen)
+        .fullScreenCover(isPresented: Binding(get: { !onboardingDone }, set: { onboardingDone = !$0 })) {
+            OnboardingView { onboardingDone = true }
         }
-        .fullScreenCover(item: $drillRequest) { request in
-            DrillView(phraseIDs: request.ids)
-        }
-        .translationTask(translationConfig) { @Sendable [compose] session in
-            // session はこの閉包の中だけで使う（ほかの actor に渡さない）
-            let text = await compose.translatingText
-            let outcome: Result<String, any Error>
-            do {
-                outcome = .success(try await session.translate(text).targetText)
-            } catch {
-                outcome = .failure(error)
-            }
-            await compose.finishTranslation(text: text, outcome: outcome)
-        }
-        .onAppear(perform: openScreenshotScene)
+        .onAppear { reminder.refresh() }
     }
+}
 
-    private var nextReviewText: String? {
-        let upcoming = store.phrases.map(\.review.due).filter { $0 > .now }.min()
-        guard let upcoming else { return nil }
-        let count = store.phrases.filter { Calendar.current.isDate($0.review.due, inSameDayAs: upcoming) }.count
-        let day = Calendar.current.isDateInTomorrow(upcoming) ? "明日" : upcoming.formatted(.dateTime.month().day())
-        return "次の復習：\(day) \(count) 問"
-    }
-
-    private func makeEnglish() {
-        let text = String(japanese.trimmingCharacters(in: .whitespacesAndNewlines).prefix(Phrase.maxJapaneseLength))
-        guard !text.isEmpty, !compose.isGenerating else { return }
-        compose.isGenerating = true
-        switch generator.status {
-        case .available:
-            Task {
-                do {
-                    let result = try await generator.generate(japanese: text)
-                    compose.finishGeneration(result)
-                } catch {
-                    // モデルが断った・失敗したときは翻訳に回す
-                    translate(text)
-                }
-            }
-        case .unavailable:
-            translate(text)
-        }
-    }
-
-    private func translate(_ text: String) {
-        compose.translatingText = text
-        if translationConfig == nil {
-            translationConfig = TranslationSession.Configuration(
-                source: Locale.Language(identifier: "ja"),
-                target: Locale.Language(identifier: "en")
-            )
-        } else {
-            translationConfig?.invalidate()
-        }
-    }
-
-    private func startTodayDrill() {
-        let ids = DrillPlanner.duePhrases(store.phrases, now: .now).map(\.id)
-        guard !ids.isEmpty else { return }
-        drillRequest = DrillRequest(ids: ids)
-    }
-
-    private func startExtraDrill() {
-        let ids = DrillPlanner.extraPractice(store.phrases, now: .now).map(\.id)
-        guard !ids.isEmpty else { return }
-        drillRequest = DrillRequest(ids: ids)
-    }
-
-    /// CI のスクリーンショット用：起動引数 -screenshotScene <名前> で画面を開く
-    private func openScreenshotScene() {
-        guard !handledScene else { return }
-        handledScene = true
-        switch ScreenshotScene.current {
-        case .drill:
-            let ids = store.sortedPhrases.map(\.id)
-            if !ids.isEmpty { drillRequest = DrillRequest(ids: ids) }
-        case .detail:
-            selection = store.sortedPhrases.first?.id
-        case .compose:
-            if let sample = Phrase.samples(now: .now).first {
-                compose.draft = PhraseDraft(
-                    japanese: sample.japanese, english: sample.english,
-                    variants: sample.variants, words: sample.words, source: .model
-                )
-            }
-        case nil:
-            break
-        }
-    }
+enum AppTab: Hashable {
+    case today, decks, record, settings
 }
 
 /// CI のスクリーンショットで開く画面（起動引数 -screenshotScene は UserDefaults の引数ドメインに入る）
 enum ScreenshotScene: String {
-    case drill, detail, compose
+    case onboarding, home, learn, drill, scramble, result, decks, deck, record, settings, share, compose
 
     static var current: ScreenshotScene? {
         UserDefaults.standard.string(forKey: "screenshotScene").flatMap(ScreenshotScene.init(rawValue:))
+    }
+
+    var tab: AppTab {
+        switch self {
+        case .decks, .deck: .decks
+        case .record, .share: .record
+        case .settings: .settings
+        default: .today
+        }
     }
 }
 
@@ -247,5 +95,13 @@ final class ComposeModel {
 struct DrillRequest: Identifiable {
     let id = UUID()
     let ids: [UUID]
+    var demo: DrillDemo?
+}
+
+/// スクリーンショット用に、ドリルの途中の場面を開く
+enum DrillDemo {
+    case recallPulled
+    case scramblePartial
+    case result
 }
 

@@ -1,0 +1,52 @@
+今日は何をする予定？|What are you doing today?|What are your plans for today?|What's up today?|doing=する;today=今日
+もう出かける時間だよ。|It's time to go.|We should get going now.|Time to go!|time to go=出かける時間;go=行く
+ちょっと待って。|Wait a second.|Could you wait a moment, please?|Hang on.|wait=待つ;second=少しの間
+鍵を持った？|Do you have your keys?|Have you got your keys?|Got your keys?|keys=鍵;have=持っている
+雨が降りそうだね。|It looks like it's going to rain.|It looks as though it might rain.|Looks like rain.|looks like=〜のようだ;rain=雨が降る
+傘を持っていったほうがいいよ。|You should take an umbrella.|It might be a good idea to take an umbrella.|Grab an umbrella.|should=〜したほうがいい;umbrella=傘
+今日は寒いね。|It's cold today.|It's rather chilly today, isn't it?|Freezing today!|cold=寒い;today=今日
+寝坊しちゃった。|I overslept.|I'm afraid I overslept this morning.|I slept in.|overslept=寝坊した;I=私は
+晩ごはん、何がいい？|What do you want for dinner?|What would you like for dinner?|What's for dinner?|dinner=晩ごはん;want=ほしい
+もうすぐ着くよ。|I'll be there soon.|I'll be arriving shortly.|Almost there!|be there=着く;soon=もうすぐ
+ゴミを出してくれる？|Could you take out the trash?|Would you mind taking out the trash?|Can you take the trash out?|take out=出す;trash=ゴミ
+洗濯物を取り込んで。|Can you bring in the laundry?|Could you bring the laundry in, please?|Grab the laundry?|bring in=取り込む;laundry=洗濯物
+電気を消してね。|Please turn off the lights.|Could you turn off the lights, please?|Lights off, please.|turn off=消す;lights=電気
+スマホの充電が切れそう。|My phone is about to die.|My phone battery is running low.|My phone's dying.|phone=スマホ;about to=〜しそう
+後で電話するね。|I'll call you later.|I'll give you a call later.|Talk later!|call=電話する;later=後で
+何時に帰ってくる？|What time will you be home?|What time are you coming home?|When are you back?|what time=何時;home=家に
+今日は家でゆっくりする。|I'm going to relax at home today.|I'm planning to take it easy at home today.|Chilling at home today.|relax=ゆっくりする;at home=家で
+週末は何してた？|What did you do over the weekend?|How did you spend your weekend?|Do anything fun this weekend?|weekend=週末;do=する
+最近忙しくて。|I've been busy lately.|I've been rather busy recently.|Super busy lately.|busy=忙しい;lately=最近
+それ、どこで買ったの？|Where did you get that?|Where did you buy that, if you don't mind me asking?|Where'd you get that?|where=どこで;get=手に入れる
+お腹すいた。|I'm hungry.|I'm getting rather hungry.|I'm starving!|hungry=お腹がすいた;I'm=私は
+少し昼寝する。|I'm going to take a nap.|I think I'll take a short nap.|Nap time.|take a nap=昼寝する;going to=〜するつもり
+もう寝るね。|I'm going to bed.|I think I'll go to bed now.|Off to bed.|going to bed=寝る;I'm=私は
+おやすみなさい。|Good night.|Good night. Sleep well.|Night!|good night=おやすみ;night=夜
+よく眠れた？|Did you sleep well?|Did you have a good night's sleep?|Sleep okay?|sleep=眠る;well=よく
+朝ごはんできたよ。|Breakfast is ready.|Breakfast is ready whenever you are.|Breakfast's up!|breakfast=朝ごはん;ready=できた
+今日の天気はどう？|What's the weather like today?|What is the forecast for today?|How's the weather?|weather=天気;today=今日
+エアコンをつけてもいい？|Can I turn on the air conditioner?|Do you mind if I turn on the air conditioning?|Mind if I put the AC on?|turn on=つける;air conditioner=エアコン
+道が混んでいる。|The traffic is bad.|The traffic is quite heavy.|Traffic's terrible.|traffic=道の混み具合;bad=ひどい
+今日はいい天気だね。|It's a nice day today.|What lovely weather we're having.|Gorgeous day!|nice day=いい天気の日;today=今日
+運動しなきゃ。|I need to get some exercise.|I really ought to get some exercise.|Gotta work out.|need to=〜しなきゃ;exercise=運動
+今日はジムに行く。|I'm going to the gym today.|I'm planning to go to the gym today.|Gym day!|gym=ジム;going to=〜へ行く
+どこに置いたっけ？|Where did I put it?|Now, where did I put it?|Where'd I put it?|put=置く;where=どこに
+手伝おうか？|Do you need a hand?|Would you like some help?|Need a hand?|need=必要;a hand=手助け
+気をつけてね。|Take care.|Please take care of yourself.|Be safe!|take care=気をつける;care=注意
+よい一日を。|Have a nice day.|I hope you have a wonderful day.|Have a good one!|have=過ごす;nice day=よい一日
+ちょっと買い物に行ってくる。|I'm going to run some errands.|I'm just going out to do some shopping.|Off to run errands.|errands=用事;going to=〜するつもり
+テレビで何か面白いのやってる？|Is there anything good on TV?|Is there anything interesting on television?|Anything good on TV?|anything=何か;on TV=テレビで
+音を小さくしてくれる？|Could you turn it down?|Would you mind turning the volume down?|Turn it down a bit?|turn it down=音を小さくする;could you=〜してくれる
+冷蔵庫に牛乳ある？|Is there any milk in the fridge?|Do we have any milk in the fridge?|Any milk left?|milk=牛乳;fridge=冷蔵庫
+今日は何曜日だっけ？|What day is it today?|What day of the week is it today?|What day is it?|what day=何曜日;today=今日
+時間がたつのは早いね。|Time flies.|Time really does fly, doesn't it?|Where does the time go?|time=時間;flies=飛ぶように過ぎる
+宿題終わった？|Did you finish your homework?|Have you finished your homework yet?|Homework done?|finish=終える;homework=宿題
+髪を切った？|Did you get a haircut?|Have you had your hair cut?|New haircut?|haircut=散髪;get=してもらう
+それ、いいね。|That looks nice.|That looks lovely.|Nice!|looks=見える;nice=いい
+ちょっと出かけてくる。|I'm heading out for a bit.|I'm just popping out for a while.|Be right back.|heading out=出かける;for a bit=少しの間
+財布を忘れた。|I forgot my wallet.|I'm afraid I've left my wallet at home.|Forgot my wallet!|forgot=忘れた;wallet=財布
+窓を開けてもいい？|Can I open the window?|Do you mind if I open the window?|Mind if I open the window?|open=開ける;window=窓
+今日はついてない日だ。|It's not my day.|Today just isn't my day.|What a day.|not my day=ついてない日;day=日
+明日は早起きしないと。|I need to get up early tomorrow.|I have to wake up early tomorrow.|Early start tomorrow.|get up=起きる;early=早く
+お風呂わいたよ。|The bath is ready.|The bath is ready for you.|Bath's ready!|bath=お風呂;ready=準備できた
+今度の休み、どこか行こうよ。|Let's go somewhere on our next day off.|Shall we go somewhere on our next day off?|Let's go somewhere next time we're off.|somewhere=どこか;day off=休みの日

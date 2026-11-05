@@ -33,6 +33,7 @@ struct Phrase: Codable, Identifiable, Equatable, Sendable {
         case model        // Apple Intelligence（端末の中のモデル）
         case translation  // Apple の翻訳（端末の中）
         case manual       // 自分で書いた
+        case bank         // アプリが用意した束
     }
 
     static let maxJapaneseLength = 200
@@ -47,6 +48,31 @@ struct Phrase: Codable, Identifiable, Equatable, Sendable {
     var words: [VocabItem]
     var source: Source
     var review: ReviewState
+    /// 場面の束（nil は自分で作ったカード）
+    var scene: String?
+    /// 束のカードの ID（自分で作ったカードは nil）
+    var bankID: String?
+
+    var sceneKind: SceneKind { SceneKind(sceneID: scene) }
+
+    private enum CodingKeys: String, CodingKey {
+        case id, createdAt, japanese, english, variants, words, source, review, scene, bankID
+    }
+
+    /// 前の版で保存したデータ（scene・bankID がない）も読めるようにする
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(UUID.self, forKey: .id)
+        createdAt = try c.decode(Date.self, forKey: .createdAt)
+        japanese = try c.decode(String.self, forKey: .japanese)
+        english = try c.decode(String.self, forKey: .english)
+        variants = try c.decodeIfPresent([PhraseVariant].self, forKey: .variants) ?? []
+        words = try c.decodeIfPresent([VocabItem].self, forKey: .words) ?? []
+        source = try c.decodeIfPresent(Source.self, forKey: .source) ?? .manual
+        review = try c.decodeIfPresent(ReviewState.self, forKey: .review) ?? ReviewState(due: createdAt)
+        scene = try c.decodeIfPresent(String.self, forKey: .scene)
+        bankID = try c.decodeIfPresent(String.self, forKey: .bankID)
+    }
 
     init(
         id: UUID = UUID(),
@@ -56,7 +82,9 @@ struct Phrase: Codable, Identifiable, Equatable, Sendable {
         variants: [PhraseVariant] = [],
         words: [VocabItem] = [],
         source: Source,
-        review: ReviewState? = nil
+        review: ReviewState? = nil,
+        scene: String? = nil,
+        bankID: String? = nil
     ) {
         self.id = id
         self.createdAt = createdAt
@@ -66,44 +94,14 @@ struct Phrase: Codable, Identifiable, Equatable, Sendable {
         self.words = words
         self.source = source
         self.review = review ?? ReviewState(due: createdAt)
+        self.scene = scene
+        self.bankID = bankID
     }
 
     mutating func clampLengths() {
         japanese = String(japanese.prefix(Self.maxJapaneseLength))
         english = String(english.prefix(Self.maxEnglishLength))
         words = Array(words.prefix(Self.maxWords))
-    }
-
-    static func samples(now: Date) -> [Phrase] {
-        [
-            Phrase(
-                createdAt: now,
-                japanese: "明日の会議、少し遅らせてもらえますか？",
-                english: "Could we push tomorrow's meeting back a little?",
-                variants: [
-                    PhraseVariant(label: "丁寧", english: "Would it be possible to move tomorrow's meeting a little later?"),
-                    PhraseVariant(label: "くだけた", english: "Can we push tomorrow's meeting back a bit?"),
-                ],
-                words: [
-                    VocabItem(english: "push back", japanese: "（予定を）遅らせる"),
-                    VocabItem(english: "a little", japanese: "少し"),
-                ],
-                source: .manual
-            ),
-            Phrase(
-                createdAt: now.addingTimeInterval(-60),
-                japanese: "駅までの道を教えてもらえますか？",
-                english: "Could you tell me the way to the station?",
-                variants: [
-                    PhraseVariant(label: "くだけた", english: "How do I get to the station?"),
-                ],
-                words: [
-                    VocabItem(english: "the way to", japanese: "〜への道"),
-                    VocabItem(english: "station", japanese: "駅"),
-                ],
-                source: .manual
-            ),
-        ]
     }
 }
 

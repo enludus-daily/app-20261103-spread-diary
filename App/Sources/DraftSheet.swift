@@ -44,7 +44,7 @@ struct DraftSheet: View {
                 Section {
                     HStack(alignment: .top) {
                         TextField("英語を書く", text: $draft.english, axis: .vertical)
-                            .font(.title3.weight(.semibold))
+                            .font(Typo.english(.title3))
                             .lineLimit(1...6)
                             .textInputAutocapitalization(.sentences)
                         if canSave {
@@ -59,14 +59,7 @@ struct DraftSheet: View {
                 if !draft.variants.isEmpty {
                     Section("言い方の違い") {
                         ForEach(draft.variants) { variant in
-                            HStack(alignment: .top) {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    Chip(text: variant.label, color: .purple)
-                                    Text(variant.english)
-                                }
-                                Spacer()
-                                SpeakButton(text: variant.english)
-                            }
+                            VariantLine(label: variant.label, text: variant.english, scene: .mine)
                         }
                     }
                 }
@@ -92,8 +85,7 @@ struct DraftSheet: View {
                                     Button(word) {
                                         draft.words.append(VocabItem(english: word, japanese: ""))
                                     }
-                                    .buttonStyle(.bordered)
-                                    .controlSize(.small)
+                                        .buttonStyle(TileButtonStyle())
                                 }
                             }
                         }
@@ -102,7 +94,9 @@ struct DraftSheet: View {
                     Text("単語カード（\(draft.words.count)/\(Phrase.maxWords)）")
                 }
             }
-            .navigationTitle("ドリルに入れる")
+            .scrollContentBackground(.hidden)
+            .background(RuledPaper(showsMargin: false))
+            .navigationTitle("じぶんのカードにする")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {

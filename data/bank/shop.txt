@@ -1,0 +1,51 @@
+これをください。|I'll take this one.|I'd like this one, please.|This one, please.|take=買う;this one=これ
+見ているだけです。|I'm just looking.|I'm just browsing, thank you.|Just looking.|just=だけ;looking=見ている
+試着してもいいですか？|Can I try this on?|Would it be possible to try this on?|Can I try it on?|try=試す（try 〜 on で試着する）;this=これ
+もっと小さいサイズはありますか？|Do you have this in a smaller size?|Would you have this in a smaller size?|Got a smaller size?|smaller=もっと小さい;size=サイズ
+いくらですか？|How much is it?|Could you tell me how much this is?|How much?|how much=いくら;it=それ
+カードで払えますか？|Can I pay by card?|Is it possible to pay by card?|Card okay?|pay=払う;by card=カードで
+袋はいりません。|I don't need a bag.|I won't need a bag, thank you.|No bag, thanks.|need=いる;bag=袋
+レシートをください。|Could I have a receipt?|Could I have a receipt, please?|Receipt, please.|receipt=レシート;have=もらう
+プレゼント用に包んでもらえますか？|Could you gift-wrap it?|Would you mind wrapping it as a gift?|Can you wrap it?|gift-wrap=プレゼント用に包む;could you=〜してもらえますか
+返品できますか？|Can I return this?|Would it be possible to return this?|Can I bring this back?|return=返品する;this=これ
+二人です。|A table for two, please.|Could we have a table for two, please?|Two, please.|table=席;two=二人
+予約していません。|We don't have a reservation.|I'm afraid we don't have a reservation.|No reservation.|reservation=予約;don't=していない
+メニューをください。|Could I see the menu?|May I see the menu, please?|Menu, please?|see=見る;menu=メニュー
+おすすめは何ですか？|What do you recommend?|What would you recommend?|What's good here?|recommend=すすめる;what=何
+これは辛いですか？|Is this spicy?|Is this dish spicy?|Spicy?|spicy=辛い;this=これ
+同じものをください。|I'll have the same.|I'd like the same, please.|Same for me.|have=注文する;same=同じもの
+お水をください。|Could I have some water?|Could I have a glass of water, please?|Water, please.|water=水;could I have=〜をください
+注文をお願いします。|We're ready to order.|We'd like to order now, please.|Ready to order!|ready=準備できた;order=注文する
+注文したものがまだ来ていません。|My order hasn't come yet.|I'm afraid my order hasn't arrived yet.|Still waiting on my food.|order=注文;yet=まだ
+お会計をお願いします。|Could we have the check?|Could we have the check, please?|Check, please.|check=お会計;have=もらう
+別々に払えますか？|Can we pay separately?|Would it be possible to pay separately?|Separate checks?|pay=払う;separately=別々に
+持ち帰りでお願いします。|To go, please.|I'd like it to go, please.|To go.|to go=持ち帰り;please=お願いします
+店内で食べます。|For here, please.|I'll eat here, please.|For here.|for here=店内で;please=お願いします
+アレルギーがあります。|I have an allergy.|I should mention that I have an allergy.|I'm allergic.|allergy=アレルギー;have=ある
+卵は入っていますか？|Does this have eggs in it?|Could you tell me if this contains egg?|Any eggs in this?|eggs=卵;have=入っている
+氷なしでお願いします。|No ice, please.|Could I have it without ice, please?|No ice.|ice=氷;no=なし
+とてもおいしかったです。|It was delicious.|Everything was absolutely delicious.|So good!|delicious=おいしい;was=だった
+少し安くなりますか？|Could you give me a discount?|Is there any chance of a discount?|Any discount?|discount=値引き;give=くれる
+これの色違いはありますか？|Do you have this in another color?|Would you have this in a different color?|Other colors?|another=別の;color=色
+在庫はありますか？|Do you have this in stock?|Could you check if you have this in stock?|In stock?|in stock=在庫がある;have=ある
+営業時間は何時までですか？|What time do you close?|Could you tell me your closing time?|When do you close?|close=閉まる;what time=何時
+ポイントカードはありません。|I don't have a point card.|I'm afraid I don't have a loyalty card.|No point card.|point card=ポイントカード;don't have=持っていない
+これを温めてもらえますか？|Could you heat this up?|Would you mind heating this up?|Can you heat this up?|heat=温める（heat 〜 up）;this=これ
+箸をください。|Could I have some chopsticks?|Could I have a pair of chopsticks, please?|Chopsticks, please.|chopsticks=箸;have=もらう
+一番人気は何ですか？|What's the most popular one?|Which one is the most popular?|What's popular?|most popular=一番人気;one=もの
+甘すぎないものはありますか？|Do you have anything not too sweet?|Would you have something that isn't too sweet?|Anything less sweet?|too sweet=甘すぎる;anything=何か
+もう少し考えます。|I'll think about it.|I'd like to think about it a little more.|Let me think.|think about=考える;it=それ
+お釣りが違うようです。|I think the change is wrong.|I'm afraid there may be a mistake with my change.|Wrong change, I think.|change=お釣り;wrong=違う
+取り置きできますか？|Could you hold this for me?|Would it be possible to put this aside for me?|Can you hold it?|hold=取り置く;for me=私のために
+大きいサイズでお願いします。|A large, please.|I'd like a large, please.|Large, please.|large=大きいサイズ;please=お願いします
+砂糖とミルクは要りません。|No sugar or milk, please.|I'll take it without sugar or milk, please.|Black, please.|sugar=砂糖;milk=ミルク
+席を移ってもいいですか？|Could we move to another table?|Would it be possible to change tables?|Can we switch tables?|move=移る;another table=別の席
+お手洗いを借りてもいいですか？|May I use the restroom?|Would it be all right to use your restroom?|Can I use the bathroom?|use=使う;restroom=お手洗い
+これは何でできていますか？|What is this made of?|Could you tell me what this is made of?|What's this made of?|made of=〜でできた;what=何
+試食してもいいですか？|Can I try a sample?|May I try a sample?|Can I taste it?|try=試す;sample=試食
+配達してもらえますか？|Can you deliver it?|Would you be able to deliver it?|Do you deliver?|deliver=配達する;it=それを
+すみません、注文を変えたいです。|Excuse me, I'd like to change my order.|Excuse me, would it be possible to change my order?|Can I change my order?|change=変える;order=注文
+デザートはありますか？|Do you have any desserts?|What desserts do you have?|Any desserts?|desserts=デザート;have=ある
+これをもう一つください。|Could I have one more of these?|Could I have another one of these, please?|One more, please.|one more=もう一つ;these=これら
+現金しか使えませんか？|Is it cash only?|Do you only accept cash?|Cash only?|cash=現金;only=だけ
+セールはいつまでですか？|How long is the sale on?|Could you tell me when the sale ends?|When does the sale end?|sale=セール;how long=いつまで

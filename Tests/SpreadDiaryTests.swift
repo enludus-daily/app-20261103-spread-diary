@@ -228,6 +228,118 @@ struct StreakTests {
     }
 }
 
+// MARK: - フレーズの束（手で用意したデータ）
+
+struct PhraseBankTests {
+    private func norm(_ s: String) -> String {
+        s.lowercased().replacingOccurrences(of: "’", with: "'").filter { $0.isLetter || $0.isNumber || $0 == "'" || $0 == " " || $0 == "-" }
+    }
+
+    @Test func hasAtLeast300PhrasesInSixScenes() throws {
+        let bank = try PhraseBank.load()
+        #expect(bank.phrases.count >= 300)
+        for scene in SceneKind.bankScenes {
+            #expect(bank.phrases(in: scene).count >= 45, "\(scene.rawValue)")
+        }
+        #expect(Set(bank.phrases.map(\.scene)) == Set(SceneKind.bankScenes.map(\.rawValue)))
+    }
+
+    @Test func everyPhraseIsComplete() throws {
+        let bank = try PhraseBank.load()
+        #expect(Set(bank.phrases.map(\.id)).count == bank.phrases.count)
+        #expect(Set(bank.phrases.map(\.ja)).count == bank.phrases.count)
+        for p in bank.phrases {
+            #expect(!p.ja.isEmpty && !p.en.isEmpty && !p.polite.isEmpty && !p.casual.isEmpty, "\(p.id)")
+            #expect(!p.words.isEmpty, "\(p.id)")
+            for w in p.words {
+                #expect(!w.ja.isEmpty, "\(p.id)")
+                #expect(norm(p.en).contains(norm(w.en)), "\(p.id): \(w.en)")
+            }
+            #expect(p.en.count <= Phrase.maxEnglishLength && p.ja.count <= Phrase.maxJapaneseLength)
+        }
+    }
+
+    @Test func bankPhraseBecomesDraftWithVariants() throws {
+        let card = try #require(try PhraseBank.load().phrases.first)
+        let draft = card.draft
+        #expect(draft.english == card.en)
+        #expect(draft.variants.map(\.label) == ["丁寧", "くだけた"])
+        #expect(draft.source == .bank)
+    }
+}
+
+// MARK: - 今日の 3 枚・記録の見える化・言い方
+
+struct TodayPlannerTests {
+    private let bank: [BankPhrase] = (1...40).map { i in
+        BankPhrase(id: String(format: "%@-%03d", i % 2 == 0 ? "work" : "travel", i), scene: i % 2 == 0 ? "work" : "travel",
+                   ja: "日本語\(i)", en: "English \(i)", polite: "p", casual: "c", words: [BankWord(en: "English", ja: "英語")])
+    }
+
+    @Test func sameDaySamePicksAndDifferentDaysDiffer() {
+        let a = TodayPlanner.picks(bank: bank, owned: [], scenes: ["work", "travel"], dayKey: "2026-11-05", count: 3)
+        let b = TodayPlanner.picks(bank: bank, owned: [], scenes: ["work", "travel"], dayKey: "2026-11-05", count: 3)
+        let c = TodayPlanner.picks(bank: bank, owned: [], scenes: ["work", "travel"], dayKey: "2026-11-06", count: 3)
+        #expect(a == b)
+        #expect(a.count == 3)
+        #expect(a != c)
+    }
+
+    @Test func skipsOwnedAndKeepsToChosenScenes() {
+        let owned = Set(bank.filter { $0.scene == "work" }.prefix(15).map(\.id))
+        let picks = TodayPlanner.picks(bank: bank, owned: owned, scenes: ["work"], dayKey: "2026-11-05", count: 5)
+        #expect(picks.count == 5)
+        #expect(picks.allSatisfy { $0.hasPrefix("work") && !owned.contains($0) })
+    }
+
+    @Test func fallsBackWhenChosenScenesAreDone() {
+        let owned = Set(bank.filter { $0.scene == "work" }.map(\.id))
+        let picks = TodayPlanner.picks(bank: bank, owned: owned, scenes: ["work"], dayKey: "2026-11-05", count: 3)
+        #expect(picks.count == 3)
+        #expect(picks.allSatisfy { $0.hasPrefix("travel") })
+        #expect(TodayPlanner.picks(bank: bank, owned: Set(bank.map(\.id)), scenes: ["work"], dayKey: "x", count: 3).isEmpty)
+    }
+
+    @Test(arguments: [(0, 0), (1, 1), (2, 1), (3, 2), (5, 2), (6, 3), (9, 3), (10, 4), (40, 4)])
+    func heatLevels(count: Int, level: Int) {
+        #expect(HeatLevel.level(count) == level)
+    }
+
+    @Test func heatmapColumnsAreMondayWeeksEndingToday() {
+        let columns = HeatmapGrid.columns(endingAt: day(5), weeks: 18, calendar: tokyo)
+        #expect(columns.count == 18)
+        #expect(columns.dropLast().allSatisfy { $0.count == 7 })
+        #expect(columns.last?.last.map { tokyo.isDate($0, inSameDayAs: day(5)) } == true)
+        // 2026-11-05 は木曜日。月曜始まりなので最後の列は 4 日
+        #expect(columns.last?.count == 4)
+        #expect(columns.first?.first.map { tokyo.component(.weekday, from: $0) } == 2)
+    }
+
+    @Test func streakMessageNeverBlames() {
+        #expect(StreakMessage.text(streak: 0, totalDays: 0, practicedToday: false).contains("1 日目"))
+        #expect(StreakMessage.text(streak: 4, totalDays: 10, practicedToday: true) == "4 日続いています")
+        #expect(StreakMessage.text(streak: 0, totalDays: 12, practicedToday: false) == "おかえりなさい。これまでに合計 12 日")
+        for text in [StreakMessage.text(streak: 0, totalDays: 3, practicedToday: false), StreakMessage.text(streak: 1, totalDays: 3, practicedToday: false)] {
+            #expect(!text.contains("途切れ"))
+        }
+    }
+
+    @Test func boxDistributionCountsEachBox() {
+        let phrases = [0, 0, 3, 6, 6, 6].map { box in
+            Phrase(createdAt: day(1), japanese: "a", english: "b", source: .manual, review: ReviewState(box: box, due: day(1)))
+        }
+        #expect(BoxDistribution.counts(phrases) == [2, 0, 0, 1, 0, 0, 3])
+    }
+
+    @Test func oldSavedPhrasesStillDecode() throws {
+        let json = #"[{"id":"7C9E6679-7425-40DE-944B-E07FC1F90AE7","createdAt":0,"japanese":"あ","english":"Hi","variants":[],"words":[],"source":"manual","review":{"box":2,"due":0,"correctCount":1,"wrongCount":0}}]"#
+        let phrases = try JSONDecoder().decode([Phrase].self, from: Data(json.utf8))
+        #expect(phrases.first?.review.box == 2)
+        #expect(phrases.first?.scene == nil)
+        #expect(phrases.first?.sceneKind == .mine)
+    }
+}
+
 // MARK: - 保存と、作る流れ（モデルは偽物）
 
 private struct FakeError: Error {}
@@ -251,16 +363,57 @@ struct PhraseStoreTests {
         defaults.removePersistentDomain(forName: suite)
     }
 
-    private func makeStore(seed: Bool = false) -> PhraseStore {
-        PhraseStore(defaults: defaults, key: "phrases", seedSamples: seed, now: day(4))
+    private func makeStore() -> PhraseStore {
+        PhraseStore(defaults: defaults, key: "phrases")
     }
 
-    @Test func firstLaunchSeedsSamplesOnlyOnce() {
-        let store = makeStore(seed: true)
-        #expect(store.phrases.count == 2)
-        #expect(store.dueCount(now: day(4)) == 2)
-        store.delete(ids: store.phrases.map(\.id))
-        #expect(makeStore(seed: true).phrases.isEmpty)
+    @Test func startsEmptyWithoutSamples() {
+        #expect(makeStore().phrases.isEmpty)
+    }
+
+    @Test func todayCardsAreStableAndLearnedOnce() throws {
+        let bank = try PhraseBank.load()
+        let store = makeStore()
+        let first = store.todayCards(bank: bank, count: 3, now: day(5), calendar: tokyo)
+        #expect(first.count == 3)
+        #expect(store.todayCards(bank: bank, count: 3, now: day(5, hour: 22), calendar: tokyo).map(\.id) == first.map(\.id))
+        #expect(makeStore().todayCards(bank: bank, count: 3, now: day(5), calendar: tokyo).map(\.id) == first.map(\.id))
+        #expect(!store.isTodayLearned(now: day(5), calendar: tokyo))
+
+        let ids = store.learnToday(first, now: day(5), calendar: tokyo)
+        #expect(ids.count == 3)
+        #expect(store.phrases.count == 3)
+        #expect(store.isTodayLearned(now: day(5), calendar: tokyo))
+        #expect(store.phrases.allSatisfy { $0.source == .bank && $0.bankID != nil && $0.scene != nil })
+        // めくり終えたあとも、今日のカードは同じ 3 枚のまま
+        #expect(store.todayCards(bank: bank, count: 3, now: day(5), calendar: tokyo).map(\.id) == first.map(\.id))
+        // 同じカードをもう一度通しても増えない
+        store.learnToday(first, now: day(5), calendar: tokyo)
+        #expect(store.phrases.count == 3)
+        // 次の日は、通したカード以外から選ぶ
+        let next = store.todayCards(bank: bank, count: 3, now: day(6), calendar: tokyo)
+        #expect(Set(next.map(\.id)).isDisjoint(with: Set(first.map(\.id))))
+        #expect(store.totalDays == 1)
+    }
+
+    @Test func addFromBankKeepsOneCopy() throws {
+        let bank = try PhraseBank.load()
+        let store = makeStore()
+        let card = try #require(bank.phrases.first)
+        let a = store.addFromBank(card, now: day(5))
+        let b = store.addFromBank(card, now: day(6))
+        #expect(a == b)
+        #expect(store.phrases.count == 1)
+        #expect(store.phrases(in: card.sceneKind).count == 1)
+        #expect(store.phrase(id: a)?.variants.count == 2)
+    }
+
+    @Test func spokenPhrasesAreBoxThreeAndUp() {
+        let store = makeStore()
+        let id = store.add(PhraseDraft(japanese: "a", english: "Thank you so much", variants: [], words: [], source: .manual), now: day(1))
+        #expect(store.spokenPhrases.isEmpty)
+        for d in 1...3 { store.record(id: id, correct: true, now: day(d), calendar: tokyo) }
+        #expect(store.spokenPhrases.map(\.id) == [id])
     }
 
     @Test func generatedDraftIsSavedAndDueImmediately() async throws {

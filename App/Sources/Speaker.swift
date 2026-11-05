@@ -12,7 +12,8 @@ final class Speaker {
         }
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.9
+        let scale = UserDefaults.standard.object(forKey: "settings.speechRate") as? Double ?? 0.9
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * Float(min(max(scale, 0.5), 1.2))
         synthesizer.speak(utterance)
     }
 }

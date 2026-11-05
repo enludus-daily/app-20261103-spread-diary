@@ -1,0 +1,50 @@
+すごくうれしい！|I'm so happy!|I'm absolutely delighted!|This is awesome!|so=すごく;happy=うれしい
+ほっとしました。|What a relief.|I'm so relieved.|Phew!|relief=安心;what a=なんて
+緊張しています。|I'm nervous.|I'm feeling rather nervous.|I'm so nervous!|nervous=緊張している;I'm=私は
+ちょっと疲れた。|I'm a bit tired.|I'm feeling a little tired.|I'm beat.|a bit=ちょっと;tired=疲れた
+がっかりしました。|I'm disappointed.|I have to say I'm disappointed.|What a letdown.|disappointed=がっかりした;I'm=私は
+びっくりした！|You surprised me!|That really surprised me!|You scared me!|surprised=驚かせた;you=あなたが
+楽しみにしています。|I'm looking forward to it.|I'm very much looking forward to it.|Can't wait!|looking forward to=楽しみにする;it=それ
+心配しないで。|Don't worry.|Please don't worry about it.|No worries!|worry=心配する;don't=しないで
+本当にありがとう。|Thank you so much.|I can't thank you enough.|Thanks a million!|thank you=ありがとう;so much=本当に
+ごめんなさい、私のせいです。|I'm sorry, it's my fault.|I apologize. It was my fault.|My bad.|sorry=ごめんなさい;fault=せい
+気にしないで。|Don't worry about it.|Please don't give it a second thought.|No big deal.|worry about=気にする;it=それを
+それは残念だね。|That's too bad.|I'm sorry to hear that.|That sucks.|too bad=残念;that's=それは
+よくやったね！|Good job!|Well done! That was excellent.|Nice work!|good job=よくやった;job=仕事
+自信がありません。|I'm not confident.|I'm not entirely sure of myself.|I'm not so sure.|confident=自信がある;not=ない
+やる気が出ない。|I can't get motivated.|I'm having trouble getting motivated.|I'm just not feeling it.|motivated=やる気が出た;can't=できない
+感動しました。|I was really moved.|I was deeply moved.|That got me!|moved=感動した;really=本当に
+うらやましい！|I'm so jealous!|I'm quite envious.|Lucky you!|jealous=うらやましい;so=すごく
+それは面白いね。|That's interesting.|How interesting.|Cool!|interesting=面白い;that's=それは
+がんばって！|Good luck!|I wish you the best of luck.|You've got this!|good luck=幸運を;luck=運
+もう無理かも。|I don't think I can do it anymore.|I'm not sure I can carry on.|I'm done.|anymore=もう;think=思う
+落ち着いて。|Calm down.|Please try to stay calm.|Chill.|calm down=落ち着く;calm=静か
+怒ってないよ。|I'm not angry.|I'm not upset at all.|I'm not mad.|angry=怒っている;not=ない
+信じられない！|I can't believe it!|That's hard to believe.|No way!|believe=信じる;can't=できない
+自分を誇りに思う。|I'm proud of myself.|I feel proud of what I've done.|Proud of me!|proud of=〜を誇りに思う;myself=自分
+寂しかったよ。|I missed you.|I've really missed you.|Missed you!|missed=寂しく思った;you=あなたを
+それは助かります。|That helps a lot.|That's very helpful.|That's a lifesaver!|helps=助かる;a lot=とても
+すごく眠い。|I'm so sleepy.|I'm terribly sleepy.|I can barely keep my eyes open.|sleepy=眠い;so=すごく
+イライラする。|I'm annoyed.|I'm feeling rather irritated.|That bugs me.|annoyed=イライラした;I'm=私は
+なんとかなるよ。|It'll work out.|I'm sure it will all work out.|It'll be fine.|work out=うまくいく;it'll=〜だろう
+後悔しています。|I regret it.|I deeply regret it.|I wish I hadn't.|regret=後悔する;it=それを
+最高の気分！|I feel great!|I'm feeling wonderful!|Never better!|feel=感じる;great=最高
+ちょっと不安です。|I'm a little worried.|I'm slightly concerned.|Kinda worried.|worried=不安な;a little=ちょっと
+恥ずかしい。|I'm embarrassed.|I feel rather embarrassed.|So embarrassing!|embarrassed=恥ずかしい;I'm=私は
+本当に？|Really?|Is that so?|Seriously?|really=本当に
+なるほど。|I see.|I understand.|Got it.|see=分かる;I=私は
+それは大変だったね。|That must have been tough.|That must have been very hard for you.|Rough!|tough=大変な;must have been=だったに違いない
+応援してるよ。|I'm rooting for you.|I'm supporting you all the way.|I've got your back.|rooting for=応援する;you=あなたを
+ワクワクする！|I'm so excited!|I'm really excited about it!|So pumped!|excited=ワクワクした;so=すごく
+落ち込んでいます。|I'm feeling down.|I'm feeling rather low.|I'm bummed.|feeling down=落ち込む;feeling=気分
+気持ちは分かるよ。|I know how you feel.|I understand how you feel.|I feel you.|know=分かる;feel=感じる
+言いにくいんだけど。|This is hard to say, but.|I'm not sure how to put this, but.|Okay, so, um.|hard to say=言いにくい;but=けれど
+ずっと会いたかった。|I've been wanting to see you.|I've been looking forward to seeing you.|Been dying to see you!|wanting to=〜したかった;see=会う
+いい考えが浮かんだ！|I have an idea!|I've just had an idea!|Ooh, idea!|idea=考え;have=持つ
+気分転換したい。|I need a change of pace.|I could use a change of scenery.|I need a break.|change of pace=気分転換;need=必要
+お大事に。|Take care of yourself.|I hope you feel better soon.|Feel better!|take care of=大事にする;yourself=自分を
+疲れが取れた。|I feel refreshed.|I feel completely refreshed.|Good as new!|refreshed=元気を取り戻した;feel=感じる
+それは素晴らしい！|That's wonderful!|That's absolutely wonderful news!|Amazing!|wonderful=素晴らしい;that's=それは
+少し怖いです。|I'm a little scared.|I'm somewhat frightened.|Kinda scary.|scared=怖い;a little=少し
+どうでもいいよ。|I don't really care.|It doesn't matter to me either way.|Whatever.|care=気にする;really=あまり
+迷っています。|I can't decide.|I'm having trouble deciding.|I'm torn.|decide=決める;can't=できない

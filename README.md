@@ -1,58 +1,68 @@
 # 言いたい英語ドリル（SpreadDiary）
 
-**日本語で言いたいことを書くと、英語の言い方・単語カード・練習ドリルができる** iOS アプリ。自分が本当に言いたいことが、そのまま毎日の復習の材料になる。enludus-daily の 2026-11-03 のアプリ（記録: https://github.com/enludus-daily/daily-ideas/issues/3 ）。
+**言いたいことが、リングの単語カードになる。** 毎日 3 枚めくって覚え、赤シートをずらして思い出す英語のフレーズ帳。職場・旅行・日常・気持ち・お店・人づきあいの 307 枚を手で用意してあり、入力しなくても今日から使える。自分の言いたい日本語も、Apple Intelligence（端末の中）か Apple の翻訳（端末の中）で英語のカードにできる。
 
-> 最初は「見開き英日記」（英文の添削を見開きで比べる）として作ったが、本人の評価（「淡白」）を受けて 2026-11-04 に作り直した。リポジトリ名とスキーム名（SpreadDiary）はそのとき のまま。
+enludus-daily の 2026-11-03 のアプリ（記録: https://github.com/enludus-daily/daily-ideas/issues/3 ）。2026-11-05 に本人の評価（「めっちゃ淡白」「内容がうすすぎる」）を受けて、`.claude/skills/app-quality-bar` の基準で作り直した。リポジトリ名とスキーム名（SpreadDiary）は最初の版のまま。
 
-## だれの・何のため
+## 世界観（look.md §1）
 
-英語を学んでいるが、教材の例文は自分の生活と関係がなく、**自分が言いたいこと**を英語で言えるようにならない人のため。語学アプリのレビューにも「自分の文を作る機会がない」という声がある（daily-ideas #3）。
+題材の棚卸し：リング綴じの単語カード／金属のリング／赤シート／緑のマーカー／罫線のノート（青い罫・赤い余白の線）／付箋／赤ペンの ◎ と ×／「済」の判子／カード箱（覚えた順の仕切り）／日付
 
-## 使い方
+**このアプリでは〔リング綴じの単語カード〕が〔フレーズ 1 枚〕になり、〔赤シート〕が〔答えを隠して思い出す操作〕になる。**
 
-1. 「日本語で言いたいこと」に書く（例：明日の会議、少し遅らせてもらえますか？）
-2. 「英語にしてドリルを作る」
-   - **Apple Intelligence が使えるとき**：端末の中のモデル（Foundation Models の guided generation）が、自然な英文・丁寧な言い方・くだけた言い方・単語と意味を作る
-   - **使えないとき**：Apple の翻訳（Translation。端末の中）で英文にする。単語は文の中からタップしてカードにする
-   - どちらも、保存の前に英語と単語の意味を直せる。翻訳もできないときは、英語を自分で書ける
-3. 「ドリルを始める」：覚えた度合いに合わせて、**並べ替え → 穴埋め → 日本語を見て英語を言う** の順に難しくなる
-4. 間違えたフレーズはすぐまた出し、できたフレーズは 1・2・4・7・15・30 日後に出す（間隔をあけた復習）
-5. 英文は読み上げられる（端末の音声）。続けた日数・覚えた数が分かる
+| 部品 | どこで | 作り |
+|---|---|---|
+| リング綴じのカード（主役） | 今日の 3 枚・ドリル・束・共有カード | `RingCard.swift`：`CardShape`（角丸 6・左上の穴を even-odd で抜く）＋ Canvas の金属のリング。場面ごとに色違いの束 |
+| 赤シート | ドリルの「めくって思い出す」 | `Marks.swift` の `RedSheet`：緑のマーカーを引いた英語に multiply で重ね、下へずらすと見える |
+| 罫線のノート | 全画面の背景 | `Paper.swift` の `RuledPaper`：Canvas で 28pt の罫と赤い余白の線 |
+| 赤ペン・判子 | 正解 ◎・間違い ×・「済」・連続日数 | `PenMark`（線を引く 300ms）、`Hanko`（二重の丸・固定の乱数のかすれ） |
+| カード箱 | きろく・きょうの復習 | 仕切り 0〜6 の枚数を立てたカードの高さで |
+| 付箋 | 空の状態・答えのあと | `StickyNote`、答えのあとの付箋（-1° 傾け） |
+
+## トークン（look.md §2〜4、`Theme.swift`）
+
+- 色：場面の束ごとに 5 段階（accent / soft / deep / paper / tape）。職場 青・旅行 緑・日常 黄・気持ち 桃・お店 橙・人づきあい 紫・じぶん 灰。地 `#FBF8F1`・文字 `#26303B`・補助 `#7D8590`・罫 `#D3E0EC`。ダーク用の値も全部持つ
+- 意味のある段階：覚えた度合い・練習した量を、緑のマーカーの濃さ 5 段階で（ヒートマップ・束の一覧・カード箱）
+- グラデーションは使わない
+- 書体：英語・見出し・大きな数字はセリフ（`.serif`、Dynamic Type に追従）、日本語と操作はサンセリフ。大きな数字は `kerning(-2〜-3)`、小さなラベルは `kerning(0.6)`、変わる数字は `monospacedDigit()`
+- 角丸：カード 6・札 10・ボタン 12・区切り 18（continuous）
+- 余白：4 / 8 / 12 / 16 / 24 / 32、主役の幅は 560 まで
+- 影：置いた紙（0.08・r6・y3）と浮かせた紙（0.18・r10・y8）の 2 種類だけ。ボタンと札は下辺の厚み 3pt で立体にする
+
+## 手応えの表（feel.md §1）
+
+| できごと | 動き | 振動 | 音 |
+|---|---|---|---|
+| 押す（ボタン・札） | 0.94 倍に縮み、下辺の厚み 3pt が沈む。離すと spring(0.25, 0.6) で戻る | 札を選ぶ・赤シートを開く：`.selection` | なし（英語の読み上げを邪魔しない） |
+| カードをめくる | Y 軸で 260ms・easeInOut、半分で面を入れ替え、途中で 1.18 倍に浮かせて影を濃くする | `.impact(.light)` | めくると英語を読み上げる |
+| 赤シートをずらす | 指に追従。半分を超えて離すと spring(0.35, 0.8) で抜け、手前なら戻る | `.selection` | 開いた瞬間に英語を読み上げる |
+| 1 つ正解 | 赤ペンの ◎ を 300ms で引く。答えの罫線が緑に。付箋が下から出る | `.impact(.light)` | 正しい英語を読み上げる |
+| 連続正解（3・5・10…） | 連続の札が 1.08 倍に弾み、数字が numericText で変わる。付箋の見出しが「3 連続！」に | `.impact(.heavy)` | 読み上げ |
+| 間違い | カードが 420ms 横に揺れる（0,-9,8,-6,5,-3,2,0）。赤ペンの × を引く。答えの罫線が赤に | `.error` | 正しい英語を読み上げる |
+| 今日の分が終わった | 「済」の判子が 1.6→1 倍・-8° で押される。付箋の紙吹雪 60 片（2200ms・固定の乱数） | `.success` | なし |
+| 場面の切れ目 | 今日の 3 枚をリングに通す→判子。ドリルの結果はノートのページに大きなセリフの数字 | `.success` | なし |
+
+効果音を入れない理由：電車や職場で使う学習アプリで、英語の読み上げが音の役目を持つため。
+**動きを減らす設定**（`accessibilityReduceMotion`）がオンなら、めくり・揺れ・弾み・紙吹雪・見本の動きを止め、値を直接変える。振動は設定で切れる。
+
+## 中身（depth.md）
+
+- **フレーズの束 307 枚**（`data/bank/*.txt` → `scripts/build-bank.py` → `App/Resources/PhraseBank.json`）：日本語・英語・丁寧・くだけた・単語（英文の中にそのまま出る）。テストで件数と形を確かめる
+- **毎日開く理由**：今日の 3 枚（日付で決まる）／復習（間隔をあけて 1・2・4・7・15・30 日）／今日の目標 5 問の線／連続日数の判子と、途切れても責めない言い方（「おかえりなさい。これまでに合計 n 日」）／18 週のヒートマップ／カード箱／言えるようになった英語の共有カード（`ImageRenderer` で 1080×1920）／毎日のおしらせ（端末の中の通知）
+- **問題の型 4 つ**：並べ替え → 穴埋め → めくって赤シートで思い出す → 聞き取り（覚えた度合いで変わる）
+- **最初の 10 秒**：3 ページのオンボーディング（めくれるカード・ずれる赤シート・進むカード箱の動く見本）→ 今日の 3 枚
+- **状態**：束を読めない・束をすべて通した・復習なし・カードなし・Apple Intelligence が使えない（理由別）・翻訳できない・通知が許可されていない（設定アプリを開く）・カードが見つからない・共有の画像を作れない
+- **設定**：1 日の枚数、場面、振動、読み上げの速さ、おしらせと時刻、使い方をもう一度、プライバシーの説明
+
+作らなかったもの：ウィジェット（App ID の追加と App Group が要るため、今回は見送り）、英語以外の言語、同期・共有のアカウント、課金。
 
 ## iPhone Duo
 
-- ホームは `NavigationSplitView`：内側の画面では左に入力と一覧、右にフレーズの中身。閉じると 1 列に重なる
-- ドリルは size class で並べ方を変える：regular では左に問題、右に答える所。compact では上下
-- 機種・向き・画面の大きさでは決めない（Apple Tech Talk「Prepare your app for iPhone Duo」 https://developer.apple.com/videos/play/tech-talks/111461/ ）
+- タブは `sidebarAdaptable`（内側の画面ではサイドバー）。きょう・今日の 3 枚・ドリルは regular 幅で 2 列に並べる
+- 機種・向き・画面の大きさではなく size class で決める（Apple Tech Talk「Prepare your app for iPhone Duo」）
 
-## 作らなかったもの
+## 版・一次資料
 
-英語以外の言語、同期・共有・バックアップ、通知、課金、ログイン、音声認識（「言ってみる」は自分で判定する）。データは端末の UserDefaults だけ。
-
-## 中身
-
-| パス | 役割 |
-|---|---|
-| `App/Sources/Phrase.swift` | フレーズ・単語カード・言い方の違い・復習の状態（箱と次に出す日） |
-| `App/Sources/Drill.swift` | 単語に分ける、並べ替え・穴埋めの問題を作る、今日のドリルを選ぶ |
-| `App/Sources/PhraseGenerator.swift` | 英語を作る役のプロトコル、出力を整える |
-| `App/Sources/OnDeviceGenerator.swift` | Foundation Models を使う本物（`@Generable` で形を決める） |
-| `App/Sources/PhraseStore.swift` | 保存（UserDefaults）、答えの記録、続けた日数 |
-| `App/Sources/ContentView.swift` ほか | 画面（ホーム、下書きの確認、フレーズの中身、ドリル） |
-| `Tests/SpreadDiaryTests.swift` | 振る舞いのテスト（モデルは偽物に差し替える） |
-| `docs/app-store.json` | App Store Connect に API で入れる情報（daily-actions の asc が読む） |
-| `PRIVACY.md` | プライバシーポリシー |
-
-## 版
-
-- iOS 26.0 以降（Foundation Models が iOS 26 から）、iPhone だけ、Swift 6
-- 一次資料：Foundation Models https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel 、guided generation https://developer.apple.com/documentation/foundationmodels/generating-swift-data-structures-with-guided-generation 、Translation https://developer.apple.com/documentation/translation/translationsession
-- CI：Xcode 27.1、iPhone Duo のシミュレータ（`.github/workflows/ci.yml`）
-
-## 手元（Mac）で開く
-
-```sh
-brew install xcodegen
-xcodegen generate
-open SpreadDiary.xcodeproj
-```
+- iOS 26.0 以降、iPhone だけ、Swift 6。外部の依存なし
+- Foundation Models https://developer.apple.com/documentation/foundationmodels/systemlanguagemodel 、Translation https://developer.apple.com/documentation/translation/translationsession
+- CI：Xcode 27.1、iPhone Duo のシミュレータ。スクリーンショットは起動引数 `-screenshotScene <名前>` で各画面を開いて撮る（見本の記録を別の保存場所に入れる）

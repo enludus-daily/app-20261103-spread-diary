@@ -1,0 +1,52 @@
+明日の会議、少し遅らせてもらえますか？|Could we push tomorrow's meeting back a little?|Would it be possible to move tomorrow's meeting a little later?|Can we push tomorrow's meeting back a bit?|push=（push 〜 back で）遅らせる;a little=少し
+今日は少し早めに帰ります。|I'm going to leave a little early today.|I'd like to leave a little early today, if that's all right.|I'm heading out a bit early today.|leave=帰る・出る;early=早めに
+資料を送っていただけますか？|Could you send me the materials?|Would you mind sending me the materials?|Can you send me the stuff?|send=送る;materials=資料
+少し考える時間をください。|Let me think about it for a bit.|Could I have some time to think it over?|Let me sleep on it.|think about=〜について考える;for a bit=少しの間
+確認してから折り返します。|I'll check and get back to you.|I'll look into it and get back to you shortly.|Let me check and I'll get back to you.|check=確認する;get back to=折り返し連絡する
+締め切りを延ばしてもらえませんか？|Could you extend the deadline?|Would it be possible to extend the deadline?|Any chance we can push the deadline?|extend=延ばす;deadline=締め切り
+画面が見えていますか？|Can you see my screen?|Are you able to see my screen?|Can you see my screen okay?|see=見える;screen=画面
+音声が途切れています。|Your audio is cutting out.|I'm afraid your audio is cutting out.|You're breaking up a bit.|audio=音声;cutting out=途切れる
+もう一度言っていただけますか？|Could you say that again?|I'm sorry, could you repeat that, please?|Sorry, say that again?|say=言う;again=もう一度
+それについては後で話しましょう。|Let's talk about that later.|Perhaps we could discuss that later.|Let's get to that later.|talk about=〜について話す;later=後で
+今週中に終わらせます。|I'll finish it by the end of this week.|I'll have it done by the end of this week.|I'll wrap it up this week.|finish=終わらせる;by the end of=〜の終わりまでに
+手伝ってもらえると助かります。|It would help a lot if you could give me a hand.|I'd really appreciate your help with this.|Could you give me a hand?|help=助ける;give me a hand=手を貸す
+進み具合はどうですか？|How is it going?|How is the project progressing?|How's it going?|how is it going=調子はどう;going=進んでいる
+少し遅れています。|We're a little behind schedule.|I'm afraid we're slightly behind schedule.|We're running a bit behind.|behind schedule=予定より遅れて;a little=少し
+良い考えだと思います。|I think that's a good idea.|That sounds like an excellent idea.|Good idea!|good idea=良い考え;think=思う
+その点には賛成できません。|I don't agree with that point.|I'm not sure I agree with that point.|I don't really buy that.|agree with=〜に賛成する;point=点
+在宅勤務の日です。|I'm working from home today.|I'll be working remotely today.|I'm WFH today.|working from home=在宅勤務;today=今日
+会議室を予約しておきます。|I'll book a meeting room.|I'll reserve a meeting room for us.|I'll grab a room.|book=予約する;meeting room=会議室
+来週の予定はいかがですか？|How does your schedule look next week?|What does your availability look like next week?|Are you free next week?|schedule=予定;next week=来週
+メールを見落としていました。|I missed your email.|I'm sorry, I overlooked your email.|Oops, I missed your email.|missed=見落とした;email=メール
+質問してもいいですか？|Can I ask a question?|May I ask you a question?|Quick question?|ask=たずねる;question=質問
+要点をまとめます。|Let me sum up the main points.|Allow me to summarize the key points.|So, to sum up.|sum up=まとめる;main points=要点
+私の担当ではありません。|That's not my responsibility.|I'm afraid that's outside my area.|That's not on me.|responsibility=担当・責任;not my=私のではない
+すぐに対応します。|I'll take care of it right away.|I'll handle it immediately.|On it!|take care of=対応する;right away=すぐに
+少しお時間いただけますか？|Do you have a minute?|Could I have a moment of your time?|Got a sec?|minute=少しの時間;have=ある
+お先に失礼します。|I'm going to head out now.|If you'll excuse me, I'll be leaving now.|I'm off. See you!|head out=出る;now=今
+お疲れさまでした。|Thanks for your hard work today.|Thank you for all your work today.|Good work today!|hard work=がんばり;thanks for=〜をありがとう
+体調が悪いので休みます。|I'm not feeling well, so I'll take the day off.|I'm unwell, so I'd like to take the day off.|I'm sick, so I'm taking the day off.|feeling well=体調が良い;take the day off=休む
+共有ありがとうございます。|Thanks for sharing.|Thank you for sharing this with us.|Thanks for the heads-up.|sharing=共有;thanks=ありがとう
+それは初めて聞きました。|That's the first time I've heard that.|I wasn't aware of that.|That's news to me.|first time=初めて;heard=聞いた
+優先順位を決めましょう。|Let's set our priorities.|Shall we decide on our priorities?|Let's figure out what comes first.|set=決める;priorities=優先順位
+予算が足りません。|We don't have enough budget.|I'm afraid the budget isn't sufficient.|We're short on budget.|enough=十分な;budget=予算
+もう少し詳しく教えてください。|Could you tell me a bit more?|Could you elaborate on that a little?|Tell me more?|tell me=教えて;a bit more=もう少し
+その件は解決しました。|That issue has been resolved.|I'm happy to say the issue has been resolved.|That's sorted.|issue=件・問題;resolved=解決した
+来週の金曜日はどうですか？|How about next Friday?|Would next Friday work for you?|Next Friday okay?|how about=〜はどう;Friday=金曜日
+間違いを見つけました。|I found a mistake.|I believe I've found an error.|Spotted a mistake.|found=見つけた;mistake=間違い
+私が説明します。|I'll explain it.|Let me walk you through it.|I'll explain.|explain=説明する;I'll=私がします
+決まったら教えてください。|Let me know when it's decided.|Please let me know once it's been decided.|Keep me posted.|let me know=教えて;decided=決まった
+助けてくれてありがとう。|Thanks for helping me out.|I really appreciate your help.|Thanks a ton!|helping=助けること;out=すっかり
+お名前を伺ってもいいですか？|May I have your name?|Could I ask your name, please?|What's your name?|name=名前;may I=〜してもいいですか
+少し休憩しましょう。|Let's take a short break.|Shall we take a short break?|Let's take five.|short break=少しの休憩;take=とる
+これで合っていますか？|Is this correct?|Could you confirm whether this is correct?|Is this right?|correct=正しい;is this=これは
+新しい担当の者です。|I'm the new person in charge.|I've just taken over this role.|I'm the new person on this.|in charge=担当;new=新しい
+電話会議に参加します。|I'll join the call.|I'll be joining the conference call.|I'll hop on the call.|join=参加する;call=通話
+もう少しで終わります。|I'm almost done.|I'm nearly finished.|Almost there!|almost=もう少しで;done=終わった
+目標を達成しました。|We hit our target.|We've achieved our goal.|We crushed it!|hit=達成する;target=目標
+ご意見をお聞かせください。|I'd like to hear your thoughts.|I'd welcome your feedback.|What do you think?|hear=聞く;thoughts=考え
+その日は都合が悪いです。|That day doesn't work for me.|I'm afraid that day doesn't suit me.|I can't do that day.|work for=都合がいい;day=日
+資料を印刷しておきます。|I'll print out the handouts.|I'll have the handouts printed.|I'll print the handouts.|print out=印刷する;handouts=配布資料
+念のため確認させてください。|Just to be sure, let me double-check.|Allow me to double-check, just in case.|Let me double-check.|to be sure=念のため;double-check=再確認する
+初めまして。よろしくお願いします。|Nice to meet you. I look forward to working with you.|It's a pleasure to meet you. I look forward to working with you.|Nice to meet you!|meet=会う;working with=一緒に働く
+今日は以上です。|That's all for today.|That concludes today's meeting.|That's it for today.|that's all=以上;today=今日

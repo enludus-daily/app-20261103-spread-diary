@@ -1,0 +1,5520 @@
+{
+ "_doc": "手で用意したフレーズの束（2026-11-05）。scene: work 職場 / travel 旅行 / daily 日常 / feelings 気持ち / shop お店・レストラン / social 人づきあい。words の en は en の中にそのまま現れる（テストで確かめる）。",
+ "version": 1,
+ "phrases": [
+  {
+   "id": "work-001",
+   "scene": "work",
+   "ja": "明日の会議、少し遅らせてもらえますか？",
+   "en": "Could we push tomorrow's meeting back a little?",
+   "polite": "Would it be possible to move tomorrow's meeting a little later?",
+   "casual": "Can we push tomorrow's meeting back a bit?",
+   "words": [
+    {
+     "en": "push",
+     "ja": "（push 〜 back で）遅らせる"
+    },
+    {
+     "en": "a little",
+     "ja": "少し"
+    }
+   ]
+  },
+  {
+   "id": "work-002",
+   "scene": "work",
+   "ja": "今日は少し早めに帰ります。",
+   "en": "I'm going to leave a little early today.",
+   "polite": "I'd like to leave a little early today, if that's all right.",
+   "casual": "I'm heading out a bit early today.",
+   "words": [
+    {
+     "en": "leave",
+     "ja": "帰る・出る"
+    },
+    {
+     "en": "early",
+     "ja": "早めに"
+    }
+   ]
+  },
+  {
+   "id": "work-003",
+   "scene": "work",
+   "ja": "資料を送っていただけますか？",
+   "en": "Could you send me the materials?",
+   "polite": "Would you mind sending me the materials?",
+   "casual": "Can you send me the stuff?",
+   "words": [
+    {
+     "en": "send",
+     "ja": "送る"
+    },
+    {
+     "en": "materials",
+     "ja": "資料"
+    }
+   ]
+  },
+  {
+   "id": "work-004",
+   "scene": "work",
+   "ja": "少し考える時間をください。",
+   "en": "Let me think about it for a bit.",
+   "polite": "Could I have some time to think it over?",
+   "casual": "Let me sleep on it.",
+   "words": [
+    {
+     "en": "think about",
+     "ja": "〜について考える"
+    },
+    {
+     "en": "for a bit",
+     "ja": "少しの間"
+    }
+   ]
+  },
+  {
+   "id": "work-005",
+   "scene": "work",
+   "ja": "確認してから折り返します。",
+   "en": "I'll check and get back to you.",
+   "polite": "I'll look into it and get back to you shortly.",
+   "casual": "Let me check and I'll get back to you.",
+   "words": [
+    {
+     "en": "check",
+     "ja": "確認する"
+    },
+    {
+     "en": "get back to",
+     "ja": "折り返し連絡する"
+    }
+   ]
+  },
+  {
+   "id": "work-006",
+   "scene": "work",
+   "ja": "締め切りを延ばしてもらえませんか？",
+   "en": "Could you extend the deadline?",
+   "polite": "Would it be possible to extend the deadline?",
+   "casual": "Any chance we can push the deadline?",
+   "words": [
+    {
+     "en": "extend",
+     "ja": "延ばす"
+    },
+    {
+     "en": "deadline",
+     "ja": "締め切り"
+    }
+   ]
+  },
+  {
+   "id": "work-007",
+   "scene": "work",
+   "ja": "画面が見えていますか？",
+   "en": "Can you see my screen?",
+   "polite": "Are you able to see my screen?",
+   "casual": "Can you see my screen okay?",
+   "words": [
+    {
+     "en": "see",
+     "ja": "見える"
+    },
+    {
+     "en": "screen",
+     "ja": "画面"
+    }
+   ]
+  },
+  {
+   "id": "work-008",
+   "scene": "work",
+   "ja": "音声が途切れています。",
+   "en": "Your audio is cutting out.",
+   "polite": "I'm afraid your audio is cutting out.",
+   "casual": "You're breaking up a bit.",
+   "words": [
+    {
+     "en": "audio",
+     "ja": "音声"
+    },
+    {
+     "en": "cutting out",
+     "ja": "途切れる"
+    }
+   ]
+  },
+  {
+   "id": "work-009",
+   "scene": "work",
+   "ja": "もう一度言っていただけますか？",
+   "en": "Could you say that again?",
+   "polite": "I'm sorry, could you repeat that, please?",
+   "casual": "Sorry, say that again?",
+   "words": [
+    {
+     "en": "say",
+     "ja": "言う"
+    },
+    {
+     "en": "again",
+     "ja": "もう一度"
+    }
+   ]
+  },
+  {
+   "id": "work-010",
+   "scene": "work",
+   "ja": "それについては後で話しましょう。",
+   "en": "Let's talk about that later.",
+   "polite": "Perhaps we could discuss that later.",
+   "casual": "Let's get to that later.",
+   "words": [
+    {
+     "en": "talk about",
+     "ja": "〜について話す"
+    },
+    {
+     "en": "later",
+     "ja": "後で"
+    }
+   ]
+  },
+  {
+   "id": "work-011",
+   "scene": "work",
+   "ja": "今週中に終わらせます。",
+   "en": "I'll finish it by the end of this week.",
+   "polite": "I'll have it done by the end of this week.",
+   "casual": "I'll wrap it up this week.",
+   "words": [
+    {
+     "en": "finish",
+     "ja": "終わらせる"
+    },
+    {
+     "en": "by the end of",
+     "ja": "〜の終わりまでに"
+    }
+   ]
+  },
+  {
+   "id": "work-012",
+   "scene": "work",
+   "ja": "手伝ってもらえると助かります。",
+   "en": "It would help a lot if you could give me a hand.",
+   "polite": "I'd really appreciate your help with this.",
+   "casual": "Could you give me a hand?",
+   "words": [
+    {
+     "en": "help",
+     "ja": "助ける"
+    },
+    {
+     "en": "give me a hand",
+     "ja": "手を貸す"
+    }
+   ]
+  },
+  {
+   "id": "work-013",
+   "scene": "work",
+   "ja": "進み具合はどうですか？",
+   "en": "How is it going?",
+   "polite": "How is the project progressing?",
+   "casual": "How's it going?",
+   "words": [
+    {
+     "en": "how is it going",
+     "ja": "調子はどう"
+    },
+    {
+     "en": "going",
+     "ja": "進んでいる"
+    }
+   ]
+  },
+  {
+   "id": "work-014",
+   "scene": "work",
+   "ja": "少し遅れています。",
+   "en": "We're a little behind schedule.",
+   "polite": "I'm afraid we're slightly behind schedule.",
+   "casual": "We're running a bit behind.",
+   "words": [
+    {
+     "en": "behind schedule",
+     "ja": "予定より遅れて"
+    },
+    {
+     "en": "a little",
+     "ja": "少し"
+    }
+   ]
+  },
+  {
+   "id": "work-015",
+   "scene": "work",
+   "ja": "良い考えだと思います。",
+   "en": "I think that's a good idea.",
+   "polite": "That sounds like an excellent idea.",
+   "casual": "Good idea!",
+   "words": [
+    {
+     "en": "good idea",
+     "ja": "良い考え"
+    },
+    {
+     "en": "think",
+     "ja": "思う"
+    }
+   ]
+  },
+  {
+   "id": "work-016",
+   "scene": "work",
+   "ja": "その点には賛成できません。",
+   "en": "I don't agree with that point.",
+   "polite": "I'm not sure I agree with that point.",
+   "casual": "I don't really buy that.",
+   "words": [
+    {
+     "en": "agree with",
+     "ja": "〜に賛成する"
+    },
+    {
+     "en": "point",
+     "ja": "点"
+    }
+   ]
+  },
+  {
+   "id": "work-017",
+   "scene": "work",
+   "ja": "在宅勤務の日です。",
+   "en": "I'm working from home today.",
+   "polite": "I'll be working remotely today.",
+   "casual": "I'm WFH today.",
+   "words": [
+    {
+     "en": "working from home",
+     "ja": "在宅勤務"
+    },
+    {
+     "en": "today",
+     "ja": "今日"
+    }
+   ]
+  },
+  {
+   "id": "work-018",
+   "scene": "work",
+   "ja": "会議室を予約しておきます。",
+   "en": "I'll book a meeting room.",
+   "polite": "I'll reserve a meeting room for us.",
+   "casual": "I'll grab a room.",
+   "words": [
+    {
+     "en": "book",
+     "ja": "予約する"
+    },
+    {
+     "en": "meeting room",
+     "ja": "会議室"
+    }
+   ]
+  },
+  {
+   "id": "work-019",
+   "scene": "work",
+   "ja": "来週の予定はいかがですか？",
+   "en": "How does your schedule look next week?",
+   "polite": "What does your availability look like next week?",
+   "casual": "Are you free next week?",
+   "words": [
+    {
+     "en": "schedule",
+     "ja": "予定"
+    },
+    {
+     "en": "next week",
+     "ja": "来週"
+    }
+   ]
+  },
+  {
+   "id": "work-020",
+   "scene": "work",
+   "ja": "メールを見落としていました。",
+   "en": "I missed your email.",
+   "polite": "I'm sorry, I overlooked your email.",
+   "casual": "Oops, I missed your email.",
+   "words": [
+    {
+     "en": "missed",
+     "ja": "見落とした"
+    },
+    {
+     "en": "email",
+     "ja": "メール"
+    }
+   ]
+  },
+  {
+   "id": "work-021",
+   "scene": "work",
+   "ja": "質問してもいいですか？",
+   "en": "Can I ask a question?",
+   "polite": "May I ask you a question?",
+   "casual": "Quick question?",
+   "words": [
+    {
+     "en": "ask",
+     "ja": "たずねる"
+    },
+    {
+     "en": "question",
+     "ja": "質問"
+    }
+   ]
+  },
+  {
+   "id": "work-022",
+   "scene": "work",
+   "ja": "要点をまとめます。",
+   "en": "Let me sum up the main points.",
+   "polite": "Allow me to summarize the key points.",
+   "casual": "So, to sum up.",
+   "words": [
+    {
+     "en": "sum up",
+     "ja": "まとめる"
+    },
+    {
+     "en": "main points",
+     "ja": "要点"
+    }
+   ]
+  },
+  {
+   "id": "work-023",
+   "scene": "work",
+   "ja": "私の担当ではありません。",
+   "en": "That's not my responsibility.",
+   "polite": "I'm afraid that's outside my area.",
+   "casual": "That's not on me.",
+   "words": [
+    {
+     "en": "responsibility",
+     "ja": "担当・責任"
+    },
+    {
+     "en": "not my",
+     "ja": "私のではない"
+    }
+   ]
+  },
+  {
+   "id": "work-024",
+   "scene": "work",
+   "ja": "すぐに対応します。",
+   "en": "I'll take care of it right away.",
+   "polite": "I'll handle it immediately.",
+   "casual": "On it!",
+   "words": [
+    {
+     "en": "take care of",
+     "ja": "対応する"
+    },
+    {
+     "en": "right away",
+     "ja": "すぐに"
+    }
+   ]
+  },
+  {
+   "id": "work-025",
+   "scene": "work",
+   "ja": "少しお時間いただけますか？",
+   "en": "Do you have a minute?",
+   "polite": "Could I have a moment of your time?",
+   "casual": "Got a sec?",
+   "words": [
+    {
+     "en": "minute",
+     "ja": "少しの時間"
+    },
+    {
+     "en": "have",
+     "ja": "ある"
+    }
+   ]
+  },
+  {
+   "id": "work-026",
+   "scene": "work",
+   "ja": "お先に失礼します。",
+   "en": "I'm going to head out now.",
+   "polite": "If you'll excuse me, I'll be leaving now.",
+   "casual": "I'm off. See you!",
+   "words": [
+    {
+     "en": "head out",
+     "ja": "出る"
+    },
+    {
+     "en": "now",
+     "ja": "今"
+    }
+   ]
+  },
+  {
+   "id": "work-027",
+   "scene": "work",
+   "ja": "お疲れさまでした。",
+   "en": "Thanks for your hard work today.",
+   "polite": "Thank you for all your work today.",
+   "casual": "Good work today!",
+   "words": [
+    {
+     "en": "hard work",
+     "ja": "がんばり"
+    },
+    {
+     "en": "thanks for",
+     "ja": "〜をありがとう"
+    }
+   ]
+  },
+  {
+   "id": "work-028",
+   "scene": "work",
+   "ja": "体調が悪いので休みます。",
+   "en": "I'm not feeling well, so I'll take the day off.",
+   "polite": "I'm unwell, so I'd like to take the day off.",
+   "casual": "I'm sick, so I'm taking the day off.",
+   "words": [
+    {
+     "en": "feeling well",
+     "ja": "体調が良い"
+    },
+    {
+     "en": "take the day off",
+     "ja": "休む"
+    }
+   ]
+  },
+  {
+   "id": "work-029",
+   "scene": "work",
+   "ja": "共有ありがとうございます。",
+   "en": "Thanks for sharing.",
+   "polite": "Thank you for sharing this with us.",
+   "casual": "Thanks for the heads-up.",
+   "words": [
+    {
+     "en": "sharing",
+     "ja": "共有"
+    },
+    {
+     "en": "thanks",
+     "ja": "ありがとう"
+    }
+   ]
+  },
+  {
+   "id": "work-030",
+   "scene": "work",
+   "ja": "それは初めて聞きました。",
+   "en": "That's the first time I've heard that.",
+   "polite": "I wasn't aware of that.",
+   "casual": "That's news to me.",
+   "words": [
+    {
+     "en": "first time",
+     "ja": "初めて"
+    },
+    {
+     "en": "heard",
+     "ja": "聞いた"
+    }
+   ]
+  },
+  {
+   "id": "work-031",
+   "scene": "work",
+   "ja": "優先順位を決めましょう。",
+   "en": "Let's set our priorities.",
+   "polite": "Shall we decide on our priorities?",
+   "casual": "Let's figure out what comes first.",
+   "words": [
+    {
+     "en": "set",
+     "ja": "決める"
+    },
+    {
+     "en": "priorities",
+     "ja": "優先順位"
+    }
+   ]
+  },
+  {
+   "id": "work-032",
+   "scene": "work",
+   "ja": "予算が足りません。",
+   "en": "We don't have enough budget.",
+   "polite": "I'm afraid the budget isn't sufficient.",
+   "casual": "We're short on budget.",
+   "words": [
+    {
+     "en": "enough",
+     "ja": "十分な"
+    },
+    {
+     "en": "budget",
+     "ja": "予算"
+    }
+   ]
+  },
+  {
+   "id": "work-033",
+   "scene": "work",
+   "ja": "もう少し詳しく教えてください。",
+   "en": "Could you tell me a bit more?",
+   "polite": "Could you elaborate on that a little?",
+   "casual": "Tell me more?",
+   "words": [
+    {
+     "en": "tell me",
+     "ja": "教えて"
+    },
+    {
+     "en": "a bit more",
+     "ja": "もう少し"
+    }
+   ]
+  },
+  {
+   "id": "work-034",
+   "scene": "work",
+   "ja": "その件は解決しました。",
+   "en": "That issue has been resolved.",
+   "polite": "I'm happy to say the issue has been resolved.",
+   "casual": "That's sorted.",
+   "words": [
+    {
+     "en": "issue",
+     "ja": "件・問題"
+    },
+    {
+     "en": "resolved",
+     "ja": "解決した"
+    }
+   ]
+  },
+  {
+   "id": "work-035",
+   "scene": "work",
+   "ja": "来週の金曜日はどうですか？",
+   "en": "How about next Friday?",
+   "polite": "Would next Friday work for you?",
+   "casual": "Next Friday okay?",
+   "words": [
+    {
+     "en": "how about",
+     "ja": "〜はどう"
+    },
+    {
+     "en": "Friday",
+     "ja": "金曜日"
+    }
+   ]
+  },
+  {
+   "id": "work-036",
+   "scene": "work",
+   "ja": "間違いを見つけました。",
+   "en": "I found a mistake.",
+   "polite": "I believe I've found an error.",
+   "casual": "Spotted a mistake.",
+   "words": [
+    {
+     "en": "found",
+     "ja": "見つけた"
+    },
+    {
+     "en": "mistake",
+     "ja": "間違い"
+    }
+   ]
+  },
+  {
+   "id": "work-037",
+   "scene": "work",
+   "ja": "私が説明します。",
+   "en": "I'll explain it.",
+   "polite": "Let me walk you through it.",
+   "casual": "I'll explain.",
+   "words": [
+    {
+     "en": "explain",
+     "ja": "説明する"
+    },
+    {
+     "en": "I'll",
+     "ja": "私がします"
+    }
+   ]
+  },
+  {
+   "id": "work-038",
+   "scene": "work",
+   "ja": "決まったら教えてください。",
+   "en": "Let me know when it's decided.",
+   "polite": "Please let me know once it's been decided.",
+   "casual": "Keep me posted.",
+   "words": [
+    {
+     "en": "let me know",
+     "ja": "教えて"
+    },
+    {
+     "en": "decided",
+     "ja": "決まった"
+    }
+   ]
+  },
+  {
+   "id": "work-039",
+   "scene": "work",
+   "ja": "助けてくれてありがとう。",
+   "en": "Thanks for helping me out.",
+   "polite": "I really appreciate your help.",
+   "casual": "Thanks a ton!",
+   "words": [
+    {
+     "en": "helping",
+     "ja": "助けること"
+    },
+    {
+     "en": "out",
+     "ja": "すっかり"
+    }
+   ]
+  },
+  {
+   "id": "work-040",
+   "scene": "work",
+   "ja": "お名前を伺ってもいいですか？",
+   "en": "May I have your name?",
+   "polite": "Could I ask your name, please?",
+   "casual": "What's your name?",
+   "words": [
+    {
+     "en": "name",
+     "ja": "名前"
+    },
+    {
+     "en": "may I",
+     "ja": "〜してもいいですか"
+    }
+   ]
+  },
+  {
+   "id": "work-041",
+   "scene": "work",
+   "ja": "少し休憩しましょう。",
+   "en": "Let's take a short break.",
+   "polite": "Shall we take a short break?",
+   "casual": "Let's take five.",
+   "words": [
+    {
+     "en": "short break",
+     "ja": "少しの休憩"
+    },
+    {
+     "en": "take",
+     "ja": "とる"
+    }
+   ]
+  },
+  {
+   "id": "work-042",
+   "scene": "work",
+   "ja": "これで合っていますか？",
+   "en": "Is this correct?",
+   "polite": "Could you confirm whether this is correct?",
+   "casual": "Is this right?",
+   "words": [
+    {
+     "en": "correct",
+     "ja": "正しい"
+    },
+    {
+     "en": "is this",
+     "ja": "これは"
+    }
+   ]
+  },
+  {
+   "id": "work-043",
+   "scene": "work",
+   "ja": "新しい担当の者です。",
+   "en": "I'm the new person in charge.",
+   "polite": "I've just taken over this role.",
+   "casual": "I'm the new person on this.",
+   "words": [
+    {
+     "en": "in charge",
+     "ja": "担当"
+    },
+    {
+     "en": "new",
+     "ja": "新しい"
+    }
+   ]
+  },
+  {
+   "id": "work-044",
+   "scene": "work",
+   "ja": "電話会議に参加します。",
+   "en": "I'll join the call.",
+   "polite": "I'll be joining the conference call.",
+   "casual": "I'll hop on the call.",
+   "words": [
+    {
+     "en": "join",
+     "ja": "参加する"
+    },
+    {
+     "en": "call",
+     "ja": "通話"
+    }
+   ]
+  },
+  {
+   "id": "work-045",
+   "scene": "work",
+   "ja": "もう少しで終わります。",
+   "en": "I'm almost done.",
+   "polite": "I'm nearly finished.",
+   "casual": "Almost there!",
+   "words": [
+    {
+     "en": "almost",
+     "ja": "もう少しで"
+    },
+    {
+     "en": "done",
+     "ja": "終わった"
+    }
+   ]
+  },
+  {
+   "id": "work-046",
+   "scene": "work",
+   "ja": "目標を達成しました。",
+   "en": "We hit our target.",
+   "polite": "We've achieved our goal.",
+   "casual": "We crushed it!",
+   "words": [
+    {
+     "en": "hit",
+     "ja": "達成する"
+    },
+    {
+     "en": "target",
+     "ja": "目標"
+    }
+   ]
+  },
+  {
+   "id": "work-047",
+   "scene": "work",
+   "ja": "ご意見をお聞かせください。",
+   "en": "I'd like to hear your thoughts.",
+   "polite": "I'd welcome your feedback.",
+   "casual": "What do you think?",
+   "words": [
+    {
+     "en": "hear",
+     "ja": "聞く"
+    },
+    {
+     "en": "thoughts",
+     "ja": "考え"
+    }
+   ]
+  },
+  {
+   "id": "work-048",
+   "scene": "work",
+   "ja": "その日は都合が悪いです。",
+   "en": "That day doesn't work for me.",
+   "polite": "I'm afraid that day doesn't suit me.",
+   "casual": "I can't do that day.",
+   "words": [
+    {
+     "en": "work for",
+     "ja": "都合がいい"
+    },
+    {
+     "en": "day",
+     "ja": "日"
+    }
+   ]
+  },
+  {
+   "id": "work-049",
+   "scene": "work",
+   "ja": "資料を印刷しておきます。",
+   "en": "I'll print out the handouts.",
+   "polite": "I'll have the handouts printed.",
+   "casual": "I'll print the handouts.",
+   "words": [
+    {
+     "en": "print out",
+     "ja": "印刷する"
+    },
+    {
+     "en": "handouts",
+     "ja": "配布資料"
+    }
+   ]
+  },
+  {
+   "id": "work-050",
+   "scene": "work",
+   "ja": "念のため確認させてください。",
+   "en": "Just to be sure, let me double-check.",
+   "polite": "Allow me to double-check, just in case.",
+   "casual": "Let me double-check.",
+   "words": [
+    {
+     "en": "to be sure",
+     "ja": "念のため"
+    },
+    {
+     "en": "double-check",
+     "ja": "再確認する"
+    }
+   ]
+  },
+  {
+   "id": "work-051",
+   "scene": "work",
+   "ja": "初めまして。よろしくお願いします。",
+   "en": "Nice to meet you. I look forward to working with you.",
+   "polite": "It's a pleasure to meet you. I look forward to working with you.",
+   "casual": "Nice to meet you!",
+   "words": [
+    {
+     "en": "meet",
+     "ja": "会う"
+    },
+    {
+     "en": "working with",
+     "ja": "一緒に働く"
+    }
+   ]
+  },
+  {
+   "id": "work-052",
+   "scene": "work",
+   "ja": "今日は以上です。",
+   "en": "That's all for today.",
+   "polite": "That concludes today's meeting.",
+   "casual": "That's it for today.",
+   "words": [
+    {
+     "en": "that's all",
+     "ja": "以上"
+    },
+    {
+     "en": "today",
+     "ja": "今日"
+    }
+   ]
+  },
+  {
+   "id": "travel-001",
+   "scene": "travel",
+   "ja": "駅までの道を教えてもらえますか？",
+   "en": "Could you tell me the way to the station?",
+   "polite": "Excuse me, could you tell me how to get to the station?",
+   "casual": "How do I get to the station?",
+   "words": [
+    {
+     "en": "the way to",
+     "ja": "〜への道"
+    },
+    {
+     "en": "station",
+     "ja": "駅"
+    }
+   ]
+  },
+  {
+   "id": "travel-002",
+   "scene": "travel",
+   "ja": "チェックインをお願いします。",
+   "en": "I'd like to check in, please.",
+   "polite": "I'd like to check in. I have a reservation.",
+   "casual": "Checking in, please.",
+   "words": [
+    {
+     "en": "check in",
+     "ja": "チェックインする"
+    },
+    {
+     "en": "please",
+     "ja": "お願いします"
+    }
+   ]
+  },
+  {
+   "id": "travel-003",
+   "scene": "travel",
+   "ja": "予約しています。名前は田中です。",
+   "en": "I have a reservation under Tanaka.",
+   "polite": "I have a reservation under the name Tanaka.",
+   "casual": "It's booked under Tanaka.",
+   "words": [
+    {
+     "en": "reservation",
+     "ja": "予約"
+    },
+    {
+     "en": "under",
+     "ja": "〜の名前で"
+    }
+   ]
+  },
+  {
+   "id": "travel-004",
+   "scene": "travel",
+   "ja": "荷物を預かってもらえますか？",
+   "en": "Could you keep my luggage?",
+   "polite": "Would you be able to hold my luggage?",
+   "casual": "Can you hold my bags?",
+   "words": [
+    {
+     "en": "keep",
+     "ja": "預かる"
+    },
+    {
+     "en": "luggage",
+     "ja": "荷物"
+    }
+   ]
+  },
+  {
+   "id": "travel-005",
+   "scene": "travel",
+   "ja": "空港まで行きたいです。",
+   "en": "I'd like to go to the airport.",
+   "polite": "Could you take me to the airport, please?",
+   "casual": "Airport, please.",
+   "words": [
+    {
+     "en": "go to",
+     "ja": "〜へ行く"
+    },
+    {
+     "en": "airport",
+     "ja": "空港"
+    }
+   ]
+  },
+  {
+   "id": "travel-006",
+   "scene": "travel",
+   "ja": "この電車は渋谷に止まりますか？",
+   "en": "Does this train stop at Shibuya?",
+   "polite": "Could you tell me if this train stops at Shibuya?",
+   "casual": "Does this stop at Shibuya?",
+   "words": [
+    {
+     "en": "train",
+     "ja": "電車"
+    },
+    {
+     "en": "stop at",
+     "ja": "〜に止まる"
+    }
+   ]
+  },
+  {
+   "id": "travel-007",
+   "scene": "travel",
+   "ja": "乗り換えはどこですか？",
+   "en": "Where do I transfer?",
+   "polite": "Could you tell me where to change trains?",
+   "casual": "Where do I change?",
+   "words": [
+    {
+     "en": "transfer",
+     "ja": "乗り換える"
+    },
+    {
+     "en": "where",
+     "ja": "どこ"
+    }
+   ]
+  },
+  {
+   "id": "travel-008",
+   "scene": "travel",
+   "ja": "切符はどこで買えますか？",
+   "en": "Where can I buy a ticket?",
+   "polite": "Could you tell me where I can buy a ticket?",
+   "casual": "Where are the tickets?",
+   "words": [
+    {
+     "en": "buy",
+     "ja": "買う"
+    },
+    {
+     "en": "ticket",
+     "ja": "切符"
+    }
+   ]
+  },
+  {
+   "id": "travel-009",
+   "scene": "travel",
+   "ja": "写真を撮ってもらえますか？",
+   "en": "Could you take a picture of us?",
+   "polite": "Would you mind taking a picture of us?",
+   "casual": "Can you take our picture?",
+   "words": [
+    {
+     "en": "take a picture",
+     "ja": "写真を撮る"
+    },
+    {
+     "en": "of us",
+     "ja": "私たちの"
+    }
+   ]
+  },
+  {
+   "id": "travel-010",
+   "scene": "travel",
+   "ja": "道に迷ってしまいました。",
+   "en": "I think I'm lost.",
+   "polite": "I'm afraid I've lost my way.",
+   "casual": "I'm lost.",
+   "words": [
+    {
+     "en": "lost",
+     "ja": "迷った"
+    },
+    {
+     "en": "think",
+     "ja": "思う"
+    }
+   ]
+  },
+  {
+   "id": "travel-011",
+   "scene": "travel",
+   "ja": "ここから歩いて行けますか？",
+   "en": "Can I walk there from here?",
+   "polite": "Is it within walking distance from here?",
+   "casual": "Is it walkable from here?",
+   "words": [
+    {
+     "en": "walk",
+     "ja": "歩く"
+    },
+    {
+     "en": "from here",
+     "ja": "ここから"
+    }
+   ]
+  },
+  {
+   "id": "travel-012",
+   "scene": "travel",
+   "ja": "どのくらいかかりますか？",
+   "en": "How long does it take?",
+   "polite": "Roughly how long will it take?",
+   "casual": "How long's it take?",
+   "words": [
+    {
+     "en": "how long",
+     "ja": "どのくらい"
+    },
+    {
+     "en": "take",
+     "ja": "かかる"
+    }
+   ]
+  },
+  {
+   "id": "travel-013",
+   "scene": "travel",
+   "ja": "Wi-Fi のパスワードを教えてください。",
+   "en": "What's the Wi-Fi password?",
+   "polite": "Could you tell me the Wi-Fi password, please?",
+   "casual": "Wi-Fi password?",
+   "words": [
+    {
+     "en": "password",
+     "ja": "パスワード"
+    },
+    {
+     "en": "what's",
+     "ja": "何ですか"
+    }
+   ]
+  },
+  {
+   "id": "travel-014",
+   "scene": "travel",
+   "ja": "部屋を変えてもらえますか？",
+   "en": "Could I change rooms?",
+   "polite": "Would it be possible to move to a different room?",
+   "casual": "Can I switch rooms?",
+   "words": [
+    {
+     "en": "change",
+     "ja": "変える"
+    },
+    {
+     "en": "rooms",
+     "ja": "部屋"
+    }
+   ]
+  },
+  {
+   "id": "travel-015",
+   "scene": "travel",
+   "ja": "朝食は何時からですか？",
+   "en": "What time does breakfast start?",
+   "polite": "Could you tell me what time breakfast is served?",
+   "casual": "When's breakfast?",
+   "words": [
+    {
+     "en": "breakfast",
+     "ja": "朝食"
+    },
+    {
+     "en": "what time",
+     "ja": "何時"
+    }
+   ]
+  },
+  {
+   "id": "travel-016",
+   "scene": "travel",
+   "ja": "タクシーを呼んでもらえますか？",
+   "en": "Could you call a taxi for me?",
+   "polite": "Would you mind calling a taxi for me?",
+   "casual": "Can you get me a taxi?",
+   "words": [
+    {
+     "en": "call",
+     "ja": "呼ぶ"
+    },
+    {
+     "en": "taxi",
+     "ja": "タクシー"
+    }
+   ]
+  },
+  {
+   "id": "travel-017",
+   "scene": "travel",
+   "ja": "観光で来ました。",
+   "en": "I'm here for sightseeing.",
+   "polite": "I'm visiting for sightseeing.",
+   "casual": "Just here for sightseeing.",
+   "words": [
+    {
+     "en": "here for",
+     "ja": "〜のために来た"
+    },
+    {
+     "en": "sightseeing",
+     "ja": "観光"
+    }
+   ]
+  },
+  {
+   "id": "travel-018",
+   "scene": "travel",
+   "ja": "1週間滞在します。",
+   "en": "I'm staying for a week.",
+   "polite": "I'll be staying for one week.",
+   "casual": "I'm here for a week.",
+   "words": [
+    {
+     "en": "staying",
+     "ja": "滞在する"
+    },
+    {
+     "en": "week",
+     "ja": "週"
+    }
+   ]
+  },
+  {
+   "id": "travel-019",
+   "scene": "travel",
+   "ja": "このバスは駅に行きますか？",
+   "en": "Does this bus go to the station?",
+   "polite": "Could you tell me if this bus goes to the station?",
+   "casual": "This bus go to the station?",
+   "words": [
+    {
+     "en": "bus",
+     "ja": "バス"
+    },
+    {
+     "en": "go to",
+     "ja": "〜へ行く"
+    }
+   ]
+  },
+  {
+   "id": "travel-020",
+   "scene": "travel",
+   "ja": "次の駅はどこですか？",
+   "en": "What's the next stop?",
+   "polite": "Could you tell me what the next stop is?",
+   "casual": "Next stop?",
+   "words": [
+    {
+     "en": "next",
+     "ja": "次の"
+    },
+    {
+     "en": "stop",
+     "ja": "停留所"
+    }
+   ]
+  },
+  {
+   "id": "travel-021",
+   "scene": "travel",
+   "ja": "ここで降ります。",
+   "en": "I'll get off here.",
+   "polite": "I'd like to get off here, please.",
+   "casual": "This is my stop.",
+   "words": [
+    {
+     "en": "get off",
+     "ja": "降りる"
+    },
+    {
+     "en": "here",
+     "ja": "ここで"
+    }
+   ]
+  },
+  {
+   "id": "travel-022",
+   "scene": "travel",
+   "ja": "窓側の席をお願いします。",
+   "en": "I'd like a window seat, please.",
+   "polite": "Could I have a window seat, please?",
+   "casual": "Window seat, please.",
+   "words": [
+    {
+     "en": "window seat",
+     "ja": "窓側の席"
+    },
+    {
+     "en": "please",
+     "ja": "お願いします"
+    }
+   ]
+  },
+  {
+   "id": "travel-023",
+   "scene": "travel",
+   "ja": "荷物が出てきません。",
+   "en": "My luggage hasn't come out.",
+   "polite": "I'm afraid my luggage hasn't arrived.",
+   "casual": "My bag's missing.",
+   "words": [
+    {
+     "en": "luggage",
+     "ja": "荷物"
+    },
+    {
+     "en": "come out",
+     "ja": "出てくる"
+    }
+   ]
+  },
+  {
+   "id": "travel-024",
+   "scene": "travel",
+   "ja": "両替はどこでできますか？",
+   "en": "Where can I exchange money?",
+   "polite": "Could you tell me where I can exchange currency?",
+   "casual": "Where's the money exchange?",
+   "words": [
+    {
+     "en": "exchange",
+     "ja": "両替する"
+    },
+    {
+     "en": "money",
+     "ja": "お金"
+    }
+   ]
+  },
+  {
+   "id": "travel-025",
+   "scene": "travel",
+   "ja": "おすすめの観光地はありますか？",
+   "en": "Are there any places you'd recommend?",
+   "polite": "Could you recommend any places to visit?",
+   "casual": "Anywhere good to see?",
+   "words": [
+    {
+     "en": "recommend",
+     "ja": "すすめる"
+    },
+    {
+     "en": "places",
+     "ja": "場所"
+    }
+   ]
+  },
+  {
+   "id": "travel-026",
+   "scene": "travel",
+   "ja": "地図に印をつけてもらえますか？",
+   "en": "Could you mark it on the map?",
+   "polite": "Would you mind marking it on the map for me?",
+   "casual": "Can you show me on the map?",
+   "words": [
+    {
+     "en": "mark",
+     "ja": "印をつける"
+    },
+    {
+     "en": "map",
+     "ja": "地図"
+    }
+   ]
+  },
+  {
+   "id": "travel-027",
+   "scene": "travel",
+   "ja": "入場料はいくらですか？",
+   "en": "How much is the admission?",
+   "polite": "Could you tell me the admission fee?",
+   "casual": "How much to get in?",
+   "words": [
+    {
+     "en": "how much",
+     "ja": "いくら"
+    },
+    {
+     "en": "admission",
+     "ja": "入場料"
+    }
+   ]
+  },
+  {
+   "id": "travel-028",
+   "scene": "travel",
+   "ja": "トイレはどこですか？",
+   "en": "Where is the restroom?",
+   "polite": "Excuse me, where can I find the restroom?",
+   "casual": "Where's the bathroom?",
+   "words": [
+    {
+     "en": "restroom",
+     "ja": "トイレ"
+    },
+    {
+     "en": "where",
+     "ja": "どこ"
+    }
+   ]
+  },
+  {
+   "id": "travel-029",
+   "scene": "travel",
+   "ja": "もっとゆっくり話してください。",
+   "en": "Could you speak more slowly?",
+   "polite": "Would you mind speaking a little more slowly?",
+   "casual": "Slower, please?",
+   "words": [
+    {
+     "en": "speak",
+     "ja": "話す"
+    },
+    {
+     "en": "slowly",
+     "ja": "ゆっくり"
+    }
+   ]
+  },
+  {
+   "id": "travel-030",
+   "scene": "travel",
+   "ja": "英語が少ししか話せません。",
+   "en": "I only speak a little English.",
+   "polite": "I'm afraid my English is limited.",
+   "casual": "My English isn't great.",
+   "words": [
+    {
+     "en": "a little",
+     "ja": "少し"
+    },
+    {
+     "en": "English",
+     "ja": "英語"
+    }
+   ]
+  },
+  {
+   "id": "travel-031",
+   "scene": "travel",
+   "ja": "チェックアウトは何時ですか？",
+   "en": "What time is checkout?",
+   "polite": "Could you tell me the checkout time?",
+   "casual": "When's checkout?",
+   "words": [
+    {
+     "en": "checkout",
+     "ja": "チェックアウト"
+    },
+    {
+     "en": "what time",
+     "ja": "何時"
+    }
+   ]
+  },
+  {
+   "id": "travel-032",
+   "scene": "travel",
+   "ja": "鍵を部屋に置いてきてしまいました。",
+   "en": "I left my key in the room.",
+   "polite": "I'm afraid I've locked my key in the room.",
+   "casual": "I locked myself out.",
+   "words": [
+    {
+     "en": "left",
+     "ja": "置いてきた"
+    },
+    {
+     "en": "key",
+     "ja": "鍵"
+    }
+   ]
+  },
+  {
+   "id": "travel-033",
+   "scene": "travel",
+   "ja": "お湯が出ません。",
+   "en": "There's no hot water.",
+   "polite": "I'm afraid the hot water isn't working.",
+   "casual": "No hot water here.",
+   "words": [
+    {
+     "en": "hot water",
+     "ja": "お湯"
+    },
+    {
+     "en": "no",
+     "ja": "ない"
+    }
+   ]
+  },
+  {
+   "id": "travel-034",
+   "scene": "travel",
+   "ja": "近くにコンビニはありますか？",
+   "en": "Is there a convenience store nearby?",
+   "polite": "Could you tell me if there's a convenience store nearby?",
+   "casual": "Any convenience stores around?",
+   "words": [
+    {
+     "en": "convenience store",
+     "ja": "コンビニ"
+    },
+    {
+     "en": "nearby",
+     "ja": "近くに"
+    }
+   ]
+  },
+  {
+   "id": "travel-035",
+   "scene": "travel",
+   "ja": "往復の切符をください。",
+   "en": "A round-trip ticket, please.",
+   "polite": "I'd like a round-trip ticket, please.",
+   "casual": "Round trip, please.",
+   "words": [
+    {
+     "en": "round-trip",
+     "ja": "往復"
+    },
+    {
+     "en": "ticket",
+     "ja": "切符"
+    }
+   ]
+  },
+  {
+   "id": "travel-036",
+   "scene": "travel",
+   "ja": "電車が遅れています。",
+   "en": "The train is delayed.",
+   "polite": "I'm afraid the train has been delayed.",
+   "casual": "The train's late.",
+   "words": [
+    {
+     "en": "train",
+     "ja": "電車"
+    },
+    {
+     "en": "delayed",
+     "ja": "遅れている"
+    }
+   ]
+  },
+  {
+   "id": "travel-037",
+   "scene": "travel",
+   "ja": "パスポートをなくしました。",
+   "en": "I lost my passport.",
+   "polite": "I'm afraid I've lost my passport.",
+   "casual": "My passport's gone.",
+   "words": [
+    {
+     "en": "lost",
+     "ja": "なくした"
+    },
+    {
+     "en": "passport",
+     "ja": "パスポート"
+    }
+   ]
+  },
+  {
+   "id": "travel-038",
+   "scene": "travel",
+   "ja": "ここに座ってもいいですか？",
+   "en": "Is this seat taken?",
+   "polite": "Excuse me, is anyone sitting here?",
+   "casual": "Anyone sitting here?",
+   "words": [
+    {
+     "en": "seat",
+     "ja": "席"
+    },
+    {
+     "en": "taken",
+     "ja": "取られている"
+    }
+   ]
+  },
+  {
+   "id": "travel-039",
+   "scene": "travel",
+   "ja": "景色がきれいですね。",
+   "en": "The view is beautiful.",
+   "polite": "What a beautiful view.",
+   "casual": "What a view!",
+   "words": [
+    {
+     "en": "view",
+     "ja": "景色"
+    },
+    {
+     "en": "beautiful",
+     "ja": "きれい"
+    }
+   ]
+  },
+  {
+   "id": "travel-040",
+   "scene": "travel",
+   "ja": "日帰りで行けますか？",
+   "en": "Can I go there on a day trip?",
+   "polite": "Is it possible to visit on a day trip?",
+   "casual": "Doable as a day trip?",
+   "words": [
+    {
+     "en": "day trip",
+     "ja": "日帰り"
+    },
+    {
+     "en": "go there",
+     "ja": "そこへ行く"
+    }
+   ]
+  },
+  {
+   "id": "travel-041",
+   "scene": "travel",
+   "ja": "レンタカーを借りたいです。",
+   "en": "I'd like to rent a car.",
+   "polite": "I'd like to hire a car, please.",
+   "casual": "I want to rent a car.",
+   "words": [
+    {
+     "en": "rent",
+     "ja": "借りる"
+    },
+    {
+     "en": "car",
+     "ja": "車"
+    }
+   ]
+  },
+  {
+   "id": "travel-042",
+   "scene": "travel",
+   "ja": "到着が遅くなります。",
+   "en": "I'll be arriving late.",
+   "polite": "I'm afraid I'll be arriving later than planned.",
+   "casual": "I'll be late getting in.",
+   "words": [
+    {
+     "en": "arriving",
+     "ja": "到着する"
+    },
+    {
+     "en": "late",
+     "ja": "遅く"
+    }
+   ]
+  },
+  {
+   "id": "travel-043",
+   "scene": "travel",
+   "ja": "傘を貸してもらえますか？",
+   "en": "Could I borrow an umbrella?",
+   "polite": "Would it be possible to borrow an umbrella?",
+   "casual": "Can I borrow an umbrella?",
+   "words": [
+    {
+     "en": "borrow",
+     "ja": "借りる"
+    },
+    {
+     "en": "umbrella",
+     "ja": "傘"
+    }
+   ]
+  },
+  {
+   "id": "travel-044",
+   "scene": "travel",
+   "ja": "この住所に行ってください。",
+   "en": "Please take me to this address.",
+   "polite": "Could you take me to this address, please?",
+   "casual": "This address, please.",
+   "words": [
+    {
+     "en": "take me to",
+     "ja": "〜へ連れて行く"
+    },
+    {
+     "en": "address",
+     "ja": "住所"
+    }
+   ]
+  },
+  {
+   "id": "travel-045",
+   "scene": "travel",
+   "ja": "クレジットカードは使えますか？",
+   "en": "Do you take credit cards?",
+   "polite": "Do you accept credit cards?",
+   "casual": "Cards okay?",
+   "words": [
+    {
+     "en": "take",
+     "ja": "受け付ける"
+    },
+    {
+     "en": "credit cards",
+     "ja": "クレジットカード"
+    }
+   ]
+  },
+  {
+   "id": "travel-046",
+   "scene": "travel",
+   "ja": "帰りの便は何時ですか？",
+   "en": "What time is the return flight?",
+   "polite": "Could you tell me the time of the return flight?",
+   "casual": "When's the flight back?",
+   "words": [
+    {
+     "en": "return flight",
+     "ja": "帰りの便"
+    },
+    {
+     "en": "what time",
+     "ja": "何時"
+    }
+   ]
+  },
+  {
+   "id": "travel-047",
+   "scene": "travel",
+   "ja": "予定より一日早く帰ります。",
+   "en": "I'm going back a day early.",
+   "polite": "I'll be returning a day earlier than planned.",
+   "casual": "Heading home a day early.",
+   "words": [
+    {
+     "en": "going back",
+     "ja": "帰る"
+    },
+    {
+     "en": "a day early",
+     "ja": "一日早く"
+    }
+   ]
+  },
+  {
+   "id": "travel-048",
+   "scene": "travel",
+   "ja": "ここは何で有名ですか？",
+   "en": "What is this place famous for?",
+   "polite": "What is this area known for?",
+   "casual": "What's this place famous for?",
+   "words": [
+    {
+     "en": "famous for",
+     "ja": "〜で有名"
+    },
+    {
+     "en": "place",
+     "ja": "場所"
+    }
+   ]
+  },
+  {
+   "id": "travel-049",
+   "scene": "travel",
+   "ja": "写真を撮ってもいいですか？",
+   "en": "Can I take pictures here?",
+   "polite": "Is it all right to take photos here?",
+   "casual": "Photos okay here?",
+   "words": [
+    {
+     "en": "take pictures",
+     "ja": "写真を撮る"
+    },
+    {
+     "en": "here",
+     "ja": "ここで"
+    }
+   ]
+  },
+  {
+   "id": "travel-050",
+   "scene": "travel",
+   "ja": "旅行を楽しんでいます。",
+   "en": "I'm enjoying my trip.",
+   "polite": "I'm really enjoying my trip.",
+   "casual": "Loving this trip!",
+   "words": [
+    {
+     "en": "enjoying",
+     "ja": "楽しんでいる"
+    },
+    {
+     "en": "trip",
+     "ja": "旅行"
+    }
+   ]
+  },
+  {
+   "id": "travel-051",
+   "scene": "travel",
+   "ja": "空港行きのバスはありますか？",
+   "en": "Is there a bus to the airport?",
+   "polite": "Could you tell me if there's a bus to the airport?",
+   "casual": "Any buses to the airport?",
+   "words": [
+    {
+     "en": "bus",
+     "ja": "バス"
+    },
+    {
+     "en": "airport",
+     "ja": "空港"
+    }
+   ]
+  },
+  {
+   "id": "travel-052",
+   "scene": "travel",
+   "ja": "もう一泊したいです。",
+   "en": "I'd like to stay one more night.",
+   "polite": "Would it be possible to extend my stay by one night?",
+   "casual": "Can I stay another night?",
+   "words": [
+    {
+     "en": "stay",
+     "ja": "泊まる"
+    },
+    {
+     "en": "one more night",
+     "ja": "もう一泊"
+    }
+   ]
+  },
+  {
+   "id": "daily-001",
+   "scene": "daily",
+   "ja": "今日は何をする予定？",
+   "en": "What are you doing today?",
+   "polite": "What are your plans for today?",
+   "casual": "What's up today?",
+   "words": [
+    {
+     "en": "doing",
+     "ja": "する"
+    },
+    {
+     "en": "today",
+     "ja": "今日"
+    }
+   ]
+  },
+  {
+   "id": "daily-002",
+   "scene": "daily",
+   "ja": "もう出かける時間だよ。",
+   "en": "It's time to go.",
+   "polite": "We should get going now.",
+   "casual": "Time to go!",
+   "words": [
+    {
+     "en": "time to go",
+     "ja": "出かける時間"
+    },
+    {
+     "en": "go",
+     "ja": "行く"
+    }
+   ]
+  },
+  {
+   "id": "daily-003",
+   "scene": "daily",
+   "ja": "ちょっと待って。",
+   "en": "Wait a second.",
+   "polite": "Could you wait a moment, please?",
+   "casual": "Hang on.",
+   "words": [
+    {
+     "en": "wait",
+     "ja": "待つ"
+    },
+    {
+     "en": "second",
+     "ja": "少しの間"
+    }
+   ]
+  },
+  {
+   "id": "daily-004",
+   "scene": "daily",
+   "ja": "鍵を持った？",
+   "en": "Do you have your keys?",
+   "polite": "Have you got your keys?",
+   "casual": "Got your keys?",
+   "words": [
+    {
+     "en": "keys",
+     "ja": "鍵"
+    },
+    {
+     "en": "have",
+     "ja": "持っている"
+    }
+   ]
+  },
+  {
+   "id": "daily-005",
+   "scene": "daily",
+   "ja": "雨が降りそうだね。",
+   "en": "It looks like it's going to rain.",
+   "polite": "It looks as though it might rain.",
+   "casual": "Looks like rain.",
+   "words": [
+    {
+     "en": "looks like",
+     "ja": "〜のようだ"
+    },
+    {
+     "en": "rain",
+     "ja": "雨が降る"
+    }
+   ]
+  },
+  {
+   "id": "daily-006",
+   "scene": "daily",
+   "ja": "傘を持っていったほうがいいよ。",
+   "en": "You should take an umbrella.",
+   "polite": "It might be a good idea to take an umbrella.",
+   "casual": "Grab an umbrella.",
+   "words": [
+    {
+     "en": "should",
+     "ja": "〜したほうがいい"
+    },
+    {
+     "en": "umbrella",
+     "ja": "傘"
+    }
+   ]
+  },
+  {
+   "id": "daily-007",
+   "scene": "daily",
+   "ja": "今日は寒いね。",
+   "en": "It's cold today.",
+   "polite": "It's rather chilly today, isn't it?",
+   "casual": "Freezing today!",
+   "words": [
+    {
+     "en": "cold",
+     "ja": "寒い"
+    },
+    {
+     "en": "today",
+     "ja": "今日"
+    }
+   ]
+  },
+  {
+   "id": "daily-008",
+   "scene": "daily",
+   "ja": "寝坊しちゃった。",
+   "en": "I overslept.",
+   "polite": "I'm afraid I overslept this morning.",
+   "casual": "I slept in.",
+   "words": [
+    {
+     "en": "overslept",
+     "ja": "寝坊した"
+    },
+    {
+     "en": "I",
+     "ja": "私は"
+    }
+   ]
+  },
+  {
+   "id": "daily-009",
+   "scene": "daily",
+   "ja": "晩ごはん、何がいい？",
+   "en": "What do you want for dinner?",
+   "polite": "What would you like for dinner?",
+   "casual": "What's for dinner?",
+   "words": [
+    {
+     "en": "dinner",
+     "ja": "晩ごはん"
+    },
+    {
+     "en": "want",
+     "ja": "ほしい"
+    }
+   ]
+  },
+  {
+   "id": "daily-010",
+   "scene": "daily",
+   "ja": "もうすぐ着くよ。",
+   "en": "I'll be there soon.",
+   "polite": "I'll be arriving shortly.",
+   "casual": "Almost there!",
+   "words": [
+    {
+     "en": "be there",
+     "ja": "着く"
+    },
+    {
+     "en": "soon",
+     "ja": "もうすぐ"
+    }
+   ]
+  },
+  {
+   "id": "daily-011",
+   "scene": "daily",
+   "ja": "ゴミを出してくれる？",
+   "en": "Could you take out the trash?",
+   "polite": "Would you mind taking out the trash?",
+   "casual": "Can you take the trash out?",
+   "words": [
+    {
+     "en": "take out",
+     "ja": "出す"
+    },
+    {
+     "en": "trash",
+     "ja": "ゴミ"
+    }
+   ]
+  },
+  {
+   "id": "daily-012",
+   "scene": "daily",
+   "ja": "洗濯物を取り込んで。",
+   "en": "Can you bring in the laundry?",
+   "polite": "Could you bring the laundry in, please?",
+   "casual": "Grab the laundry?",
+   "words": [
+    {
+     "en": "bring in",
+     "ja": "取り込む"
+    },
+    {
+     "en": "laundry",
+     "ja": "洗濯物"
+    }
+   ]
+  },
+  {
+   "id": "daily-013",
+   "scene": "daily",
+   "ja": "電気を消してね。",
+   "en": "Please turn off the lights.",
+   "polite": "Could you turn off the lights, please?",
+   "casual": "Lights off, please.",
+   "words": [
+    {
+     "en": "turn off",
+     "ja": "消す"
+    },
+    {
+     "en": "lights",
+     "ja": "電気"
+    }
+   ]
+  },
+  {
+   "id": "daily-014",
+   "scene": "daily",
+   "ja": "スマホの充電が切れそう。",
+   "en": "My phone is about to die.",
+   "polite": "My phone battery is running low.",
+   "casual": "My phone's dying.",
+   "words": [
+    {
+     "en": "phone",
+     "ja": "スマホ"
+    },
+    {
+     "en": "about to",
+     "ja": "〜しそう"
+    }
+   ]
+  },
+  {
+   "id": "daily-015",
+   "scene": "daily",
+   "ja": "後で電話するね。",
+   "en": "I'll call you later.",
+   "polite": "I'll give you a call later.",
+   "casual": "Talk later!",
+   "words": [
+    {
+     "en": "call",
+     "ja": "電話する"
+    },
+    {
+     "en": "later",
+     "ja": "後で"
+    }
+   ]
+  },
+  {
+   "id": "daily-016",
+   "scene": "daily",
+   "ja": "何時に帰ってくる？",
+   "en": "What time will you be home?",
+   "polite": "What time are you coming home?",
+   "casual": "When are you back?",
+   "words": [
+    {
+     "en": "what time",
+     "ja": "何時"
+    },
+    {
+     "en": "home",
+     "ja": "家に"
+    }
+   ]
+  },
+  {
+   "id": "daily-017",
+   "scene": "daily",
+   "ja": "今日は家でゆっくりする。",
+   "en": "I'm going to relax at home today.",
+   "polite": "I'm planning to take it easy at home today.",
+   "casual": "Chilling at home today.",
+   "words": [
+    {
+     "en": "relax",
+     "ja": "ゆっくりする"
+    },
+    {
+     "en": "at home",
+     "ja": "家で"
+    }
+   ]
+  },
+  {
+   "id": "daily-018",
+   "scene": "daily",
+   "ja": "週末は何してた？",
+   "en": "What did you do over the weekend?",
+   "polite": "How did you spend your weekend?",
+   "casual": "Do anything fun this weekend?",
+   "words": [
+    {
+     "en": "weekend",
+     "ja": "週末"
+    },
+    {
+     "en": "do",
+     "ja": "する"
+    }
+   ]
+  },
+  {
+   "id": "daily-019",
+   "scene": "daily",
+   "ja": "最近忙しくて。",
+   "en": "I've been busy lately.",
+   "polite": "I've been rather busy recently.",
+   "casual": "Super busy lately.",
+   "words": [
+    {
+     "en": "busy",
+     "ja": "忙しい"
+    },
+    {
+     "en": "lately",
+     "ja": "最近"
+    }
+   ]
+  },
+  {
+   "id": "daily-020",
+   "scene": "daily",
+   "ja": "それ、どこで買ったの？",
+   "en": "Where did you get that?",
+   "polite": "Where did you buy that, if you don't mind me asking?",
+   "casual": "Where'd you get that?",
+   "words": [
+    {
+     "en": "where",
+     "ja": "どこで"
+    },
+    {
+     "en": "get",
+     "ja": "手に入れる"
+    }
+   ]
+  },
+  {
+   "id": "daily-021",
+   "scene": "daily",
+   "ja": "お腹すいた。",
+   "en": "I'm hungry.",
+   "polite": "I'm getting rather hungry.",
+   "casual": "I'm starving!",
+   "words": [
+    {
+     "en": "hungry",
+     "ja": "お腹がすいた"
+    },
+    {
+     "en": "I'm",
+     "ja": "私は"
+    }
+   ]
+  },
+  {
+   "id": "daily-022",
+   "scene": "daily",
+   "ja": "少し昼寝する。",
+   "en": "I'm going to take a nap.",
+   "polite": "I think I'll take a short nap.",
+   "casual": "Nap time.",
+   "words": [
+    {
+     "en": "take a nap",
+     "ja": "昼寝する"
+    },
+    {
+     "en": "going to",
+     "ja": "〜するつもり"
+    }
+   ]
+  },
+  {
+   "id": "daily-023",
+   "scene": "daily",
+   "ja": "もう寝るね。",
+   "en": "I'm going to bed.",
+   "polite": "I think I'll go to bed now.",
+   "casual": "Off to bed.",
+   "words": [
+    {
+     "en": "going to bed",
+     "ja": "寝る"
+    },
+    {
+     "en": "I'm",
+     "ja": "私は"
+    }
+   ]
+  },
+  {
+   "id": "daily-024",
+   "scene": "daily",
+   "ja": "おやすみなさい。",
+   "en": "Good night.",
+   "polite": "Good night. Sleep well.",
+   "casual": "Night!",
+   "words": [
+    {
+     "en": "good night",
+     "ja": "おやすみ"
+    },
+    {
+     "en": "night",
+     "ja": "夜"
+    }
+   ]
+  },
+  {
+   "id": "daily-025",
+   "scene": "daily",
+   "ja": "よく眠れた？",
+   "en": "Did you sleep well?",
+   "polite": "Did you have a good night's sleep?",
+   "casual": "Sleep okay?",
+   "words": [
+    {
+     "en": "sleep",
+     "ja": "眠る"
+    },
+    {
+     "en": "well",
+     "ja": "よく"
+    }
+   ]
+  },
+  {
+   "id": "daily-026",
+   "scene": "daily",
+   "ja": "朝ごはんできたよ。",
+   "en": "Breakfast is ready.",
+   "polite": "Breakfast is ready whenever you are.",
+   "casual": "Breakfast's up!",
+   "words": [
+    {
+     "en": "breakfast",
+     "ja": "朝ごはん"
+    },
+    {
+     "en": "ready",
+     "ja": "できた"
+    }
+   ]
+  },
+  {
+   "id": "daily-027",
+   "scene": "daily",
+   "ja": "今日の天気はどう？",
+   "en": "What's the weather like today?",
+   "polite": "What is the forecast for today?",
+   "casual": "How's the weather?",
+   "words": [
+    {
+     "en": "weather",
+     "ja": "天気"
+    },
+    {
+     "en": "today",
+     "ja": "今日"
+    }
+   ]
+  },
+  {
+   "id": "daily-028",
+   "scene": "daily",
+   "ja": "エアコンをつけてもいい？",
+   "en": "Can I turn on the air conditioner?",
+   "polite": "Do you mind if I turn on the air conditioning?",
+   "casual": "Mind if I put the AC on?",
+   "words": [
+    {
+     "en": "turn on",
+     "ja": "つける"
+    },
+    {
+     "en": "air conditioner",
+     "ja": "エアコン"
+    }
+   ]
+  },
+  {
+   "id": "daily-029",
+   "scene": "daily",
+   "ja": "道が混んでいる。",
+   "en": "The traffic is bad.",
+   "polite": "The traffic is quite heavy.",
+   "casual": "Traffic's terrible.",
+   "words": [
+    {
+     "en": "traffic",
+     "ja": "道の混み具合"
+    },
+    {
+     "en": "bad",
+     "ja": "ひどい"
+    }
+   ]
+  },
+  {
+   "id": "daily-030",
+   "scene": "daily",
+   "ja": "今日はいい天気だね。",
+   "en": "It's a nice day today.",
+   "polite": "What lovely weather we're having.",
+   "casual": "Gorgeous day!",
+   "words": [
+    {
+     "en": "nice day",
+     "ja": "いい天気の日"
+    },
+    {
+     "en": "today",
+     "ja": "今日"
+    }
+   ]
+  },
+  {
+   "id": "daily-031",
+   "scene": "daily",
+   "ja": "運動しなきゃ。",
+   "en": "I need to get some exercise.",
+   "polite": "I really ought to get some exercise.",
+   "casual": "Gotta work out.",
+   "words": [
+    {
+     "en": "need to",
+     "ja": "〜しなきゃ"
+    },
+    {
+     "en": "exercise",
+     "ja": "運動"
+    }
+   ]
+  },
+  {
+   "id": "daily-032",
+   "scene": "daily",
+   "ja": "今日はジムに行く。",
+   "en": "I'm going to the gym today.",
+   "polite": "I'm planning to go to the gym today.",
+   "casual": "Gym day!",
+   "words": [
+    {
+     "en": "gym",
+     "ja": "ジム"
+    },
+    {
+     "en": "going to",
+     "ja": "〜へ行く"
+    }
+   ]
+  },
+  {
+   "id": "daily-033",
+   "scene": "daily",
+   "ja": "どこに置いたっけ？",
+   "en": "Where did I put it?",
+   "polite": "Now, where did I put it?",
+   "casual": "Where'd I put it?",
+   "words": [
+    {
+     "en": "put",
+     "ja": "置く"
+    },
+    {
+     "en": "where",
+     "ja": "どこに"
+    }
+   ]
+  },
+  {
+   "id": "daily-034",
+   "scene": "daily",
+   "ja": "手伝おうか？",
+   "en": "Do you need a hand?",
+   "polite": "Would you like some help?",
+   "casual": "Need a hand?",
+   "words": [
+    {
+     "en": "need",
+     "ja": "必要"
+    },
+    {
+     "en": "a hand",
+     "ja": "手助け"
+    }
+   ]
+  },
+  {
+   "id": "daily-035",
+   "scene": "daily",
+   "ja": "気をつけてね。",
+   "en": "Take care.",
+   "polite": "Please take care of yourself.",
+   "casual": "Be safe!",
+   "words": [
+    {
+     "en": "take care",
+     "ja": "気をつける"
+    },
+    {
+     "en": "care",
+     "ja": "注意"
+    }
+   ]
+  },
+  {
+   "id": "daily-036",
+   "scene": "daily",
+   "ja": "よい一日を。",
+   "en": "Have a nice day.",
+   "polite": "I hope you have a wonderful day.",
+   "casual": "Have a good one!",
+   "words": [
+    {
+     "en": "have",
+     "ja": "過ごす"
+    },
+    {
+     "en": "nice day",
+     "ja": "よい一日"
+    }
+   ]
+  },
+  {
+   "id": "daily-037",
+   "scene": "daily",
+   "ja": "ちょっと買い物に行ってくる。",
+   "en": "I'm going to run some errands.",
+   "polite": "I'm just going out to do some shopping.",
+   "casual": "Off to run errands.",
+   "words": [
+    {
+     "en": "errands",
+     "ja": "用事"
+    },
+    {
+     "en": "going to",
+     "ja": "〜するつもり"
+    }
+   ]
+  },
+  {
+   "id": "daily-038",
+   "scene": "daily",
+   "ja": "テレビで何か面白いのやってる？",
+   "en": "Is there anything good on TV?",
+   "polite": "Is there anything interesting on television?",
+   "casual": "Anything good on TV?",
+   "words": [
+    {
+     "en": "anything",
+     "ja": "何か"
+    },
+    {
+     "en": "on TV",
+     "ja": "テレビで"
+    }
+   ]
+  },
+  {
+   "id": "daily-039",
+   "scene": "daily",
+   "ja": "音を小さくしてくれる？",
+   "en": "Could you turn it down?",
+   "polite": "Would you mind turning the volume down?",
+   "casual": "Turn it down a bit?",
+   "words": [
+    {
+     "en": "turn it down",
+     "ja": "音を小さくする"
+    },
+    {
+     "en": "could you",
+     "ja": "〜してくれる"
+    }
+   ]
+  },
+  {
+   "id": "daily-040",
+   "scene": "daily",
+   "ja": "冷蔵庫に牛乳ある？",
+   "en": "Is there any milk in the fridge?",
+   "polite": "Do we have any milk in the fridge?",
+   "casual": "Any milk left?",
+   "words": [
+    {
+     "en": "milk",
+     "ja": "牛乳"
+    },
+    {
+     "en": "fridge",
+     "ja": "冷蔵庫"
+    }
+   ]
+  },
+  {
+   "id": "daily-041",
+   "scene": "daily",
+   "ja": "今日は何曜日だっけ？",
+   "en": "What day is it today?",
+   "polite": "What day of the week is it today?",
+   "casual": "What day is it?",
+   "words": [
+    {
+     "en": "what day",
+     "ja": "何曜日"
+    },
+    {
+     "en": "today",
+     "ja": "今日"
+    }
+   ]
+  },
+  {
+   "id": "daily-042",
+   "scene": "daily",
+   "ja": "時間がたつのは早いね。",
+   "en": "Time flies.",
+   "polite": "Time really does fly, doesn't it?",
+   "casual": "Where does the time go?",
+   "words": [
+    {
+     "en": "time",
+     "ja": "時間"
+    },
+    {
+     "en": "flies",
+     "ja": "飛ぶように過ぎる"
+    }
+   ]
+  },
+  {
+   "id": "daily-043",
+   "scene": "daily",
+   "ja": "宿題終わった？",
+   "en": "Did you finish your homework?",
+   "polite": "Have you finished your homework yet?",
+   "casual": "Homework done?",
+   "words": [
+    {
+     "en": "finish",
+     "ja": "終える"
+    },
+    {
+     "en": "homework",
+     "ja": "宿題"
+    }
+   ]
+  },
+  {
+   "id": "daily-044",
+   "scene": "daily",
+   "ja": "髪を切った？",
+   "en": "Did you get a haircut?",
+   "polite": "Have you had your hair cut?",
+   "casual": "New haircut?",
+   "words": [
+    {
+     "en": "haircut",
+     "ja": "散髪"
+    },
+    {
+     "en": "get",
+     "ja": "してもらう"
+    }
+   ]
+  },
+  {
+   "id": "daily-045",
+   "scene": "daily",
+   "ja": "それ、いいね。",
+   "en": "That looks nice.",
+   "polite": "That looks lovely.",
+   "casual": "Nice!",
+   "words": [
+    {
+     "en": "looks",
+     "ja": "見える"
+    },
+    {
+     "en": "nice",
+     "ja": "いい"
+    }
+   ]
+  },
+  {
+   "id": "daily-046",
+   "scene": "daily",
+   "ja": "ちょっと出かけてくる。",
+   "en": "I'm heading out for a bit.",
+   "polite": "I'm just popping out for a while.",
+   "casual": "Be right back.",
+   "words": [
+    {
+     "en": "heading out",
+     "ja": "出かける"
+    },
+    {
+     "en": "for a bit",
+     "ja": "少しの間"
+    }
+   ]
+  },
+  {
+   "id": "daily-047",
+   "scene": "daily",
+   "ja": "財布を忘れた。",
+   "en": "I forgot my wallet.",
+   "polite": "I'm afraid I've left my wallet at home.",
+   "casual": "Forgot my wallet!",
+   "words": [
+    {
+     "en": "forgot",
+     "ja": "忘れた"
+    },
+    {
+     "en": "wallet",
+     "ja": "財布"
+    }
+   ]
+  },
+  {
+   "id": "daily-048",
+   "scene": "daily",
+   "ja": "窓を開けてもいい？",
+   "en": "Can I open the window?",
+   "polite": "Do you mind if I open the window?",
+   "casual": "Mind if I open the window?",
+   "words": [
+    {
+     "en": "open",
+     "ja": "開ける"
+    },
+    {
+     "en": "window",
+     "ja": "窓"
+    }
+   ]
+  },
+  {
+   "id": "daily-049",
+   "scene": "daily",
+   "ja": "今日はついてない日だ。",
+   "en": "It's not my day.",
+   "polite": "Today just isn't my day.",
+   "casual": "What a day.",
+   "words": [
+    {
+     "en": "not my day",
+     "ja": "ついてない日"
+    },
+    {
+     "en": "day",
+     "ja": "日"
+    }
+   ]
+  },
+  {
+   "id": "daily-050",
+   "scene": "daily",
+   "ja": "明日は早起きしないと。",
+   "en": "I need to get up early tomorrow.",
+   "polite": "I have to wake up early tomorrow.",
+   "casual": "Early start tomorrow.",
+   "words": [
+    {
+     "en": "get up",
+     "ja": "起きる"
+    },
+    {
+     "en": "early",
+     "ja": "早く"
+    }
+   ]
+  },
+  {
+   "id": "daily-051",
+   "scene": "daily",
+   "ja": "お風呂わいたよ。",
+   "en": "The bath is ready.",
+   "polite": "The bath is ready for you.",
+   "casual": "Bath's ready!",
+   "words": [
+    {
+     "en": "bath",
+     "ja": "お風呂"
+    },
+    {
+     "en": "ready",
+     "ja": "準備できた"
+    }
+   ]
+  },
+  {
+   "id": "daily-052",
+   "scene": "daily",
+   "ja": "今度の休み、どこか行こうよ。",
+   "en": "Let's go somewhere on our next day off.",
+   "polite": "Shall we go somewhere on our next day off?",
+   "casual": "Let's go somewhere next time we're off.",
+   "words": [
+    {
+     "en": "somewhere",
+     "ja": "どこか"
+    },
+    {
+     "en": "day off",
+     "ja": "休みの日"
+    }
+   ]
+  },
+  {
+   "id": "feelings-001",
+   "scene": "feelings",
+   "ja": "すごくうれしい！",
+   "en": "I'm so happy!",
+   "polite": "I'm absolutely delighted!",
+   "casual": "This is awesome!",
+   "words": [
+    {
+     "en": "so",
+     "ja": "すごく"
+    },
+    {
+     "en": "happy",
+     "ja": "うれしい"
+    }
+   ]
+  },
+  {
+   "id": "feelings-002",
+   "scene": "feelings",
+   "ja": "ほっとしました。",
+   "en": "What a relief.",
+   "polite": "I'm so relieved.",
+   "casual": "Phew!",
+   "words": [
+    {
+     "en": "relief",
+     "ja": "安心"
+    },
+    {
+     "en": "what a",
+     "ja": "なんて"
+    }
+   ]
+  },
+  {
+   "id": "feelings-003",
+   "scene": "feelings",
+   "ja": "緊張しています。",
+   "en": "I'm nervous.",
+   "polite": "I'm feeling rather nervous.",
+   "casual": "I'm so nervous!",
+   "words": [
+    {
+     "en": "nervous",
+     "ja": "緊張している"
+    },
+    {
+     "en": "I'm",
+     "ja": "私は"
+    }
+   ]
+  },
+  {
+   "id": "feelings-004",
+   "scene": "feelings",
+   "ja": "ちょっと疲れた。",
+   "en": "I'm a bit tired.",
+   "polite": "I'm feeling a little tired.",
+   "casual": "I'm beat.",
+   "words": [
+    {
+     "en": "a bit",
+     "ja": "ちょっと"
+    },
+    {
+     "en": "tired",
+     "ja": "疲れた"
+    }
+   ]
+  },
+  {
+   "id": "feelings-005",
+   "scene": "feelings",
+   "ja": "がっかりしました。",
+   "en": "I'm disappointed.",
+   "polite": "I have to say I'm disappointed.",
+   "casual": "What a letdown.",
+   "words": [
+    {
+     "en": "disappointed",
+     "ja": "がっかりした"
+    },
+    {
+     "en": "I'm",
+     "ja": "私は"
+    }
+   ]
+  },
+  {
+   "id": "feelings-006",
+   "scene": "feelings",
+   "ja": "びっくりした！",
+   "en": "You surprised me!",
+   "polite": "That really surprised me!",
+   "casual": "You scared me!",
+   "words": [
+    {
+     "en": "surprised",
+     "ja": "驚かせた"
+    },
+    {
+     "en": "you",
+     "ja": "あなたが"
+    }
+   ]
+  },
+  {
+   "id": "feelings-007",
+   "scene": "feelings",
+   "ja": "楽しみにしています。",
+   "en": "I'm looking forward to it.",
+   "polite": "I'm very much looking forward to it.",
+   "casual": "Can't wait!",
+   "words": [
+    {
+     "en": "looking forward to",
+     "ja": "楽しみにする"
+    },
+    {
+     "en": "it",
+     "ja": "それ"
+    }
+   ]
+  },
+  {
+   "id": "feelings-008",
+   "scene": "feelings",
+   "ja": "心配しないで。",
+   "en": "Don't worry.",
+   "polite": "Please don't worry about it.",
+   "casual": "No worries!",
+   "words": [
+    {
+     "en": "worry",
+     "ja": "心配する"
+    },
+    {
+     "en": "don't",
+     "ja": "しないで"
+    }
+   ]
+  },
+  {
+   "id": "feelings-009",
+   "scene": "feelings",
+   "ja": "本当にありがとう。",
+   "en": "Thank you so much.",
+   "polite": "I can't thank you enough.",
+   "casual": "Thanks a million!",
+   "words": [
+    {
+     "en": "thank you",
+     "ja": "ありがとう"
+    },
+    {
+     "en": "so much",
+     "ja": "本当に"
+    }
+   ]
+  },
+  {
+   "id": "feelings-010",
+   "scene": "feelings",
+   "ja": "ごめんなさい、私のせいです。",
+   "en": "I'm sorry, it's my fault.",
+   "polite": "I apologize. It was my fault.",
+   "casual": "My bad.",
+   "words": [
+    {
+     "en": "sorry",
+     "ja": "ごめんなさい"
+    },
+    {
+     "en": "fault",
+     "ja": "せい"
+    }
+   ]
+  },
+  {
+   "id": "feelings-011",
+   "scene": "feelings",
+   "ja": "気にしないで。",
+   "en": "Don't worry about it.",
+   "polite": "Please don't give it a second thought.",
+   "casual": "No big deal.",
+   "words": [
+    {
+     "en": "worry about",
+     "ja": "気にする"
+    },
+    {
+     "en": "it",
+     "ja": "それを"
+    }
+   ]
+  },
+  {
+   "id": "feelings-012",
+   "scene": "feelings",
+   "ja": "それは残念だね。",
+   "en": "That's too bad.",
+   "polite": "I'm sorry to hear that.",
+   "casual": "That sucks.",
+   "words": [
+    {
+     "en": "too bad",
+     "ja": "残念"
+    },
+    {
+     "en": "that's",
+     "ja": "それは"
+    }
+   ]
+  },
+  {
+   "id": "feelings-013",
+   "scene": "feelings",
+   "ja": "よくやったね！",
+   "en": "Good job!",
+   "polite": "Well done! That was excellent.",
+   "casual": "Nice work!",
+   "words": [
+    {
+     "en": "good job",
+     "ja": "よくやった"
+    },
+    {
+     "en": "job",
+     "ja": "仕事"
+    }
+   ]
+  },
+  {
+   "id": "feelings-014",
+   "scene": "feelings",
+   "ja": "自信がありません。",
+   "en": "I'm not confident.",
+   "polite": "I'm not entirely sure of myself.",
+   "casual": "I'm not so sure.",
+   "words": [
+    {
+     "en": "confident",
+     "ja": "自信がある"
+    },
+    {
+     "en": "not",
+     "ja": "ない"
+    }
+   ]
+  },
+  {
+   "id": "feelings-015",
+   "scene": "feelings",
+   "ja": "やる気が出ない。",
+   "en": "I can't get motivated.",
+   "polite": "I'm having trouble getting motivated.",
+   "casual": "I'm just not feeling it.",
+   "words": [
+    {
+     "en": "motivated",
+     "ja": "やる気が出た"
+    },
+    {
+     "en": "can't",
+     "ja": "できない"
+    }
+   ]
+  },
+  {
+   "id": "feelings-016",
+   "scene": "feelings",
+   "ja": "感動しました。",
+   "en": "I was really moved.",
+   "polite": "I was deeply moved.",
+   "casual": "That got me!",
+   "words": [
+    {
+     "en": "moved",
+     "ja": "感動した"
+    },
+    {
+     "en": "really",
+     "ja": "本当に"
+    }
+   ]
+  },
+  {
+   "id": "feelings-017",
+   "scene": "feelings",
+   "ja": "うらやましい！",
+   "en": "I'm so jealous!",
+   "polite": "I'm quite envious.",
+   "casual": "Lucky you!",
+   "words": [
+    {
+     "en": "jealous",
+     "ja": "うらやましい"
+    },
+    {
+     "en": "so",
+     "ja": "すごく"
+    }
+   ]
+  },
+  {
+   "id": "feelings-018",
+   "scene": "feelings",
+   "ja": "それは面白いね。",
+   "en": "That's interesting.",
+   "polite": "How interesting.",
+   "casual": "Cool!",
+   "words": [
+    {
+     "en": "interesting",
+     "ja": "面白い"
+    },
+    {
+     "en": "that's",
+     "ja": "それは"
+    }
+   ]
+  },
+  {
+   "id": "feelings-019",
+   "scene": "feelings",
+   "ja": "がんばって！",
+   "en": "Good luck!",
+   "polite": "I wish you the best of luck.",
+   "casual": "You've got this!",
+   "words": [
+    {
+     "en": "good luck",
+     "ja": "幸運を"
+    },
+    {
+     "en": "luck",
+     "ja": "運"
+    }
+   ]
+  },
+  {
+   "id": "feelings-020",
+   "scene": "feelings",
+   "ja": "もう無理かも。",
+   "en": "I don't think I can do it anymore.",
+   "polite": "I'm not sure I can carry on.",
+   "casual": "I'm done.",
+   "words": [
+    {
+     "en": "anymore",
+     "ja": "もう"
+    },
+    {
+     "en": "think",
+     "ja": "思う"
+    }
+   ]
+  },
+  {
+   "id": "feelings-021",
+   "scene": "feelings",
+   "ja": "落ち着いて。",
+   "en": "Calm down.",
+   "polite": "Please try to stay calm.",
+   "casual": "Chill.",
+   "words": [
+    {
+     "en": "calm down",
+     "ja": "落ち着く"
+    },
+    {
+     "en": "calm",
+     "ja": "静か"
+    }
+   ]
+  },
+  {
+   "id": "feelings-022",
+   "scene": "feelings",
+   "ja": "怒ってないよ。",
+   "en": "I'm not angry.",
+   "polite": "I'm not upset at all.",
+   "casual": "I'm not mad.",
+   "words": [
+    {
+     "en": "angry",
+     "ja": "怒っている"
+    },
+    {
+     "en": "not",
+     "ja": "ない"
+    }
+   ]
+  },
+  {
+   "id": "feelings-023",
+   "scene": "feelings",
+   "ja": "信じられない！",
+   "en": "I can't believe it!",
+   "polite": "That's hard to believe.",
+   "casual": "No way!",
+   "words": [
+    {
+     "en": "believe",
+     "ja": "信じる"
+    },
+    {
+     "en": "can't",
+     "ja": "できない"
+    }
+   ]
+  },
+  {
+   "id": "feelings-024",
+   "scene": "feelings",
+   "ja": "自分を誇りに思う。",
+   "en": "I'm proud of myself.",
+   "polite": "I feel proud of what I've done.",
+   "casual": "Proud of me!",
+   "words": [
+    {
+     "en": "proud of",
+     "ja": "〜を誇りに思う"
+    },
+    {
+     "en": "myself",
+     "ja": "自分"
+    }
+   ]
+  },
+  {
+   "id": "feelings-025",
+   "scene": "feelings",
+   "ja": "寂しかったよ。",
+   "en": "I missed you.",
+   "polite": "I've really missed you.",
+   "casual": "Missed you!",
+   "words": [
+    {
+     "en": "missed",
+     "ja": "寂しく思った"
+    },
+    {
+     "en": "you",
+     "ja": "あなたを"
+    }
+   ]
+  },
+  {
+   "id": "feelings-026",
+   "scene": "feelings",
+   "ja": "それは助かります。",
+   "en": "That helps a lot.",
+   "polite": "That's very helpful.",
+   "casual": "That's a lifesaver!",
+   "words": [
+    {
+     "en": "helps",
+     "ja": "助かる"
+    },
+    {
+     "en": "a lot",
+     "ja": "とても"
+    }
+   ]
+  },
+  {
+   "id": "feelings-027",
+   "scene": "feelings",
+   "ja": "すごく眠い。",
+   "en": "I'm so sleepy.",
+   "polite": "I'm terribly sleepy.",
+   "casual": "I can barely keep my eyes open.",
+   "words": [
+    {
+     "en": "sleepy",
+     "ja": "眠い"
+    },
+    {
+     "en": "so",
+     "ja": "すごく"
+    }
+   ]
+  },
+  {
+   "id": "feelings-028",
+   "scene": "feelings",
+   "ja": "イライラする。",
+   "en": "I'm annoyed.",
+   "polite": "I'm feeling rather irritated.",
+   "casual": "That bugs me.",
+   "words": [
+    {
+     "en": "annoyed",
+     "ja": "イライラした"
+    },
+    {
+     "en": "I'm",
+     "ja": "私は"
+    }
+   ]
+  },
+  {
+   "id": "feelings-029",
+   "scene": "feelings",
+   "ja": "なんとかなるよ。",
+   "en": "It'll work out.",
+   "polite": "I'm sure it will all work out.",
+   "casual": "It'll be fine.",
+   "words": [
+    {
+     "en": "work out",
+     "ja": "うまくいく"
+    },
+    {
+     "en": "it'll",
+     "ja": "〜だろう"
+    }
+   ]
+  },
+  {
+   "id": "feelings-030",
+   "scene": "feelings",
+   "ja": "後悔しています。",
+   "en": "I regret it.",
+   "polite": "I deeply regret it.",
+   "casual": "I wish I hadn't.",
+   "words": [
+    {
+     "en": "regret",
+     "ja": "後悔する"
+    },
+    {
+     "en": "it",
+     "ja": "それを"
+    }
+   ]
+  },
+  {
+   "id": "feelings-031",
+   "scene": "feelings",
+   "ja": "最高の気分！",
+   "en": "I feel great!",
+   "polite": "I'm feeling wonderful!",
+   "casual": "Never better!",
+   "words": [
+    {
+     "en": "feel",
+     "ja": "感じる"
+    },
+    {
+     "en": "great",
+     "ja": "最高"
+    }
+   ]
+  },
+  {
+   "id": "feelings-032",
+   "scene": "feelings",
+   "ja": "ちょっと不安です。",
+   "en": "I'm a little worried.",
+   "polite": "I'm slightly concerned.",
+   "casual": "Kinda worried.",
+   "words": [
+    {
+     "en": "worried",
+     "ja": "不安な"
+    },
+    {
+     "en": "a little",
+     "ja": "ちょっと"
+    }
+   ]
+  },
+  {
+   "id": "feelings-033",
+   "scene": "feelings",
+   "ja": "恥ずかしい。",
+   "en": "I'm embarrassed.",
+   "polite": "I feel rather embarrassed.",
+   "casual": "So embarrassing!",
+   "words": [
+    {
+     "en": "embarrassed",
+     "ja": "恥ずかしい"
+    },
+    {
+     "en": "I'm",
+     "ja": "私は"
+    }
+   ]
+  },
+  {
+   "id": "feelings-034",
+   "scene": "feelings",
+   "ja": "本当に？",
+   "en": "Really?",
+   "polite": "Is that so?",
+   "casual": "Seriously?",
+   "words": [
+    {
+     "en": "really",
+     "ja": "本当に"
+    }
+   ]
+  },
+  {
+   "id": "feelings-035",
+   "scene": "feelings",
+   "ja": "なるほど。",
+   "en": "I see.",
+   "polite": "I understand.",
+   "casual": "Got it.",
+   "words": [
+    {
+     "en": "see",
+     "ja": "分かる"
+    },
+    {
+     "en": "I",
+     "ja": "私は"
+    }
+   ]
+  },
+  {
+   "id": "feelings-036",
+   "scene": "feelings",
+   "ja": "それは大変だったね。",
+   "en": "That must have been tough.",
+   "polite": "That must have been very hard for you.",
+   "casual": "Rough!",
+   "words": [
+    {
+     "en": "tough",
+     "ja": "大変な"
+    },
+    {
+     "en": "must have been",
+     "ja": "だったに違いない"
+    }
+   ]
+  },
+  {
+   "id": "feelings-037",
+   "scene": "feelings",
+   "ja": "応援してるよ。",
+   "en": "I'm rooting for you.",
+   "polite": "I'm supporting you all the way.",
+   "casual": "I've got your back.",
+   "words": [
+    {
+     "en": "rooting for",
+     "ja": "応援する"
+    },
+    {
+     "en": "you",
+     "ja": "あなたを"
+    }
+   ]
+  },
+  {
+   "id": "feelings-038",
+   "scene": "feelings",
+   "ja": "ワクワクする！",
+   "en": "I'm so excited!",
+   "polite": "I'm really excited about it!",
+   "casual": "So pumped!",
+   "words": [
+    {
+     "en": "excited",
+     "ja": "ワクワクした"
+    },
+    {
+     "en": "so",
+     "ja": "すごく"
+    }
+   ]
+  },
+  {
+   "id": "feelings-039",
+   "scene": "feelings",
+   "ja": "落ち込んでいます。",
+   "en": "I'm feeling down.",
+   "polite": "I'm feeling rather low.",
+   "casual": "I'm bummed.",
+   "words": [
+    {
+     "en": "feeling down",
+     "ja": "落ち込む"
+    },
+    {
+     "en": "feeling",
+     "ja": "気分"
+    }
+   ]
+  },
+  {
+   "id": "feelings-040",
+   "scene": "feelings",
+   "ja": "気持ちは分かるよ。",
+   "en": "I know how you feel.",
+   "polite": "I understand how you feel.",
+   "casual": "I feel you.",
+   "words": [
+    {
+     "en": "know",
+     "ja": "分かる"
+    },
+    {
+     "en": "feel",
+     "ja": "感じる"
+    }
+   ]
+  },
+  {
+   "id": "feelings-041",
+   "scene": "feelings",
+   "ja": "言いにくいんだけど。",
+   "en": "This is hard to say, but.",
+   "polite": "I'm not sure how to put this, but.",
+   "casual": "Okay, so, um.",
+   "words": [
+    {
+     "en": "hard to say",
+     "ja": "言いにくい"
+    },
+    {
+     "en": "but",
+     "ja": "けれど"
+    }
+   ]
+  },
+  {
+   "id": "feelings-042",
+   "scene": "feelings",
+   "ja": "ずっと会いたかった。",
+   "en": "I've been wanting to see you.",
+   "polite": "I've been looking forward to seeing you.",
+   "casual": "Been dying to see you!",
+   "words": [
+    {
+     "en": "wanting to",
+     "ja": "〜したかった"
+    },
+    {
+     "en": "see",
+     "ja": "会う"
+    }
+   ]
+  },
+  {
+   "id": "feelings-043",
+   "scene": "feelings",
+   "ja": "いい考えが浮かんだ！",
+   "en": "I have an idea!",
+   "polite": "I've just had an idea!",
+   "casual": "Ooh, idea!",
+   "words": [
+    {
+     "en": "idea",
+     "ja": "考え"
+    },
+    {
+     "en": "have",
+     "ja": "持つ"
+    }
+   ]
+  },
+  {
+   "id": "feelings-044",
+   "scene": "feelings",
+   "ja": "気分転換したい。",
+   "en": "I need a change of pace.",
+   "polite": "I could use a change of scenery.",
+   "casual": "I need a break.",
+   "words": [
+    {
+     "en": "change of pace",
+     "ja": "気分転換"
+    },
+    {
+     "en": "need",
+     "ja": "必要"
+    }
+   ]
+  },
+  {
+   "id": "feelings-045",
+   "scene": "feelings",
+   "ja": "お大事に。",
+   "en": "Take care of yourself.",
+   "polite": "I hope you feel better soon.",
+   "casual": "Feel better!",
+   "words": [
+    {
+     "en": "take care of",
+     "ja": "大事にする"
+    },
+    {
+     "en": "yourself",
+     "ja": "自分を"
+    }
+   ]
+  },
+  {
+   "id": "feelings-046",
+   "scene": "feelings",
+   "ja": "疲れが取れた。",
+   "en": "I feel refreshed.",
+   "polite": "I feel completely refreshed.",
+   "casual": "Good as new!",
+   "words": [
+    {
+     "en": "refreshed",
+     "ja": "元気を取り戻した"
+    },
+    {
+     "en": "feel",
+     "ja": "感じる"
+    }
+   ]
+  },
+  {
+   "id": "feelings-047",
+   "scene": "feelings",
+   "ja": "それは素晴らしい！",
+   "en": "That's wonderful!",
+   "polite": "That's absolutely wonderful news!",
+   "casual": "Amazing!",
+   "words": [
+    {
+     "en": "wonderful",
+     "ja": "素晴らしい"
+    },
+    {
+     "en": "that's",
+     "ja": "それは"
+    }
+   ]
+  },
+  {
+   "id": "feelings-048",
+   "scene": "feelings",
+   "ja": "少し怖いです。",
+   "en": "I'm a little scared.",
+   "polite": "I'm somewhat frightened.",
+   "casual": "Kinda scary.",
+   "words": [
+    {
+     "en": "scared",
+     "ja": "怖い"
+    },
+    {
+     "en": "a little",
+     "ja": "少し"
+    }
+   ]
+  },
+  {
+   "id": "feelings-049",
+   "scene": "feelings",
+   "ja": "どうでもいいよ。",
+   "en": "I don't really care.",
+   "polite": "It doesn't matter to me either way.",
+   "casual": "Whatever.",
+   "words": [
+    {
+     "en": "care",
+     "ja": "気にする"
+    },
+    {
+     "en": "really",
+     "ja": "あまり"
+    }
+   ]
+  },
+  {
+   "id": "feelings-050",
+   "scene": "feelings",
+   "ja": "迷っています。",
+   "en": "I can't decide.",
+   "polite": "I'm having trouble deciding.",
+   "casual": "I'm torn.",
+   "words": [
+    {
+     "en": "decide",
+     "ja": "決める"
+    },
+    {
+     "en": "can't",
+     "ja": "できない"
+    }
+   ]
+  },
+  {
+   "id": "shop-001",
+   "scene": "shop",
+   "ja": "これをください。",
+   "en": "I'll take this one.",
+   "polite": "I'd like this one, please.",
+   "casual": "This one, please.",
+   "words": [
+    {
+     "en": "take",
+     "ja": "買う"
+    },
+    {
+     "en": "this one",
+     "ja": "これ"
+    }
+   ]
+  },
+  {
+   "id": "shop-002",
+   "scene": "shop",
+   "ja": "見ているだけです。",
+   "en": "I'm just looking.",
+   "polite": "I'm just browsing, thank you.",
+   "casual": "Just looking.",
+   "words": [
+    {
+     "en": "just",
+     "ja": "だけ"
+    },
+    {
+     "en": "looking",
+     "ja": "見ている"
+    }
+   ]
+  },
+  {
+   "id": "shop-003",
+   "scene": "shop",
+   "ja": "試着してもいいですか？",
+   "en": "Can I try this on?",
+   "polite": "Would it be possible to try this on?",
+   "casual": "Can I try it on?",
+   "words": [
+    {
+     "en": "try",
+     "ja": "試す（try 〜 on で試着する）"
+    },
+    {
+     "en": "this",
+     "ja": "これ"
+    }
+   ]
+  },
+  {
+   "id": "shop-004",
+   "scene": "shop",
+   "ja": "もっと小さいサイズはありますか？",
+   "en": "Do you have this in a smaller size?",
+   "polite": "Would you have this in a smaller size?",
+   "casual": "Got a smaller size?",
+   "words": [
+    {
+     "en": "smaller",
+     "ja": "もっと小さい"
+    },
+    {
+     "en": "size",
+     "ja": "サイズ"
+    }
+   ]
+  },
+  {
+   "id": "shop-005",
+   "scene": "shop",
+   "ja": "いくらですか？",
+   "en": "How much is it?",
+   "polite": "Could you tell me how much this is?",
+   "casual": "How much?",
+   "words": [
+    {
+     "en": "how much",
+     "ja": "いくら"
+    },
+    {
+     "en": "it",
+     "ja": "それ"
+    }
+   ]
+  },
+  {
+   "id": "shop-006",
+   "scene": "shop",
+   "ja": "カードで払えますか？",
+   "en": "Can I pay by card?",
+   "polite": "Is it possible to pay by card?",
+   "casual": "Card okay?",
+   "words": [
+    {
+     "en": "pay",
+     "ja": "払う"
+    },
+    {
+     "en": "by card",
+     "ja": "カードで"
+    }
+   ]
+  },
+  {
+   "id": "shop-007",
+   "scene": "shop",
+   "ja": "袋はいりません。",
+   "en": "I don't need a bag.",
+   "polite": "I won't need a bag, thank you.",
+   "casual": "No bag, thanks.",
+   "words": [
+    {
+     "en": "need",
+     "ja": "いる"
+    },
+    {
+     "en": "bag",
+     "ja": "袋"
+    }
+   ]
+  },
+  {
+   "id": "shop-008",
+   "scene": "shop",
+   "ja": "レシートをください。",
+   "en": "Could I have a receipt?",
+   "polite": "Could I have a receipt, please?",
+   "casual": "Receipt, please.",
+   "words": [
+    {
+     "en": "receipt",
+     "ja": "レシート"
+    },
+    {
+     "en": "have",
+     "ja": "もらう"
+    }
+   ]
+  },
+  {
+   "id": "shop-009",
+   "scene": "shop",
+   "ja": "プレゼント用に包んでもらえますか？",
+   "en": "Could you gift-wrap it?",
+   "polite": "Would you mind wrapping it as a gift?",
+   "casual": "Can you wrap it?",
+   "words": [
+    {
+     "en": "gift-wrap",
+     "ja": "プレゼント用に包む"
+    },
+    {
+     "en": "could you",
+     "ja": "〜してもらえますか"
+    }
+   ]
+  },
+  {
+   "id": "shop-010",
+   "scene": "shop",
+   "ja": "返品できますか？",
+   "en": "Can I return this?",
+   "polite": "Would it be possible to return this?",
+   "casual": "Can I bring this back?",
+   "words": [
+    {
+     "en": "return",
+     "ja": "返品する"
+    },
+    {
+     "en": "this",
+     "ja": "これ"
+    }
+   ]
+  },
+  {
+   "id": "shop-011",
+   "scene": "shop",
+   "ja": "二人です。",
+   "en": "A table for two, please.",
+   "polite": "Could we have a table for two, please?",
+   "casual": "Two, please.",
+   "words": [
+    {
+     "en": "table",
+     "ja": "席"
+    },
+    {
+     "en": "two",
+     "ja": "二人"
+    }
+   ]
+  },
+  {
+   "id": "shop-012",
+   "scene": "shop",
+   "ja": "予約していません。",
+   "en": "We don't have a reservation.",
+   "polite": "I'm afraid we don't have a reservation.",
+   "casual": "No reservation.",
+   "words": [
+    {
+     "en": "reservation",
+     "ja": "予約"
+    },
+    {
+     "en": "don't",
+     "ja": "していない"
+    }
+   ]
+  },
+  {
+   "id": "shop-013",
+   "scene": "shop",
+   "ja": "メニューをください。",
+   "en": "Could I see the menu?",
+   "polite": "May I see the menu, please?",
+   "casual": "Menu, please?",
+   "words": [
+    {
+     "en": "see",
+     "ja": "見る"
+    },
+    {
+     "en": "menu",
+     "ja": "メニュー"
+    }
+   ]
+  },
+  {
+   "id": "shop-014",
+   "scene": "shop",
+   "ja": "おすすめは何ですか？",
+   "en": "What do you recommend?",
+   "polite": "What would you recommend?",
+   "casual": "What's good here?",
+   "words": [
+    {
+     "en": "recommend",
+     "ja": "すすめる"
+    },
+    {
+     "en": "what",
+     "ja": "何"
+    }
+   ]
+  },
+  {
+   "id": "shop-015",
+   "scene": "shop",
+   "ja": "これは辛いですか？",
+   "en": "Is this spicy?",
+   "polite": "Is this dish spicy?",
+   "casual": "Spicy?",
+   "words": [
+    {
+     "en": "spicy",
+     "ja": "辛い"
+    },
+    {
+     "en": "this",
+     "ja": "これ"
+    }
+   ]
+  },
+  {
+   "id": "shop-016",
+   "scene": "shop",
+   "ja": "同じものをください。",
+   "en": "I'll have the same.",
+   "polite": "I'd like the same, please.",
+   "casual": "Same for me.",
+   "words": [
+    {
+     "en": "have",
+     "ja": "注文する"
+    },
+    {
+     "en": "same",
+     "ja": "同じもの"
+    }
+   ]
+  },
+  {
+   "id": "shop-017",
+   "scene": "shop",
+   "ja": "お水をください。",
+   "en": "Could I have some water?",
+   "polite": "Could I have a glass of water, please?",
+   "casual": "Water, please.",
+   "words": [
+    {
+     "en": "water",
+     "ja": "水"
+    },
+    {
+     "en": "could I have",
+     "ja": "〜をください"
+    }
+   ]
+  },
+  {
+   "id": "shop-018",
+   "scene": "shop",
+   "ja": "注文をお願いします。",
+   "en": "We're ready to order.",
+   "polite": "We'd like to order now, please.",
+   "casual": "Ready to order!",
+   "words": [
+    {
+     "en": "ready",
+     "ja": "準備できた"
+    },
+    {
+     "en": "order",
+     "ja": "注文する"
+    }
+   ]
+  },
+  {
+   "id": "shop-019",
+   "scene": "shop",
+   "ja": "注文したものがまだ来ていません。",
+   "en": "My order hasn't come yet.",
+   "polite": "I'm afraid my order hasn't arrived yet.",
+   "casual": "Still waiting on my food.",
+   "words": [
+    {
+     "en": "order",
+     "ja": "注文"
+    },
+    {
+     "en": "yet",
+     "ja": "まだ"
+    }
+   ]
+  },
+  {
+   "id": "shop-020",
+   "scene": "shop",
+   "ja": "お会計をお願いします。",
+   "en": "Could we have the check?",
+   "polite": "Could we have the check, please?",
+   "casual": "Check, please.",
+   "words": [
+    {
+     "en": "check",
+     "ja": "お会計"
+    },
+    {
+     "en": "have",
+     "ja": "もらう"
+    }
+   ]
+  },
+  {
+   "id": "shop-021",
+   "scene": "shop",
+   "ja": "別々に払えますか？",
+   "en": "Can we pay separately?",
+   "polite": "Would it be possible to pay separately?",
+   "casual": "Separate checks?",
+   "words": [
+    {
+     "en": "pay",
+     "ja": "払う"
+    },
+    {
+     "en": "separately",
+     "ja": "別々に"
+    }
+   ]
+  },
+  {
+   "id": "shop-022",
+   "scene": "shop",
+   "ja": "持ち帰りでお願いします。",
+   "en": "To go, please.",
+   "polite": "I'd like it to go, please.",
+   "casual": "To go.",
+   "words": [
+    {
+     "en": "to go",
+     "ja": "持ち帰り"
+    },
+    {
+     "en": "please",
+     "ja": "お願いします"
+    }
+   ]
+  },
+  {
+   "id": "shop-023",
+   "scene": "shop",
+   "ja": "店内で食べます。",
+   "en": "For here, please.",
+   "polite": "I'll eat here, please.",
+   "casual": "For here.",
+   "words": [
+    {
+     "en": "for here",
+     "ja": "店内で"
+    },
+    {
+     "en": "please",
+     "ja": "お願いします"
+    }
+   ]
+  },
+  {
+   "id": "shop-024",
+   "scene": "shop",
+   "ja": "アレルギーがあります。",
+   "en": "I have an allergy.",
+   "polite": "I should mention that I have an allergy.",
+   "casual": "I'm allergic.",
+   "words": [
+    {
+     "en": "allergy",
+     "ja": "アレルギー"
+    },
+    {
+     "en": "have",
+     "ja": "ある"
+    }
+   ]
+  },
+  {
+   "id": "shop-025",
+   "scene": "shop",
+   "ja": "卵は入っていますか？",
+   "en": "Does this have eggs in it?",
+   "polite": "Could you tell me if this contains egg?",
+   "casual": "Any eggs in this?",
+   "words": [
+    {
+     "en": "eggs",
+     "ja": "卵"
+    },
+    {
+     "en": "have",
+     "ja": "入っている"
+    }
+   ]
+  },
+  {
+   "id": "shop-026",
+   "scene": "shop",
+   "ja": "氷なしでお願いします。",
+   "en": "No ice, please.",
+   "polite": "Could I have it without ice, please?",
+   "casual": "No ice.",
+   "words": [
+    {
+     "en": "ice",
+     "ja": "氷"
+    },
+    {
+     "en": "no",
+     "ja": "なし"
+    }
+   ]
+  },
+  {
+   "id": "shop-027",
+   "scene": "shop",
+   "ja": "とてもおいしかったです。",
+   "en": "It was delicious.",
+   "polite": "Everything was absolutely delicious.",
+   "casual": "So good!",
+   "words": [
+    {
+     "en": "delicious",
+     "ja": "おいしい"
+    },
+    {
+     "en": "was",
+     "ja": "だった"
+    }
+   ]
+  },
+  {
+   "id": "shop-028",
+   "scene": "shop",
+   "ja": "少し安くなりますか？",
+   "en": "Could you give me a discount?",
+   "polite": "Is there any chance of a discount?",
+   "casual": "Any discount?",
+   "words": [
+    {
+     "en": "discount",
+     "ja": "値引き"
+    },
+    {
+     "en": "give",
+     "ja": "くれる"
+    }
+   ]
+  },
+  {
+   "id": "shop-029",
+   "scene": "shop",
+   "ja": "これの色違いはありますか？",
+   "en": "Do you have this in another color?",
+   "polite": "Would you have this in a different color?",
+   "casual": "Other colors?",
+   "words": [
+    {
+     "en": "another",
+     "ja": "別の"
+    },
+    {
+     "en": "color",
+     "ja": "色"
+    }
+   ]
+  },
+  {
+   "id": "shop-030",
+   "scene": "shop",
+   "ja": "在庫はありますか？",
+   "en": "Do you have this in stock?",
+   "polite": "Could you check if you have this in stock?",
+   "casual": "In stock?",
+   "words": [
+    {
+     "en": "in stock",
+     "ja": "在庫がある"
+    },
+    {
+     "en": "have",
+     "ja": "ある"
+    }
+   ]
+  },
+  {
+   "id": "shop-031",
+   "scene": "shop",
+   "ja": "営業時間は何時までですか？",
+   "en": "What time do you close?",
+   "polite": "Could you tell me your closing time?",
+   "casual": "When do you close?",
+   "words": [
+    {
+     "en": "close",
+     "ja": "閉まる"
+    },
+    {
+     "en": "what time",
+     "ja": "何時"
+    }
+   ]
+  },
+  {
+   "id": "shop-032",
+   "scene": "shop",
+   "ja": "ポイントカードはありません。",
+   "en": "I don't have a point card.",
+   "polite": "I'm afraid I don't have a loyalty card.",
+   "casual": "No point card.",
+   "words": [
+    {
+     "en": "point card",
+     "ja": "ポイントカード"
+    },
+    {
+     "en": "don't have",
+     "ja": "持っていない"
+    }
+   ]
+  },
+  {
+   "id": "shop-033",
+   "scene": "shop",
+   "ja": "これを温めてもらえますか？",
+   "en": "Could you heat this up?",
+   "polite": "Would you mind heating this up?",
+   "casual": "Can you heat this up?",
+   "words": [
+    {
+     "en": "heat",
+     "ja": "温める（heat 〜 up）"
+    },
+    {
+     "en": "this",
+     "ja": "これ"
+    }
+   ]
+  },
+  {
+   "id": "shop-034",
+   "scene": "shop",
+   "ja": "箸をください。",
+   "en": "Could I have some chopsticks?",
+   "polite": "Could I have a pair of chopsticks, please?",
+   "casual": "Chopsticks, please.",
+   "words": [
+    {
+     "en": "chopsticks",
+     "ja": "箸"
+    },
+    {
+     "en": "have",
+     "ja": "もらう"
+    }
+   ]
+  },
+  {
+   "id": "shop-035",
+   "scene": "shop",
+   "ja": "一番人気は何ですか？",
+   "en": "What's the most popular one?",
+   "polite": "Which one is the most popular?",
+   "casual": "What's popular?",
+   "words": [
+    {
+     "en": "most popular",
+     "ja": "一番人気"
+    },
+    {
+     "en": "one",
+     "ja": "もの"
+    }
+   ]
+  },
+  {
+   "id": "shop-036",
+   "scene": "shop",
+   "ja": "甘すぎないものはありますか？",
+   "en": "Do you have anything not too sweet?",
+   "polite": "Would you have something that isn't too sweet?",
+   "casual": "Anything less sweet?",
+   "words": [
+    {
+     "en": "too sweet",
+     "ja": "甘すぎる"
+    },
+    {
+     "en": "anything",
+     "ja": "何か"
+    }
+   ]
+  },
+  {
+   "id": "shop-037",
+   "scene": "shop",
+   "ja": "もう少し考えます。",
+   "en": "I'll think about it.",
+   "polite": "I'd like to think about it a little more.",
+   "casual": "Let me think.",
+   "words": [
+    {
+     "en": "think about",
+     "ja": "考える"
+    },
+    {
+     "en": "it",
+     "ja": "それ"
+    }
+   ]
+  },
+  {
+   "id": "shop-038",
+   "scene": "shop",
+   "ja": "お釣りが違うようです。",
+   "en": "I think the change is wrong.",
+   "polite": "I'm afraid there may be a mistake with my change.",
+   "casual": "Wrong change, I think.",
+   "words": [
+    {
+     "en": "change",
+     "ja": "お釣り"
+    },
+    {
+     "en": "wrong",
+     "ja": "違う"
+    }
+   ]
+  },
+  {
+   "id": "shop-039",
+   "scene": "shop",
+   "ja": "取り置きできますか？",
+   "en": "Could you hold this for me?",
+   "polite": "Would it be possible to put this aside for me?",
+   "casual": "Can you hold it?",
+   "words": [
+    {
+     "en": "hold",
+     "ja": "取り置く"
+    },
+    {
+     "en": "for me",
+     "ja": "私のために"
+    }
+   ]
+  },
+  {
+   "id": "shop-040",
+   "scene": "shop",
+   "ja": "大きいサイズでお願いします。",
+   "en": "A large, please.",
+   "polite": "I'd like a large, please.",
+   "casual": "Large, please.",
+   "words": [
+    {
+     "en": "large",
+     "ja": "大きいサイズ"
+    },
+    {
+     "en": "please",
+     "ja": "お願いします"
+    }
+   ]
+  },
+  {
+   "id": "shop-041",
+   "scene": "shop",
+   "ja": "砂糖とミルクは要りません。",
+   "en": "No sugar or milk, please.",
+   "polite": "I'll take it without sugar or milk, please.",
+   "casual": "Black, please.",
+   "words": [
+    {
+     "en": "sugar",
+     "ja": "砂糖"
+    },
+    {
+     "en": "milk",
+     "ja": "ミルク"
+    }
+   ]
+  },
+  {
+   "id": "shop-042",
+   "scene": "shop",
+   "ja": "席を移ってもいいですか？",
+   "en": "Could we move to another table?",
+   "polite": "Would it be possible to change tables?",
+   "casual": "Can we switch tables?",
+   "words": [
+    {
+     "en": "move",
+     "ja": "移る"
+    },
+    {
+     "en": "another table",
+     "ja": "別の席"
+    }
+   ]
+  },
+  {
+   "id": "shop-043",
+   "scene": "shop",
+   "ja": "お手洗いを借りてもいいですか？",
+   "en": "May I use the restroom?",
+   "polite": "Would it be all right to use your restroom?",
+   "casual": "Can I use the bathroom?",
+   "words": [
+    {
+     "en": "use",
+     "ja": "使う"
+    },
+    {
+     "en": "restroom",
+     "ja": "お手洗い"
+    }
+   ]
+  },
+  {
+   "id": "shop-044",
+   "scene": "shop",
+   "ja": "これは何でできていますか？",
+   "en": "What is this made of?",
+   "polite": "Could you tell me what this is made of?",
+   "casual": "What's this made of?",
+   "words": [
+    {
+     "en": "made of",
+     "ja": "〜でできた"
+    },
+    {
+     "en": "what",
+     "ja": "何"
+    }
+   ]
+  },
+  {
+   "id": "shop-045",
+   "scene": "shop",
+   "ja": "試食してもいいですか？",
+   "en": "Can I try a sample?",
+   "polite": "May I try a sample?",
+   "casual": "Can I taste it?",
+   "words": [
+    {
+     "en": "try",
+     "ja": "試す"
+    },
+    {
+     "en": "sample",
+     "ja": "試食"
+    }
+   ]
+  },
+  {
+   "id": "shop-046",
+   "scene": "shop",
+   "ja": "配達してもらえますか？",
+   "en": "Can you deliver it?",
+   "polite": "Would you be able to deliver it?",
+   "casual": "Do you deliver?",
+   "words": [
+    {
+     "en": "deliver",
+     "ja": "配達する"
+    },
+    {
+     "en": "it",
+     "ja": "それを"
+    }
+   ]
+  },
+  {
+   "id": "shop-047",
+   "scene": "shop",
+   "ja": "すみません、注文を変えたいです。",
+   "en": "Excuse me, I'd like to change my order.",
+   "polite": "Excuse me, would it be possible to change my order?",
+   "casual": "Can I change my order?",
+   "words": [
+    {
+     "en": "change",
+     "ja": "変える"
+    },
+    {
+     "en": "order",
+     "ja": "注文"
+    }
+   ]
+  },
+  {
+   "id": "shop-048",
+   "scene": "shop",
+   "ja": "デザートはありますか？",
+   "en": "Do you have any desserts?",
+   "polite": "What desserts do you have?",
+   "casual": "Any desserts?",
+   "words": [
+    {
+     "en": "desserts",
+     "ja": "デザート"
+    },
+    {
+     "en": "have",
+     "ja": "ある"
+    }
+   ]
+  },
+  {
+   "id": "shop-049",
+   "scene": "shop",
+   "ja": "これをもう一つください。",
+   "en": "Could I have one more of these?",
+   "polite": "Could I have another one of these, please?",
+   "casual": "One more, please.",
+   "words": [
+    {
+     "en": "one more",
+     "ja": "もう一つ"
+    },
+    {
+     "en": "these",
+     "ja": "これら"
+    }
+   ]
+  },
+  {
+   "id": "shop-050",
+   "scene": "shop",
+   "ja": "現金しか使えませんか？",
+   "en": "Is it cash only?",
+   "polite": "Do you only accept cash?",
+   "casual": "Cash only?",
+   "words": [
+    {
+     "en": "cash",
+     "ja": "現金"
+    },
+    {
+     "en": "only",
+     "ja": "だけ"
+    }
+   ]
+  },
+  {
+   "id": "shop-051",
+   "scene": "shop",
+   "ja": "セールはいつまでですか？",
+   "en": "How long is the sale on?",
+   "polite": "Could you tell me when the sale ends?",
+   "casual": "When does the sale end?",
+   "words": [
+    {
+     "en": "sale",
+     "ja": "セール"
+    },
+    {
+     "en": "how long",
+     "ja": "いつまで"
+    }
+   ]
+  },
+  {
+   "id": "social-001",
+   "scene": "social",
+   "ja": "お久しぶりです。",
+   "en": "Long time no see.",
+   "polite": "It's been a long time.",
+   "casual": "Hey, long time!",
+   "words": [
+    {
+     "en": "long time",
+     "ja": "長い間"
+    },
+    {
+     "en": "see",
+     "ja": "会う"
+    }
+   ]
+  },
+  {
+   "id": "social-002",
+   "scene": "social",
+   "ja": "最近どう？",
+   "en": "How have you been?",
+   "polite": "How have you been lately?",
+   "casual": "What's new?",
+   "words": [
+    {
+     "en": "how have you been",
+     "ja": "最近どう"
+    },
+    {
+     "en": "been",
+     "ja": "過ごしている"
+    }
+   ]
+  },
+  {
+   "id": "social-003",
+   "scene": "social",
+   "ja": "お仕事は何をしていますか？",
+   "en": "What do you do?",
+   "polite": "What do you do for a living?",
+   "casual": "What do you do?",
+   "words": [
+    {
+     "en": "do",
+     "ja": "仕事をする"
+    },
+    {
+     "en": "what",
+     "ja": "何"
+    }
+   ]
+  },
+  {
+   "id": "social-004",
+   "scene": "social",
+   "ja": "出身はどこですか？",
+   "en": "Where are you from?",
+   "polite": "May I ask where you're from?",
+   "casual": "Where are you from?",
+   "words": [
+    {
+     "en": "where",
+     "ja": "どこ"
+    },
+    {
+     "en": "from",
+     "ja": "出身"
+    }
+   ]
+  },
+  {
+   "id": "social-005",
+   "scene": "social",
+   "ja": "趣味は何ですか？",
+   "en": "What are your hobbies?",
+   "polite": "What do you like to do in your free time?",
+   "casual": "What are you into?",
+   "words": [
+    {
+     "en": "hobbies",
+     "ja": "趣味"
+    },
+    {
+     "en": "what",
+     "ja": "何"
+    }
+   ]
+  },
+  {
+   "id": "social-006",
+   "scene": "social",
+   "ja": "また会いましょう。",
+   "en": "Let's meet again.",
+   "polite": "I hope we can meet again soon.",
+   "casual": "Let's hang out again!",
+   "words": [
+    {
+     "en": "meet",
+     "ja": "会う"
+    },
+    {
+     "en": "again",
+     "ja": "また"
+    }
+   ]
+  },
+  {
+   "id": "social-007",
+   "scene": "social",
+   "ja": "連絡先を交換しませんか？",
+   "en": "Shall we exchange contact info?",
+   "polite": "Would you like to exchange contact information?",
+   "casual": "Wanna swap numbers?",
+   "words": [
+    {
+     "en": "exchange",
+     "ja": "交換する"
+    },
+    {
+     "en": "contact info",
+     "ja": "連絡先"
+    }
+   ]
+  },
+  {
+   "id": "social-008",
+   "scene": "social",
+   "ja": "今度ごはんに行きましょう。",
+   "en": "Let's grab dinner sometime.",
+   "polite": "We should go out for dinner sometime.",
+   "casual": "Dinner sometime?",
+   "words": [
+    {
+     "en": "grab dinner",
+     "ja": "ごはんに行く"
+    },
+    {
+     "en": "sometime",
+     "ja": "今度"
+    }
+   ]
+  },
+  {
+   "id": "social-009",
+   "scene": "social",
+   "ja": "お誕生日おめでとう！",
+   "en": "Happy birthday!",
+   "polite": "Wishing you a very happy birthday!",
+   "casual": "Happy b-day!",
+   "words": [
+    {
+     "en": "happy birthday",
+     "ja": "誕生日おめでとう"
+    },
+    {
+     "en": "birthday",
+     "ja": "誕生日"
+    }
+   ]
+  },
+  {
+   "id": "social-010",
+   "scene": "social",
+   "ja": "おめでとうございます！",
+   "en": "Congratulations!",
+   "polite": "Congratulations! I'm so happy for you.",
+   "casual": "Congrats!",
+   "words": [
+    {
+     "en": "congratulations",
+     "ja": "おめでとう"
+    }
+   ]
+  },
+  {
+   "id": "social-011",
+   "scene": "social",
+   "ja": "遅れてごめんね。",
+   "en": "Sorry I'm late.",
+   "polite": "I apologize for being late.",
+   "casual": "Sorry, running late!",
+   "words": [
+    {
+     "en": "sorry",
+     "ja": "ごめん"
+    },
+    {
+     "en": "late",
+     "ja": "遅れて"
+    }
+   ]
+  },
+  {
+   "id": "social-012",
+   "scene": "social",
+   "ja": "来てくれてありがとう。",
+   "en": "Thanks for coming.",
+   "polite": "Thank you so much for coming.",
+   "casual": "Thanks for coming!",
+   "words": [
+    {
+     "en": "thanks for",
+     "ja": "ありがとう"
+    },
+    {
+     "en": "coming",
+     "ja": "来ること"
+    }
+   ]
+  },
+  {
+   "id": "social-013",
+   "scene": "social",
+   "ja": "楽しかったです。",
+   "en": "I had a great time.",
+   "polite": "I really enjoyed myself.",
+   "casual": "That was fun!",
+   "words": [
+    {
+     "en": "great time",
+     "ja": "楽しい時間"
+    },
+    {
+     "en": "had",
+     "ja": "過ごした"
+    }
+   ]
+  },
+  {
+   "id": "social-014",
+   "scene": "social",
+   "ja": "またね！",
+   "en": "See you later!",
+   "polite": "I'll see you again soon.",
+   "casual": "See ya!",
+   "words": [
+    {
+     "en": "see you",
+     "ja": "またね"
+    },
+    {
+     "en": "later",
+     "ja": "後で"
+    }
+   ]
+  },
+  {
+   "id": "social-015",
+   "scene": "social",
+   "ja": "気をつけて帰ってね。",
+   "en": "Get home safe.",
+   "polite": "Please get home safely.",
+   "casual": "Get home safe!",
+   "words": [
+    {
+     "en": "get home",
+     "ja": "家に帰る"
+    },
+    {
+     "en": "safe",
+     "ja": "無事に"
+    }
+   ]
+  },
+  {
+   "id": "social-016",
+   "scene": "social",
+   "ja": "今、話せる？",
+   "en": "Do you have time to talk?",
+   "polite": "Is now a good time to talk?",
+   "casual": "Got a minute?",
+   "words": [
+    {
+     "en": "time",
+     "ja": "時間"
+    },
+    {
+     "en": "talk",
+     "ja": "話す"
+    }
+   ]
+  },
+  {
+   "id": "social-017",
+   "scene": "social",
+   "ja": "それ、どういう意味？",
+   "en": "What does that mean?",
+   "polite": "What do you mean by that?",
+   "casual": "Meaning?",
+   "words": [
+    {
+     "en": "mean",
+     "ja": "意味する"
+    },
+    {
+     "en": "what",
+     "ja": "何"
+    }
+   ]
+  },
+  {
+   "id": "social-018",
+   "scene": "social",
+   "ja": "知らなかった！",
+   "en": "I didn't know that!",
+   "polite": "I wasn't aware of that.",
+   "casual": "No idea!",
+   "words": [
+    {
+     "en": "know",
+     "ja": "知る"
+    },
+    {
+     "en": "didn't",
+     "ja": "しなかった"
+    }
+   ]
+  },
+  {
+   "id": "social-019",
+   "scene": "social",
+   "ja": "私もそう思う。",
+   "en": "I think so too.",
+   "polite": "I couldn't agree more.",
+   "casual": "Same here.",
+   "words": [
+    {
+     "en": "think so",
+     "ja": "そう思う"
+    },
+    {
+     "en": "too",
+     "ja": "も"
+    }
+   ]
+  },
+  {
+   "id": "social-020",
+   "scene": "social",
+   "ja": "そうは思わないな。",
+   "en": "I don't think so.",
+   "polite": "I'm not sure I agree.",
+   "casual": "Nah.",
+   "words": [
+    {
+     "en": "think so",
+     "ja": "そう思う"
+    },
+    {
+     "en": "don't",
+     "ja": "しない"
+    }
+   ]
+  },
+  {
+   "id": "social-021",
+   "scene": "social",
+   "ja": "紹介します、友だちの健です。",
+   "en": "This is my friend Ken.",
+   "polite": "I'd like you to meet my friend Ken.",
+   "casual": "This is Ken.",
+   "words": [
+    {
+     "en": "friend",
+     "ja": "友だち"
+    },
+    {
+     "en": "this is",
+     "ja": "こちらは"
+    }
+   ]
+  },
+  {
+   "id": "social-022",
+   "scene": "social",
+   "ja": "お会いできてうれしいです。",
+   "en": "It's nice to meet you.",
+   "polite": "It's a pleasure to meet you.",
+   "casual": "Nice meeting you!",
+   "words": [
+    {
+     "en": "nice",
+     "ja": "うれしい"
+    },
+    {
+     "en": "meet",
+     "ja": "会う"
+    }
+   ]
+  },
+  {
+   "id": "social-023",
+   "scene": "social",
+   "ja": "日本に来たことはありますか？",
+   "en": "Have you ever been to Japan?",
+   "polite": "Have you had the chance to visit Japan?",
+   "casual": "Ever been to Japan?",
+   "words": [
+    {
+     "en": "ever",
+     "ja": "今までに"
+    },
+    {
+     "en": "Japan",
+     "ja": "日本"
+    }
+   ]
+  },
+  {
+   "id": "social-024",
+   "scene": "social",
+   "ja": "週末あいてる？",
+   "en": "Are you free this weekend?",
+   "polite": "Do you have any plans this weekend?",
+   "casual": "Free this weekend?",
+   "words": [
+    {
+     "en": "free",
+     "ja": "あいている"
+    },
+    {
+     "en": "weekend",
+     "ja": "週末"
+    }
+   ]
+  },
+  {
+   "id": "social-025",
+   "scene": "social",
+   "ja": "一緒に行かない？",
+   "en": "Do you want to come with me?",
+   "polite": "Would you like to join me?",
+   "casual": "Wanna come?",
+   "words": [
+    {
+     "en": "come with",
+     "ja": "一緒に来る"
+    },
+    {
+     "en": "want to",
+     "ja": "〜したい"
+    }
+   ]
+  },
+  {
+   "id": "social-026",
+   "scene": "social",
+   "ja": "ちょっと聞いてもいい？",
+   "en": "Can I ask you something?",
+   "polite": "May I ask you something?",
+   "casual": "Quick question?",
+   "words": [
+    {
+     "en": "ask",
+     "ja": "聞く"
+    },
+    {
+     "en": "something",
+     "ja": "何か"
+    }
+   ]
+  },
+  {
+   "id": "social-027",
+   "scene": "social",
+   "ja": "写真を送るね。",
+   "en": "I'll send you the photos.",
+   "polite": "I'll send the photos over to you.",
+   "casual": "Sending pics!",
+   "words": [
+    {
+     "en": "send",
+     "ja": "送る"
+    },
+    {
+     "en": "photos",
+     "ja": "写真"
+    }
+   ]
+  },
+  {
+   "id": "social-028",
+   "scene": "social",
+   "ja": "いつでも連絡してね。",
+   "en": "Feel free to contact me anytime.",
+   "polite": "Please don't hesitate to contact me.",
+   "casual": "Hit me up anytime.",
+   "words": [
+    {
+     "en": "contact",
+     "ja": "連絡する"
+    },
+    {
+     "en": "anytime",
+     "ja": "いつでも"
+    }
+   ]
+  },
+  {
+   "id": "social-029",
+   "scene": "social",
+   "ja": "お邪魔します。",
+   "en": "Thanks for having me.",
+   "polite": "Thank you for inviting me in.",
+   "casual": "Thanks for having me!",
+   "words": [
+    {
+     "en": "having",
+     "ja": "招いてくれること"
+    },
+    {
+     "en": "thanks for",
+     "ja": "〜をありがとう"
+    }
+   ]
+  },
+  {
+   "id": "social-030",
+   "scene": "social",
+   "ja": "どうぞ、入って。",
+   "en": "Come on in.",
+   "polite": "Please, come in.",
+   "casual": "Come in!",
+   "words": [
+    {
+     "en": "come on in",
+     "ja": "どうぞ入って"
+    }
+   ]
+  },
+  {
+   "id": "social-031",
+   "scene": "social",
+   "ja": "何か飲む？",
+   "en": "Would you like something to drink?",
+   "polite": "Can I get you something to drink?",
+   "casual": "Want a drink?",
+   "words": [
+    {
+     "en": "something",
+     "ja": "何か"
+    },
+    {
+     "en": "drink",
+     "ja": "飲む"
+    }
+   ]
+  },
+  {
+   "id": "social-032",
+   "scene": "social",
+   "ja": "家族は元気？",
+   "en": "How's your family?",
+   "polite": "How is your family doing?",
+   "casual": "Family good?",
+   "words": [
+    {
+     "en": "family",
+     "ja": "家族"
+    },
+    {
+     "en": "how's",
+     "ja": "どうですか"
+    }
+   ]
+  },
+  {
+   "id": "social-033",
+   "scene": "social",
+   "ja": "それは知っています。",
+   "en": "I know about that.",
+   "polite": "I'm aware of that.",
+   "casual": "Yeah, I know.",
+   "words": [
+    {
+     "en": "know about",
+     "ja": "知っている"
+    },
+    {
+     "en": "that",
+     "ja": "それ"
+    }
+   ]
+  },
+  {
+   "id": "social-034",
+   "scene": "social",
+   "ja": "話を聞いてくれてありがとう。",
+   "en": "Thanks for listening.",
+   "polite": "Thank you for hearing me out.",
+   "casual": "Thanks for listening!",
+   "words": [
+    {
+     "en": "listening",
+     "ja": "聞くこと"
+    },
+    {
+     "en": "thanks for",
+     "ja": "〜をありがとう"
+    }
+   ]
+  },
+  {
+   "id": "social-035",
+   "scene": "social",
+   "ja": "私に任せて。",
+   "en": "Leave it to me.",
+   "polite": "Please leave it to me.",
+   "casual": "I got this.",
+   "words": [
+    {
+     "en": "leave",
+     "ja": "任せる"
+    },
+    {
+     "en": "to me",
+     "ja": "私に"
+    }
+   ]
+  },
+  {
+   "id": "social-036",
+   "scene": "social",
+   "ja": "いいよ、どういたしまして。",
+   "en": "You're welcome.",
+   "polite": "It was my pleasure.",
+   "casual": "No problem!",
+   "words": [
+    {
+     "en": "welcome",
+     "ja": "どういたしまして"
+    },
+    {
+     "en": "you're",
+     "ja": "あなたは"
+    }
+   ]
+  },
+  {
+   "id": "social-037",
+   "scene": "social",
+   "ja": "先に行ってて。",
+   "en": "Go ahead without me.",
+   "polite": "Please go on ahead.",
+   "casual": "Go ahead!",
+   "words": [
+    {
+     "en": "go ahead",
+     "ja": "先に行く"
+    },
+    {
+     "en": "without me",
+     "ja": "私なしで"
+    }
+   ]
+  },
+  {
+   "id": "social-038",
+   "scene": "social",
+   "ja": "どっちでもいいよ。",
+   "en": "Either is fine.",
+   "polite": "Either one is fine with me.",
+   "casual": "Whatever works!",
+   "words": [
+    {
+     "en": "either",
+     "ja": "どちらでも"
+    },
+    {
+     "en": "fine",
+     "ja": "いい"
+    }
+   ]
+  },
+  {
+   "id": "social-039",
+   "scene": "social",
+   "ja": "それ、ウケる！",
+   "en": "That's hilarious!",
+   "polite": "That's really funny!",
+   "casual": "LOL!",
+   "words": [
+    {
+     "en": "hilarious",
+     "ja": "すごく面白い"
+    },
+    {
+     "en": "that's",
+     "ja": "それは"
+    }
+   ]
+  },
+  {
+   "id": "social-040",
+   "scene": "social",
+   "ja": "聞いて！いい知らせがあるの。",
+   "en": "Guess what? I have good news.",
+   "polite": "I have some good news to share.",
+   "casual": "Guess what!",
+   "words": [
+    {
+     "en": "good news",
+     "ja": "いい知らせ"
+    },
+    {
+     "en": "guess what",
+     "ja": "聞いて"
+    }
+   ]
+  },
+  {
+   "id": "social-041",
+   "scene": "social",
+   "ja": "それは秘密ね。",
+   "en": "Let's keep it a secret.",
+   "polite": "Please keep this between us.",
+   "casual": "Our secret!",
+   "words": [
+    {
+     "en": "keep",
+     "ja": "守る"
+    },
+    {
+     "en": "secret",
+     "ja": "秘密"
+    }
+   ]
+  },
+  {
+   "id": "social-042",
+   "scene": "social",
+   "ja": "どうやって知り合ったの？",
+   "en": "How did you two meet?",
+   "polite": "How did you get to know each other?",
+   "casual": "How'd you meet?",
+   "words": [
+    {
+     "en": "meet",
+     "ja": "出会う"
+    },
+    {
+     "en": "how",
+     "ja": "どうやって"
+    }
+   ]
+  },
+  {
+   "id": "social-043",
+   "scene": "social",
+   "ja": "前に会ったことありますよね？",
+   "en": "Haven't we met before?",
+   "polite": "I believe we've met before.",
+   "casual": "Have we met?",
+   "words": [
+    {
+     "en": "met",
+     "ja": "会った"
+    },
+    {
+     "en": "before",
+     "ja": "前に"
+    }
+   ]
+  },
+  {
+   "id": "social-044",
+   "scene": "social",
+   "ja": "英語を勉強しています。",
+   "en": "I'm studying English.",
+   "polite": "I'm currently learning English.",
+   "casual": "I'm learning English.",
+   "words": [
+    {
+     "en": "studying",
+     "ja": "勉強している"
+    },
+    {
+     "en": "English",
+     "ja": "英語"
+    }
+   ]
+  },
+  {
+   "id": "social-045",
+   "scene": "social",
+   "ja": "ゆっくりでいいよ。",
+   "en": "Take your time.",
+   "polite": "Please take as long as you need.",
+   "casual": "No rush.",
+   "words": [
+    {
+     "en": "take your time",
+     "ja": "ゆっくりでいい"
+    },
+    {
+     "en": "time",
+     "ja": "時間"
+    }
+   ]
+  },
+  {
+   "id": "social-046",
+   "scene": "social",
+   "ja": "楽しんでね！",
+   "en": "Have fun!",
+   "polite": "I hope you have a great time!",
+   "casual": "Have a blast!",
+   "words": [
+    {
+     "en": "have fun",
+     "ja": "楽しむ"
+    },
+    {
+     "en": "fun",
+     "ja": "楽しみ"
+    }
+   ]
+  },
+  {
+   "id": "social-047",
+   "scene": "social",
+   "ja": "いつも助かってるよ。",
+   "en": "You always help me out.",
+   "polite": "I'm always grateful for your help.",
+   "casual": "You're the best.",
+   "words": [
+    {
+     "en": "always",
+     "ja": "いつも"
+    },
+    {
+     "en": "help",
+     "ja": "助ける"
+    }
+   ]
+  },
+  {
+   "id": "social-048",
+   "scene": "social",
+   "ja": "それ、似合ってるね。",
+   "en": "That looks good on you.",
+   "polite": "That really suits you.",
+   "casual": "Looks great on you!",
+   "words": [
+    {
+     "en": "looks good",
+     "ja": "似合う"
+    },
+    {
+     "en": "on you",
+     "ja": "あなたに"
+    }
+   ]
+  },
+  {
+   "id": "social-049",
+   "scene": "social",
+   "ja": "返信が遅れてごめん。",
+   "en": "Sorry for the late reply.",
+   "polite": "I apologize for my late reply.",
+   "casual": "Sorry, late reply!",
+   "words": [
+    {
+     "en": "late reply",
+     "ja": "遅れた返信"
+    },
+    {
+     "en": "sorry",
+     "ja": "ごめん"
+    }
+   ]
+  },
+  {
+   "id": "social-050",
+   "scene": "social",
+   "ja": "今度紹介するね。",
+   "en": "I'll introduce you sometime.",
+   "polite": "I'd be happy to introduce you sometime.",
+   "casual": "I'll hook you up.",
+   "words": [
+    {
+     "en": "introduce",
+     "ja": "紹介する"
+    },
+    {
+     "en": "sometime",
+     "ja": "今度"
+    }
+   ]
+  }
+ ]
+}

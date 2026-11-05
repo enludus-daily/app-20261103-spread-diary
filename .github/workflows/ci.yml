@@ -12,9 +12,9 @@ concurrency:
   cancel-in-progress: true
 jobs:
   ci:
-    uses: enludus-daily/daily-actions/.github/workflows/ios-ci.yml@d6f0ff04abcdbcf5d6ff28bec62485e6a50010ca # daily-actions 2026-11-04-limits-scenes
+    uses: enludus-daily/daily-actions/.github/workflows/ios-ci.yml@a1ff697155d5340b046cadad44228578d483f54c # daily-actions 2026-11-05-duo-posture
     with:
-      actions-sha: d6f0ff04abcdbcf5d6ff28bec62485e6a50010ca
+      actions-sha: a1ff697155d5340b046cadad44228578d483f54c
       scheme: SpreadDiary
       # iPhone Duo の全画面の表示には Xcode 27.1（iOS 27.1 SDK）が要る（Apple Tech Talk「Prepare your app for iPhone Duo」）。
       # xcode-27 ランナーは GitHub で Preview 扱い（actions/runner-images #14404）。
@@ -23,5 +23,6 @@ jobs:
       test-destination: "platform=iOS Simulator,name=iPhone Duo,OS=27.1"
       screenshot-device: iPhone Duo
       # 撮る画面（ContentView の ScreenshotScene。@dark でダークモード）
-      screenshot-scenes: launch drill detail compose launch@dark
+      screenshot-posture: open
+      screenshot-scenes: onboarding home learn drill scramble result decks deck record settings share compose home@dark drill@dark
       guard-disabled: ${{ vars.DAILY_GUARD_DISABLED == 'true' && 'true' || 'false' }}

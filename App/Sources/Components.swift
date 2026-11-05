@@ -49,23 +49,6 @@ struct WordFlowLayout: Layout {
     }
 }
 
-/// 覚えた度合い（箱）を点で表す
-struct MasteryDots: View {
-    let box: Int
-
-    var body: some View {
-        HStack(spacing: 3) {
-            ForEach(0..<ReviewState.maxBox, id: \.self) { index in
-                Circle()
-                    .fill(index < box ? Color.accentColor : Color.secondary.opacity(0.25))
-                    .frame(width: 6, height: 6)
-            }
-        }
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("覚えた度合い \(box) / \(ReviewState.maxBox)")
-    }
-}
-
 /// 読み上げボタン
 struct SpeakButton: View {
     let text: String
@@ -75,24 +58,13 @@ struct SpeakButton: View {
             Speaker.shared.speak(text)
         } label: {
             Image(systemName: "speaker.wave.2.fill")
+                .font(.body.weight(.semibold))
+                .foregroundStyle(Ink.pen)
+                .frame(width: 44, height: 44)
+                .background(Circle().fill(Ink.card).overlay(Circle().strokeBorder(Ink.rule, lineWidth: 1)))
         }
-        .buttonStyle(.borderless)
-        .accessibilityLabel("読み上げる")
-    }
-}
-
-/// 丸い札
-struct Chip: View {
-    let text: String
-    var color: Color = .accentColor
-
-    var body: some View {
-        Text(text)
-            .font(.caption.weight(.semibold))
-            .padding(.horizontal, 8)
-            .padding(.vertical, 3)
-            .background(color.opacity(0.15), in: Capsule())
-            .foregroundStyle(color)
+        .buttonStyle(.plain)
+        .accessibilityLabel("英語を読み上げる")
     }
 }
 
@@ -102,6 +74,7 @@ extension Phrase.Source {
         case .model: "Apple Intelligence"
         case .translation: "Apple の翻訳"
         case .manual: "手入力"
+        case .bank: "場面の束"
         }
     }
 }
